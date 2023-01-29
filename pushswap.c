@@ -12,8 +12,21 @@
 
 #include "pushswap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
+	char	*tmp;
+	int		i;
+	int 	j;
+
+	i = 1;
+	j = 0;
 	if (argc < 2)
 		return (0);
+	while (i < argc)
+	{
+		if (argv[i] != NULL)
+		{
+		}
+		i++;
+	}
 }

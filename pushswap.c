@@ -26,6 +26,13 @@ int	main(int argc, char **argv)
 	{
 		if (argv[i] != NULL)
 		{
+			while (argv[i][j] != '\0')
+			{
+				if (argv[i][j])
+				{
+				}
+				j++;
+			}
 		}
 		i++;
 	}

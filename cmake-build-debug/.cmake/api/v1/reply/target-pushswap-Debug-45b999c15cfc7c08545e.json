@@ -42,17 +42,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk"
-				},
-				{
-					"fragment" : "-std=gnu11"
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/min/Desktop/c/42cursus/pushswap/."
+					"path" : "/goinfre/hyecheon/push_swap/."
 				}
 			],
 			"language" : "C",

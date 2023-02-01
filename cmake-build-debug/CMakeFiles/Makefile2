@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /goinfre/hyecheon/push_swap
+CMAKE_SOURCE_DIR = /Users/min/Desktop/c/42cursus/pushswap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /goinfre/hyecheon/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/pushswap.dir/clean
 CMakeFiles/pushswap.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target pushswap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target pushswap"
 .PHONY : CMakeFiles/pushswap.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pushswap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pushswap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/pushswap.dir/rule
 
 # Convenience name for target.

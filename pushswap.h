@@ -13,6 +13,8 @@
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 
+# define ERROR -1
+
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>

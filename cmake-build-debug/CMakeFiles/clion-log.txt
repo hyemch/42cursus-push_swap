@@ -1,10 +1,10 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/min/Desktop/c/42cursus/pushswap -B /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug
--- The C compiler identification is AppleClang 12.0.5.12050022
+/Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /goinfre/hyecheon/pushswap -B /goinfre/hyecheon/pushswap/cmake-build-debug
+-- The C compiler identification is AppleClang 12.0.0.12000032
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug
+-- Build files have been written to: /goinfre/hyecheon/pushswap/cmake-build-debug

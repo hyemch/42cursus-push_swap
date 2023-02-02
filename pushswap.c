@@ -21,7 +21,7 @@
  * 	- int 배열에 담아주기
  * */
 
-static	int	check_argument(const char *str)
+static	int	check_arg(const char *str)
 {
 	int	i;
 
@@ -43,7 +43,7 @@ static	int	check_argument(const char *str)
 	return (0);
 }
 
-static int	pars_argument(char **argv)
+static int	parsing_arg(char **argv)
 {
 	char	*tmp;
 	int		i;
@@ -51,20 +51,22 @@ static int	pars_argument(char **argv)
 	i = 1;
 	while (argv[i] != NULL)
 	{
-		if (check_argument(argv[i]) != ERROR)
+		if (check_arg(argv[i]) != ERROR)
 			i++;
 		else
 			return (ERROR);
 	}
-	/* 1. tmp 에 "argv[1] argv[2] argv[3] argv[i].. " 담아주기
+	/* 1. tmp = "argv[1] argv[2] argv[3] argv[i].. " 담아주기
 	 * 2. ' ' 기준으로 split -> int 베열에 담아주기
 	 * 3. 연결리스트 deque
+	 * 4. 가장 첫번째 인자가 스택의 맨 위에 있어야 한다.
 	 * */
+	return (0);
 }
 
 int	main(int argc, char **argv)
 {
 	if (argc < 2)
 		return (0);
-	pars_argument(argv);
+	parsing_arg(argv);
 }

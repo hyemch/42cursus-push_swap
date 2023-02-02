@@ -13,11 +13,18 @@
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 
-# define ERROR -1
-
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+
+# define ERROR -1
+
+typedef struct s_node
+{
+	int				data;
+	struct s_node	*prev;
+	struct s_node	*next;
+}	t_node;
 
 #endif

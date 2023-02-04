@@ -6,5 +6,5 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(pushswap
-        pushswap.c
-        pushswap.h)
+        push_swap.c
+        push_swap.h)

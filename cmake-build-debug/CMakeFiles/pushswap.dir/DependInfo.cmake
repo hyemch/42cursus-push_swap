@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/goinfre/hyecheon/pushswap/pushswap.c" "CMakeFiles/pushswap.dir/pushswap.c.o" "gcc" "CMakeFiles/pushswap.dir/pushswap.c.o.d"
+  "/Users/min/Desktop/c/42cursus/pushswap/push_swap.c" "CMakeFiles/pushswap.dir/push_swap.c.o" "gcc" "CMakeFiles/pushswap.dir/push_swap.c.o.d"
   )
 
 # Targets to which this target links.

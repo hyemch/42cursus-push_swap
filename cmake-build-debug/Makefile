@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /goinfre/hyecheon/pushswap
+CMAKE_SOURCE_DIR = /Users/min/Desktop/c/42cursus/pushswap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /goinfre/hyecheon/pushswap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /goinfre/hyecheon/pushswap/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /goinfre/hyecheon/pushswap/cmake-build-debug/CMakeFiles /goinfre/hyecheon/pushswap/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /goinfre/hyecheon/pushswap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ pushswap/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/build
 .PHONY : pushswap/fast
 
-pushswap.o: pushswap.c.o
-.PHONY : pushswap.o
+push_swap.o: push_swap.c.o
+.PHONY : push_swap.o
 
 # target to build an object file
-pushswap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/pushswap.c.o
-.PHONY : pushswap.c.o
+push_swap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/push_swap.c.o
+.PHONY : push_swap.c.o
 
-pushswap.i: pushswap.c.i
-.PHONY : pushswap.i
+push_swap.i: push_swap.c.i
+.PHONY : push_swap.i
 
 # target to preprocess a source file
-pushswap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/pushswap.c.i
-.PHONY : pushswap.c.i
+push_swap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/push_swap.c.i
+.PHONY : push_swap.c.i
 
-pushswap.s: pushswap.c.s
-.PHONY : pushswap.s
+push_swap.s: push_swap.c.s
+.PHONY : push_swap.s
 
 # target to generate assembly for a file
-pushswap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/pushswap.c.s
-.PHONY : pushswap.c.s
+push_swap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pushswap.dir/build.make CMakeFiles/pushswap.dir/push_swap.c.s
+.PHONY : push_swap.c.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pushswap"
-	@echo "... pushswap.o"
-	@echo "... pushswap.i"
-	@echo "... pushswap.s"
+	@echo "... push_swap.o"
+	@echo "... push_swap.i"
+	@echo "... push_swap.s"
 .PHONY : help
 
 

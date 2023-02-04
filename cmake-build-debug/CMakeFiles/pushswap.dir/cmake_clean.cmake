@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pushswap.dir/pushswap.c.o"
-  "CMakeFiles/pushswap.dir/pushswap.c.o.d"
+  "CMakeFiles/pushswap.dir/push_swap.c.o"
+  "CMakeFiles/pushswap.dir/push_swap.c.o.d"
   "pushswap"
   "pushswap.pdb"
 )

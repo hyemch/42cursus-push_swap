@@ -8,85 +8,83 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/goinfre/hyecheon/pushswap/cmake-build-debug"/>
+				<Option working_dir="/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pushswap">
-				<Option output="/goinfre/hyecheon/pushswap/cmake-build-debug/pushswap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/goinfre/hyecheon/pushswap/cmake-build-debug"/>
+				<Option output="/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/pushswap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/goinfre/hyecheon/pushswap/."/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Users/min/Desktop/c/42cursus/pushswap/."/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 pushswap"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 pushswap"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pushswap/fast">
-				<Option output="/goinfre/hyecheon/pushswap/cmake-build-debug/pushswap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/goinfre/hyecheon/pushswap/cmake-build-debug"/>
+				<Option output="/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/pushswap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/goinfre/hyecheon/pushswap/."/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Users/min/Desktop/c/42cursus/pushswap/."/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 pushswap/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 pushswap/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/goinfre/hyecheon/pushswap/cmake-build-debug"/>
+				<Option working_dir="/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/goinfre/hyecheon/pushswap/cmake-build-debug"/>
+				<Option working_dir="/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/goinfre/hyecheon/pushswap/pushswap.c">
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/push_swap.c">
 			<Option target="pushswap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/pushswap/pushswap.h">
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/push_swap.h">
 			<Option target="pushswap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/pushswap/CMakeLists.txt">
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

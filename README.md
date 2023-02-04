@@ -1,5 +1,7 @@
 # 42cursus-push_swap
 
+------------------------------------
+
 ## Mandatory
 
 - stack A 

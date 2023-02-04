@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /goinfre/hyecheon/pushswap
+CMAKE_SOURCE_DIR = /Users/min/Desktop/c/42cursus/pushswap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /goinfre/hyecheon/pushswap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pushswap.dir/depend.make
@@ -69,31 +69,31 @@ include CMakeFiles/pushswap.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pushswap.dir/flags.make
 
-CMakeFiles/pushswap.dir/pushswap.c.o: CMakeFiles/pushswap.dir/flags.make
-CMakeFiles/pushswap.dir/pushswap.c.o: ../pushswap.c
-CMakeFiles/pushswap.dir/pushswap.c.o: CMakeFiles/pushswap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/pushswap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pushswap.dir/pushswap.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pushswap.dir/pushswap.c.o -MF CMakeFiles/pushswap.dir/pushswap.c.o.d -o CMakeFiles/pushswap.dir/pushswap.c.o -c /goinfre/hyecheon/pushswap/pushswap.c
+CMakeFiles/pushswap.dir/push_swap.c.o: CMakeFiles/pushswap.dir/flags.make
+CMakeFiles/pushswap.dir/push_swap.c.o: ../push_swap.c
+CMakeFiles/pushswap.dir/push_swap.c.o: CMakeFiles/pushswap.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pushswap.dir/push_swap.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pushswap.dir/push_swap.c.o -MF CMakeFiles/pushswap.dir/push_swap.c.o.d -o CMakeFiles/pushswap.dir/push_swap.c.o -c /Users/min/Desktop/c/42cursus/pushswap/push_swap.c
 
-CMakeFiles/pushswap.dir/pushswap.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pushswap.dir/pushswap.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /goinfre/hyecheon/pushswap/pushswap.c > CMakeFiles/pushswap.dir/pushswap.c.i
+CMakeFiles/pushswap.dir/push_swap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pushswap.dir/push_swap.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/min/Desktop/c/42cursus/pushswap/push_swap.c > CMakeFiles/pushswap.dir/push_swap.c.i
 
-CMakeFiles/pushswap.dir/pushswap.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pushswap.dir/pushswap.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /goinfre/hyecheon/pushswap/pushswap.c -o CMakeFiles/pushswap.dir/pushswap.c.s
+CMakeFiles/pushswap.dir/push_swap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pushswap.dir/push_swap.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/min/Desktop/c/42cursus/pushswap/push_swap.c -o CMakeFiles/pushswap.dir/push_swap.c.s
 
 # Object files for target pushswap
 pushswap_OBJECTS = \
-"CMakeFiles/pushswap.dir/pushswap.c.o"
+"CMakeFiles/pushswap.dir/push_swap.c.o"
 
 # External object files for target pushswap
 pushswap_EXTERNAL_OBJECTS =
 
-pushswap: CMakeFiles/pushswap.dir/pushswap.c.o
+pushswap: CMakeFiles/pushswap.dir/push_swap.c.o
 pushswap: CMakeFiles/pushswap.dir/build.make
 pushswap: CMakeFiles/pushswap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/goinfre/hyecheon/pushswap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable pushswap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable pushswap"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pushswap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +105,6 @@ CMakeFiles/pushswap.dir/clean:
 .PHONY : CMakeFiles/pushswap.dir/clean
 
 CMakeFiles/pushswap.dir/depend:
-	cd /goinfre/hyecheon/pushswap/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /goinfre/hyecheon/pushswap /goinfre/hyecheon/pushswap /goinfre/hyecheon/pushswap/cmake-build-debug /goinfre/hyecheon/pushswap/cmake-build-debug /goinfre/hyecheon/pushswap/cmake-build-debug/CMakeFiles/pushswap.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/min/Desktop/c/42cursus/pushswap /Users/min/Desktop/c/42cursus/pushswap /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles/pushswap.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pushswap.dir/depend
 

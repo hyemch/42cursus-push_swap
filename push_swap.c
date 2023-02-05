@@ -53,9 +53,8 @@ static	int	check_arg(const char *str)
 	return (0);
 }
 
-static int	parsing_arg(char **argv)
+static int	valid_arg(char **argv)
 {
-	char	*tmp;
 	int		i;
 
 	i = 1;
@@ -68,16 +67,42 @@ static int	parsing_arg(char **argv)
 	}
 	return (0);
 }
-	/*
-	 * 1. tmp = "argv[1] argv[2] argv[3] argv[i].. " 담아주기
-	 * 2. ' ' 기준으로 split -> int 베열에 담아주기
-	 * 3. 연결리스트 deque
-	 * 4. 가장 첫번째 인자가 스택의 맨 위에 있어야 한다.
-	 * */
+
+static int	parsing_arg(int argc, char **argv)
+{
+	char	*tmp;
+	char	*ret;
+	int		i;
+
+	i = 1;
+	ret = ft_calloc(1, sizeof(char));
+	if (valid_arg(argv) == 0)
+	{
+		while (i < argc)
+		{
+			tmp = ret;
+			ret = ft_strjoin(ret, argv[i]);
+			free (tmp);
+			tmp = ret;
+			ret = ft_strjoin(tmp, " ");
+			free (tmp);
+			i++;
+		}
+	}
+	printf("ret: %s\n", ret);
+	return (0);
+}
+
+/*
+* 1. tmp = "argv[1] argv[2] argv[3] argv[i].. " 담아주기
+* 2. ' ' 기준으로 split -> int 베열에 담아주기
+* 3. 연결리스트 deque
+* 4. 가장 첫번째 인자가 스택의 맨 위에 있어야 한다.
+* */
 
 int	main(int argc, char **argv)
 {
 	if (argc < 2)
 		return (0);
-	parsing_arg(argv);
+	parsing_arg(argc, argv);
 }

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyecheon <hyecheon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:28:58 by hyecheon          #+#    #+#             */
-/*   Updated: 2023/01/29 17:30:11 by hyecheon         ###   ########.fr       */
+/*   Created: 2022/08/22 02:27:21 by hyecheon          #+#    #+#             */
+/*   Updated: 2022/08/22 02:32:43 by hyecheon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include "./libft/libft.h"
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-# define ERROR -1
-
-typedef struct s_node
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int				data;
-	struct s_node	*prev;
-	struct s_node	*next;
-}	t_node;
+	const unsigned char	*sptr1;
+	const unsigned char	*sptr2;
 
-#endif
+	sptr1 = (const unsigned char *)s1;
+	sptr2 = (const unsigned char *)s2;
+	while (n)
+	{
+		if (*sptr1 != *sptr2)
+			return (*sptr1 - *sptr2);
+		sptr1++;
+		sptr2++;
+		n--;
+	}
+	return (0);
+}

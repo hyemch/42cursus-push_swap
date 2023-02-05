@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyecheon <hyecheon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:28:58 by hyecheon          #+#    #+#             */
-/*   Updated: 2023/01/29 17:30:11 by hyecheon         ###   ########.fr       */
+/*   Created: 2022/08/20 16:08:38 by hyecheon          #+#    #+#             */
+/*   Updated: 2022/09/07 22:12:09 by hyecheon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include "./libft/libft.h"
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-# define ERROR -1
-
-typedef struct s_node
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int				data;
-	struct s_node	*prev;
-	struct s_node	*next;
-}	t_node;
+	size_t				i;
+	unsigned char		*sptr1;
+	unsigned char		*sptr2;
 
-#endif
+	sptr1 = (unsigned char *)s1;
+	sptr2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n && (sptr1[i] != '\0' || sptr2[i] != '\0'))
+	{	
+		if (sptr1[i] != sptr2[i])
+			return (sptr1[i] - sptr2[i]);
+		i++;
+	}
+	return (0);
+}

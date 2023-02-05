@@ -25,6 +25,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/min/Desktop/c/42cursus/pushswap/."/>
+					<Add directory="/Users/min/Desktop/c/42cursus/pushswap/./libft"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -45,6 +46,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/min/Desktop/c/42cursus/pushswap/."/>
+					<Add directory="/Users/min/Desktop/c/42cursus/pushswap/./libft"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>

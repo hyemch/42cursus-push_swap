@@ -3,7 +3,8 @@ project(pushswap C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(.)
+include_directories(.
+        ./libft)
 
 add_executable(pushswap
         push_swap.c

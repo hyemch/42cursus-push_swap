@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyecheon <hyecheon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:28:58 by hyecheon          #+#    #+#             */
-/*   Updated: 2023/01/29 17:30:11 by hyecheon         ###   ########.fr       */
+/*   Created: 2022/08/22 02:23:56 by hyecheon          #+#    #+#             */
+/*   Updated: 2022/09/07 22:12:46 by hyecheon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include "./libft/libft.h"
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-# define ERROR -1
-
-typedef struct s_node
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int				data;
-	struct s_node	*prev;
-	struct s_node	*next;
-}	t_node;
+	unsigned char	*sptr;
 
-#endif
+	sptr = (unsigned char *)s;
+	while (n > 0)
+	{
+		if (*sptr == (unsigned char)c)
+			return (sptr);
+		sptr++;
+		n--;
+	}
+	return (0);
+}

@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyecheon <hyecheon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:28:58 by hyecheon          #+#    #+#             */
-/*   Updated: 2023/01/29 17:30:11 by hyecheon         ###   ########.fr       */
+/*   Created: 2022/08/22 02:34:02 by hyecheon          #+#    #+#             */
+/*   Updated: 2022/08/23 15:02:26 by hyecheon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include "./libft/libft.h"
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-# define ERROR -1
-
-typedef struct s_node
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int				data;
-	struct s_node	*prev;
-	struct s_node	*next;
-}	t_node;
+	size_t	i;
+	size_t	j;
 
-#endif
+	i = 0;
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (haystack[i] && i < len)
+	{
+		j = 0;
+		while (haystack[i + j] == needle[j] && i + j < len)
+		{
+			j++;
+			if (needle[j] == 0)
+				return ((char *)&haystack[i]);
+		}
+		i++;
+	}
+	return (0);
+}

@@ -25,7 +25,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 9,
 				"parent" : 0
 			},
 			{
@@ -53,6 +53,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/Users/min/Desktop/c/42cursus/pushswap/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/min/Desktop/c/42cursus/pushswap/./libft"
 				}
 			],
 			"language" : "C",

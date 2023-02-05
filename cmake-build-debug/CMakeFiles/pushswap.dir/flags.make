@@ -4,7 +4,7 @@
 # compile C with /Library/Developer/CommandLineTools/usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/min/Desktop/c/42cursus/pushswap/.
+C_INCLUDES = -I/Users/min/Desktop/c/42cursus/pushswap/. -I/Users/min/Desktop/c/42cursus/pushswap/./libft
 
 C_FLAGSarm64 = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu11
 

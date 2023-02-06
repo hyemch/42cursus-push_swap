@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "pushswap",
+					"name" : "push_swap",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "pushswap::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-pushswap-Debug-f6c13d56ad09685efeae.json",
-					"name" : "pushswap",
+					"id" : "push_swap::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-push_swap-Debug-3b31dcae573084d60743.json",
+					"name" : "push_swap",
 					"projectIndex" : 0
 				}
 			]

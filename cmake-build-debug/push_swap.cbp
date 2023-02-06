@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="pushswap"/>
+		<Option title="push_swap"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -80,6 +80,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_atoi.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_calloc.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_memset.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_split.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_strjoin.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_strlcat.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_strlcpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/libft/ft_strlen.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/min/Desktop/c/42cursus/pushswap/push_swap.c">
 			<Option target="push_swap"/>
 		</Unit>

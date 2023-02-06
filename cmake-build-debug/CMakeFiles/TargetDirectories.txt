@@ -1,3 +1,3 @@
-/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles/pushswap.dir
+/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles/push_swap.dir
 /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug/CMakeFiles/rebuild_cache.dir

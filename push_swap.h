@@ -24,8 +24,14 @@
 typedef struct s_node
 {
 	int				data;
-	struct s_node	*prev;
-	struct s_node	*next;
+	struct s_list	*prev;
+	struct s_list	*next;
 }	t_node;
+
+typedef struct s_info
+{
+	char	*ret;
+	int		*arr;
+}	t_info;
 
 #endif

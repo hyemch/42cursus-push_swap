@@ -31,7 +31,8 @@ typedef struct s_node
 typedef struct s_info
 {
 	char	*ret;
-	int		*arr;
+	int		ret_cnt;
+	int		*ret_arr;
 }	t_info;
 
 #endif

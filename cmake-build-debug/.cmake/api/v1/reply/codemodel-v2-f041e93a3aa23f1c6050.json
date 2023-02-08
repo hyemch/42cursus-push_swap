@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "push_swap::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-push_swap-Debug-3b31dcae573084d60743.json",
+					"jsonFile" : "target-push_swap-Debug-23d4a77a2c57f5c9ebfa.json",
 					"name" : "push_swap",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/min/Desktop/c/42cursus/pushswap/cmake-build-debug",
-		"source" : "/Users/min/Desktop/c/42cursus/pushswap"
+		"build" : "/goinfre/hyecheon/pushswap/cmake-build-debug",
+		"source" : "/goinfre/hyecheon/pushswap"
 	},
 	"version" : 
 	{

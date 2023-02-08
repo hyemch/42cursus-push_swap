@@ -21,14 +21,10 @@
  * 	- +-하나씩만 있을땐 양수, 음수 & 여러개 들어왔을땐 에러
  * 	- 중복된 값 에러
  * 	- int 배열에 담아주기
+ * 	info->ret 에 넣어둔 char 배열 ' ' 기준으로 스플릿
+ * 	받아온 숫자 개수 count -> int 배열 만들기
+ * 	atoi 해서 넣어주기
  */
-//			j = i + 1;
-//			while (str[i] && str[j] != '\0' )
-//			{
-//				if (str[i] == str [j])
-//					return (ERROR);
-//				j++;
-//			}
 
 static void	error_exit(char *error_message)
 {
@@ -93,6 +89,28 @@ static int	valid_arg(int argc, char **argv)
 	return (0);
 }
 
+static void	split_arg(t_info *info)
+{
+	int		i;
+	char	**arr;
+
+	i = 0;
+	arr = ft_split(info->ret, ' ');
+	while (arr[i])
+	{
+		info->ret_cnt++;
+		i++;
+	}
+	i = 0;
+	info->ret_arr = (int *)malloc(sizeof(int) * info->ret_cnt);
+	while (arr[i])
+	{
+		info->ret_arr[i] = ft_atoi(arr[i]);
+		printf("ret_arr[%d]: %d\n", i, info->ret_arr[i]);
+		i++;
+	}
+}
+
 static int	parsing_arg(t_info *info, int argc, char **argv)
 {
 	char	*tmp;
@@ -105,7 +123,6 @@ static int	parsing_arg(t_info *info, int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			printf ("argv ret[%d] : %s\n", i, ret);
 			tmp = ret;
 			ret = ft_strjoin(ret, argv[i]);
 			free (tmp);
@@ -116,18 +133,11 @@ static int	parsing_arg(t_info *info, int argc, char **argv)
 		}
 		info->ret = ret;
 	}
-	printf("ret: %s\n", info->ret);
+	else
+		error_exit("argument error!\n");
+	split_arg(info);
 	return (0);
 }
-	//info->ret 에 넣어둔 char 배열 ' ' 기준으로 스플릿
-	//받아온 숫자 개수 count -> int 배열 만들기
-	//atoi 해서 넣어주기
-/*static void	split_arg(t_info *info)
-{
-	int	i;
-
-	i = 0;
-}*/
 
 int	main(int argc, char **argv)
 {

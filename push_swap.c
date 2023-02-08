@@ -89,6 +89,25 @@ static int	valid_arg(int argc, char **argv)
 	return (0);
 }
 
+static void	check_intarr(t_info *info)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < info->ret_cnt && info->ret_arr[i])
+	{
+		j = i + 1;
+		while (j < info->ret_cnt)
+		{
+			if (info->ret_arr[i] == info->ret_arr[j])
+				error_exit("Overlap argument!\n");
+			j++;
+		}
+		i++;
+	}
+}
+
 static void	split_arg(t_info *info)
 {
 	int		i;
@@ -109,6 +128,7 @@ static void	split_arg(t_info *info)
 		printf("ret_arr[%d]: %d\n", i, info->ret_arr[i]);
 		i++;
 	}
+	check_intarr(info);
 }
 
 static int	parsing_arg(t_info *info, int argc, char **argv)

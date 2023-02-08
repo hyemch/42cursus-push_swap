@@ -28,6 +28,22 @@ typedef struct s_node
 	struct s_list	*next;
 }	t_node;
 
+typedef struct s_deque
+{
+	int		elementcnt;
+	t_node	*head;
+	t_node	*tail;
+}	t_deque;
+
+typedef struct s_deque_node
+{
+	int		num;
+	t_deque	*head_a;
+	t_deque	*head_b;
+	t_deque	*tail_a;
+	t_deque	*tail_b;
+}	t_deque_node;
+
 typedef struct s_info
 {
 	char	*ret;

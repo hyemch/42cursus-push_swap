@@ -129,6 +129,30 @@ push_swap/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
 .PHONY : push_swap/fast
 
+deque.o: deque.c.o
+.PHONY : deque.o
+
+# target to build an object file
+deque.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque.c.o
+.PHONY : deque.c.o
+
+deque.i: deque.c.i
+.PHONY : deque.i
+
+# target to preprocess a source file
+deque.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque.c.i
+.PHONY : deque.c.i
+
+deque.s: deque.c.s
+.PHONY : deque.s
+
+# target to generate assembly for a file
+deque.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque.c.s
+.PHONY : deque.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 .PHONY : libft/ft_atoi.o
 
@@ -354,6 +378,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... push_swap"
+	@echo "... deque.o"
+	@echo "... deque.i"
+	@echo "... deque.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/push_swap.dir/deque.c.o"
+  "CMakeFiles/push_swap.dir/deque.c.o.d"
   "CMakeFiles/push_swap.dir/libft/ft_atoi.c.o"
   "CMakeFiles/push_swap.dir/libft/ft_atoi.c.o.d"
   "CMakeFiles/push_swap.dir/libft/ft_calloc.c.o"

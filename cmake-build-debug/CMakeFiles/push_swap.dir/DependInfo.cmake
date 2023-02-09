@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/goinfre/hyecheon/push_swap/deque.c" "CMakeFiles/push_swap.dir/deque.c.o" "gcc" "CMakeFiles/push_swap.dir/deque.c.o.d"
   "/goinfre/hyecheon/push_swap/libft/ft_atoi.c" "CMakeFiles/push_swap.dir/libft/ft_atoi.c.o" "gcc" "CMakeFiles/push_swap.dir/libft/ft_atoi.c.o.d"
   "/goinfre/hyecheon/push_swap/libft/ft_calloc.c" "CMakeFiles/push_swap.dir/libft/ft_calloc.c.o" "gcc" "CMakeFiles/push_swap.dir/libft/ft_calloc.c.o.d"
   "/goinfre/hyecheon/push_swap/libft/ft_memset.c" "CMakeFiles/push_swap.dir/libft/ft_memset.c.o" "gcc" "CMakeFiles/push_swap.dir/libft/ft_memset.c.o.d"

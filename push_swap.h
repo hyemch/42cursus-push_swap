@@ -36,14 +36,14 @@ typedef struct s_deque
 	t_node	*tail;
 }	t_deque;
 
-typedef struct s_deque_node
-{
-	int		num;
-	t_deque	*head_a;
-	t_deque	*head_b;
-	t_deque	*tail_a;
-	t_deque	*tail_b;
-}	t_deque_node;
+//typedef struct s_deque_node
+//{
+//	int		num;
+//	t_deque	*head_a;
+//	t_deque	*head_b;
+//	t_deque	*tail_a;
+//	t_deque	*tail_b;
+//}	t_deque_node;
 
 typedef struct s_info
 {
@@ -54,11 +54,11 @@ typedef struct s_info
 
 t_node	*new_node(int data);
 t_deque	*new_deque(void);
-int		addfront(t_deque *pdeque, t_node data);
-int		addrear(t_deque *pdeque, t_node data);
-t_node	*peekfront(t_deque *pdeque);
-t_node	*deletefrond(t_deque *pdeque);
-t_node	*peekrear(t_deque *pdeque);
-t_node	*deleterear(t_deque *pdeque);
+int		push_front(t_deque *pdeque, t_node data);
+int		push_rear(t_deque *pdeque, t_node data);
+t_node	*peek_front(t_deque *pdeque);
+t_node	*pop_frond(t_deque *pdeque);
+t_node	*peek_rear(t_deque *pdeque);
+t_node	*pop_rear(t_deque *pdeque);
 
 #endif

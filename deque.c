@@ -38,7 +38,7 @@ t_deque	*new_deque(void)
 	return (deque);
 }
 
-int	addfront(t_deque *pdeque, t_node data)
+int	push_front(t_deque *pdeque, t_node data)
 {
 	t_node	*new;
 
@@ -64,7 +64,7 @@ int	addfront(t_deque *pdeque, t_node data)
 	return (TRUE);
 }
 
-int	addrear(t_deque *pdeque, t_node data)
+int	push_rear(t_deque *pdeque, t_node data)
 {
 	t_node	*new;
 
@@ -90,18 +90,18 @@ int	addrear(t_deque *pdeque, t_node data)
 	return (TRUE);
 }
 
-t_node	*peekfront(t_deque *pdeque)
+t_node	*peek_front(t_deque *pdeque)
 {
 	if (pdeque->elementcnt == 0)
 		return (NULL);
 	return (pdeque->head);
 }
 
-t_node	*deletefrond(t_deque *pdeque)
+t_node	*pop_front(t_deque *pdeque)
 {
 	t_node	*ret;
 
-	ret = peekfront(pdeque);
+	ret = peek_front(pdeque);
 	if (ret == NULL)
 		return (NULL);
 	if (pdeque->elementcnt == 1)
@@ -119,18 +119,18 @@ t_node	*deletefrond(t_deque *pdeque)
 	return (ret);
 }
 
-t_node	*peekrear(t_deque *pdeque)
+t_node	*peek_rear(t_deque *pdeque)
 {
 	if (pdeque->elementcnt == 0)
 		return (NULL);
 	return (pdeque->tail);
 }
 
-t_node	*deleterear(t_deque *pdeque)
+t_node	*pop_rear(t_deque *pdeque)
 {
 	t_node	*ret;
 
-	ret = peekrear(pdeque);
+	ret = peek_rear(pdeque);
 	if (ret == NULL)
 		return (NULL);
 	if (pdeque->elementcnt == 1)
@@ -148,7 +148,7 @@ t_node	*deleterear(t_deque *pdeque)
 	return (ret);
 }
 
-static void	delete_deque(t_deque *pdeque)
+static void	free_deque(t_deque *pdeque)
 {
 	t_node	*curr;
 	t_node	*right;

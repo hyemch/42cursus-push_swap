@@ -9,6 +9,7 @@ include_directories(.
 add_executable(push_swap
         push_swap.c
         push_swap.h
+        deque.c
         ./libft/ft_calloc.c
         ./libft/ft_strjoin.c
         ./libft/ft_strlcpy.c

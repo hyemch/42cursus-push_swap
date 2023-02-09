@@ -83,10 +83,24 @@ CMakeFiles/push_swap.dir/push_swap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/push_swap.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /goinfre/hyecheon/push_swap/push_swap.c -o CMakeFiles/push_swap.dir/push_swap.c.s
 
+CMakeFiles/push_swap.dir/deque.c.o: CMakeFiles/push_swap.dir/flags.make
+CMakeFiles/push_swap.dir/deque.c.o: ../deque.c
+CMakeFiles/push_swap.dir/deque.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/push_swap.dir/deque.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/deque.c.o -MF CMakeFiles/push_swap.dir/deque.c.o.d -o CMakeFiles/push_swap.dir/deque.c.o -c /goinfre/hyecheon/push_swap/deque.c
+
+CMakeFiles/push_swap.dir/deque.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap.dir/deque.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /goinfre/hyecheon/push_swap/deque.c > CMakeFiles/push_swap.dir/deque.c.i
+
+CMakeFiles/push_swap.dir/deque.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/deque.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /goinfre/hyecheon/push_swap/deque.c -o CMakeFiles/push_swap.dir/deque.c.s
+
 CMakeFiles/push_swap.dir/libft/ft_calloc.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_calloc.c.o: ../libft/ft_calloc.c
 CMakeFiles/push_swap.dir/libft/ft_calloc.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/push_swap.dir/libft/ft_calloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/push_swap.dir/libft/ft_calloc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_calloc.c.o -MF CMakeFiles/push_swap.dir/libft/ft_calloc.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_calloc.c.o -c /goinfre/hyecheon/push_swap/libft/ft_calloc.c
 
 CMakeFiles/push_swap.dir/libft/ft_calloc.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/push_swap.dir/libft/ft_calloc.c.s: cmake_force
 CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
 CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o -MF CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o -c /goinfre/hyecheon/push_swap/libft/ft_strjoin.c
 
 CMakeFiles/push_swap.dir/libft/ft_strjoin.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/push_swap.dir/libft/ft_strjoin.c.s: cmake_force
 CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o: ../libft/ft_strlcpy.c
 CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o -MF CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o -c /goinfre/hyecheon/push_swap/libft/ft_strlcpy.c
 
 CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.s: cmake_force
 CMakeFiles/push_swap.dir/libft/ft_memset.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_memset.c.o: ../libft/ft_memset.c
 CMakeFiles/push_swap.dir/libft/ft_memset.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/push_swap.dir/libft/ft_memset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/push_swap.dir/libft/ft_memset.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_memset.c.o -MF CMakeFiles/push_swap.dir/libft/ft_memset.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_memset.c.o -c /goinfre/hyecheon/push_swap/libft/ft_memset.c
 
 CMakeFiles/push_swap.dir/libft/ft_memset.c.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/push_swap.dir/libft/ft_memset.c.s: cmake_force
 CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o: ../libft/ft_strlcat.c
 CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o -MF CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_strlcat.c.o -c /goinfre/hyecheon/push_swap/libft/ft_strlcat.c
 
 CMakeFiles/push_swap.dir/libft/ft_strlcat.c.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/push_swap.dir/libft/ft_strlcat.c.s: cmake_force
 CMakeFiles/push_swap.dir/libft/ft_strlen.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
 CMakeFiles/push_swap.dir/libft/ft_strlen.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/push_swap.dir/libft/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/push_swap.dir/libft/ft_strlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_strlen.c.o -MF CMakeFiles/push_swap.dir/libft/ft_strlen.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_strlen.c.o -c /goinfre/hyecheon/push_swap/libft/ft_strlen.c
 
 CMakeFiles/push_swap.dir/libft/ft_strlen.c.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/push_swap.dir/libft/ft_strlen.c.s: cmake_force
 CMakeFiles/push_swap.dir/libft/ft_atoi.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/push_swap.dir/libft/ft_atoi.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/push_swap.dir/libft/ft_atoi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/push_swap.dir/libft/ft_atoi.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_atoi.c.o -MF CMakeFiles/push_swap.dir/libft/ft_atoi.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_atoi.c.o -c /goinfre/hyecheon/push_swap/libft/ft_atoi.c
 
 CMakeFiles/push_swap.dir/libft/ft_atoi.c.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/push_swap.dir/libft/ft_atoi.c.s: cmake_force
 CMakeFiles/push_swap.dir/libft/ft_split.c.o: CMakeFiles/push_swap.dir/flags.make
 CMakeFiles/push_swap.dir/libft/ft_split.c.o: ../libft/ft_split.c
 CMakeFiles/push_swap.dir/libft/ft_split.c.o: CMakeFiles/push_swap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/push_swap.dir/libft/ft_split.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/push_swap.dir/libft/ft_split.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/push_swap.dir/libft/ft_split.c.o -MF CMakeFiles/push_swap.dir/libft/ft_split.c.o.d -o CMakeFiles/push_swap.dir/libft/ft_split.c.o -c /goinfre/hyecheon/push_swap/libft/ft_split.c
 
 CMakeFiles/push_swap.dir/libft/ft_split.c.i: cmake_force
@@ -198,6 +212,7 @@ CMakeFiles/push_swap.dir/libft/ft_split.c.s: cmake_force
 # Object files for target push_swap
 push_swap_OBJECTS = \
 "CMakeFiles/push_swap.dir/push_swap.c.o" \
+"CMakeFiles/push_swap.dir/deque.c.o" \
 "CMakeFiles/push_swap.dir/libft/ft_calloc.c.o" \
 "CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o" \
 "CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o" \
@@ -211,6 +226,7 @@ push_swap_OBJECTS = \
 push_swap_EXTERNAL_OBJECTS =
 
 push_swap: CMakeFiles/push_swap.dir/push_swap.c.o
+push_swap: CMakeFiles/push_swap.dir/deque.c.o
 push_swap: CMakeFiles/push_swap.dir/libft/ft_calloc.c.o
 push_swap: CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o
 push_swap: CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o
@@ -221,7 +237,7 @@ push_swap: CMakeFiles/push_swap.dir/libft/ft_atoi.c.o
 push_swap: CMakeFiles/push_swap.dir/libft/ft_split.c.o
 push_swap: CMakeFiles/push_swap.dir/build.make
 push_swap: CMakeFiles/push_swap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable push_swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/goinfre/hyecheon/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable push_swap"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/push_swap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

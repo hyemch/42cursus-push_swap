@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "push_swap::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-push_swap-Debug-23d4a77a2c57f5c9ebfa.json",
+					"jsonFile" : "target-push_swap-Debug-fb389ea4702e9f6ffcf1.json",
 					"name" : "push_swap",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/goinfre/hyecheon/pushswap/cmake-build-debug",
-		"source" : "/goinfre/hyecheon/pushswap"
+		"build" : "/goinfre/hyecheon/push_swap/cmake-build-debug",
+		"source" : "/goinfre/hyecheon/push_swap"
 	},
 	"version" : 
 	{

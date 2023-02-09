@@ -12,197 +12,171 @@
 
 #include "push_swap.h"
 
-t_deque	*deque_new(int data)
+t_node	*new_node(int data)
+{
+	t_node	*node;
+
+	node = (t_node *)malloc(sizeof(t_node));
+	if (!node)
+		return (0);
+	node->data = data;
+	node->next = NULL;
+	node->prev = NULL;
+	return (node);
+}
+
+t_deque	*new_deque(void)
 {
 	t_deque	*deque;
 
 	deque = (t_deque *)malloc(sizeof(t_deque));
 	if (!deque)
 		return (0);
-	deque->data = data;
-	deque->prev = NULL;
-	deque->next = NULL;
+	deque->elementcnt = 0;
+	deque->head = NULL;
+	deque->tail = NULL;
 	return (deque);
 }
 
-#define TRUE		1
-#define FALSE		0
-
-typedef struct DequeNodeType
+int	addfront(t_deque *pdeque, t_node data)
 {
-	char					data;
-	int						vertexId;
-	struct DequeNodeType*	pRLink;
-	struct DequeNodeType*	pLLink;
-}	DequeNode;
+	t_node	*new;
 
-typedef struct LinkedDequeType
-{
-	int			currentElementCount;
-	DequeNode*	pFrontNode;
-	DequeNode*	pRearNode;
-}	LinkedDeque;
-
-LinkedDeque*	createLinkedDeque()
-{
-	LinkedDeque	*deque;
-
-	deque = (LinkedDeque *)malloc(sizeof(LinkedDeque));
-	if (deque == NULL)
-		return (NULL);
-	deque->currentElementCount = 0;
-	deque->pFrontNode = NULL;
-	deque->pRearNode = NULL;
-	return (deque);
-}
-
-DequeNode*	peekFrontLD(LinkedDeque* pDeque)
-{
-	if (pDeque->currentElementCount == 0)
-		return (NULL);
-	return (pDeque->pFrontNode);
-}
-
-DequeNode*	peekRearLD(LinkedDeque* pDeque)
-{
-	if (pDeque->currentElementCount == 0)
-		return (NULL);
-	return (pDeque->pRearNode);
-}
-
-int	insertFrontLD(LinkedDeque* pDeque, DequeNode element)
-{
-	DequeNode	*new;
-
-	new = (DequeNode *)malloc(sizeof(DequeNode));
+	new = (t_node *)malloc(sizeof(t_node));
 	if (new == NULL)
-		return (FALSE);
-	*new = element;
-	if (pDeque->currentElementCount == 0)
+		return (0);
+	*new = data;
+	if (pdeque->elementcnt == 0)
 	{
-		new->pLLink = NULL;
-		new->pRLink = NULL;
-		pDeque->pFrontNode = new;
-		pDeque->pRearNode = new;
+		new->prev = NULL;
+		new->next = NULL;
+		pdeque->head = new;
+		pdeque->tail = new;
 	}
 	else
 	{
-		new->pLLink = NULL;
-		new->pRLink = pDeque->pFrontNode;
-		pDeque->pFrontNode->pLLink = new;
-		pDeque->pFrontNode = new;
+		new->prev = NULL;
+		new->next = pdeque->head;
+		pdeque->head->prev = new;
+		pdeque->head = new;
 	}
-	pDeque->currentElementCount++;
+	pdeque->elementcnt++;
 	return (TRUE);
 }
 
-int	insertRearLD(LinkedDeque* pDeque, DequeNode element)
+int	addrear(t_deque *pdeque, t_node data)
 {
-	DequeNode	*new;
+	t_node	*new;
 
-	new = (DequeNode *)malloc(sizeof(DequeNode));
+	new = (t_node *)malloc(sizeof(t_node));
 	if (new == NULL)
-		return (FALSE);
-	*new = element;
-	if (pDeque->currentElementCount == 0)
+		return (0);
+	*new = data;
+	if (pdeque->elementcnt == 0)
 	{
-		new->pLLink = NULL;
-		new->pRLink = NULL;
-		pDeque->pFrontNode = new;
-		pDeque->pRearNode = new;
+		new->prev = NULL;
+		new->next = NULL;
+		pdeque->head = new;
+		pdeque->tail = new;
 	}
 	else
 	{
-		new->pRLink = NULL;
-		new->pLLink = pDeque->pRearNode;
-		pDeque->pRearNode->pRLink = new;
-		pDeque->pRearNode = new;
+		new->next = NULL;
+		new->prev = pdeque->tail;
+		pdeque->tail->next = new;
+		pdeque->tail = new;
 	}
-	pDeque->currentElementCount++;
+	pdeque->elementcnt++;
 	return (TRUE);
 }
 
-DequeNode*	deleteFrontLD(LinkedDeque* pDeque)
+t_node	*peekfront(t_deque *pdeque)
 {
-	DequeNode	*ret;
+	if (pdeque->elementcnt == 0)
+		return (NULL);
+	return (pdeque->head);
+}
 
-	ret = peekFrontLD(pDeque);
+t_node	*deletefrond(t_deque *pdeque)
+{
+	t_node	*ret;
+
+	ret = peekfront(pdeque);
 	if (ret == NULL)
 		return (NULL);
-	if (pDeque->currentElementCount == 1)
+	if (pdeque->elementcnt == 1)
 	{
-		pDeque->pFrontNode = NULL;
-		pDeque->pRearNode = NULL;
+		pdeque->head = NULL;
+		pdeque->tail = NULL;
 	}
 	else
 	{
-		pDeque->pFrontNode = ret->pRLink;
-		pDeque->pFrontNode->pLLink = NULL;
+		pdeque->head = ret->next;
+		pdeque->head->prev = NULL;
 	}
-	ret->pRLink = NULL;
-	pDeque->currentElementCount--;
+	ret->next = NULL;
+	pdeque->elementcnt--;
 	return (ret);
 }
 
-DequeNode*	deleteRearLD(LinkedDeque* pDeque)
+t_node	*peekrear(t_deque *pdeque)
 {
-	DequeNode	*ret;
+	if (pdeque->elementcnt == 0)
+		return (NULL);
+	return (pdeque->tail);
+}
 
-	ret = peekRearLD(pDeque);
+t_node	*deleterear(t_deque *pdeque)
+{
+	t_node	*ret;
+
+	ret = peekrear(pdeque);
 	if (ret == NULL)
 		return (NULL);
-	if (pDeque->currentElementCount == 1)
+	if (pdeque->elementcnt == 1)
 	{
-		pDeque->pFrontNode = NULL;
-		pDeque->pRearNode = NULL;
+		pdeque->tail = NULL;
+		pdeque->head = NULL;
 	}
 	else
 	{
-		pDeque->pRearNode = ret->pLLink;
-		pDeque->pRearNode->pRLink = NULL;
+		pdeque->tail = ret->prev;
+		pdeque->tail->next = NULL;
 	}
-	ret->pLLink = NULL;
-	pDeque->currentElementCount--;
+	ret->prev = NULL;
+	pdeque->elementcnt--;
 	return (ret);
 }
 
-
-void	deleteLinkedDeque(LinkedDeque* pDeque)
+static void	delete_deque(t_deque *pdeque)
 {
-	DequeNode	*curr;
-	DequeNode	*next;
+	t_node	*curr;
+	t_node	*right;
 
-	curr = pDeque->pFrontNode;
+	curr = pdeque->head;
 	while (curr)
 	{
-		next = curr->pRLink;
+		right = curr->next;
 		free(curr);
-		curr = next;
+		curr = right;
 	}
-	free(pDeque);
+	free(pdeque);
 }
 
-int	isLinkedDequeEmpty(LinkedDeque* pDeque)
+static void	display_deque(t_deque *pdeque)
 {
-	return (pDeque->currentElementCount == 0);
-}
+	t_node	*curr;
 
-void	displayLinkedDeque(LinkedDeque *pDeque)
-{
-	DequeNode	*curr;
-
-	curr = pDeque->pFrontNode;
+	curr = pdeque->head;
 	if (curr == NULL)
 	{
 		printf("empty deque\n");
 		return ;
 	}
-	while (curr->pRLink)
+	while (curr->next)
 	{
-		// printf("%c -> ", curr->data);
-		printf("%d -> ", curr->vertexId);
-		curr = curr->pRLink;
+		printf("%d -> ", curr->data);
+		curr = curr->next;
 	}
-	// printf("%c\n", curr->data);
-	printf("%d\n", curr->vertexId);
+	printf("%d\n", curr->data);
 }

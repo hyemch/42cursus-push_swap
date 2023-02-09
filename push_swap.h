@@ -19,13 +19,14 @@
 # include <stdlib.h>
 # include <stdio.h>
 
+# define TRUE	1
 # define ERROR -1
 
 typedef struct s_node
 {
 	int				data;
-	struct s_list	*prev;
-	struct s_list	*next;
+	struct s_node	*prev;
+	struct s_node	*next;
 }	t_node;
 
 typedef struct s_deque
@@ -50,5 +51,14 @@ typedef struct s_info
 	int		ret_cnt;
 	int		*ret_arr;
 }	t_info;
+
+t_node	*new_node(int data);
+t_deque	*new_deque(void);
+int		addfront(t_deque *pdeque, t_node data);
+int		addrear(t_deque *pdeque, t_node data);
+t_node	*peekfront(t_deque *pdeque);
+t_node	*deletefrond(t_deque *pdeque);
+t_node	*peekrear(t_deque *pdeque);
+t_node	*deleterear(t_deque *pdeque);
 
 #endif

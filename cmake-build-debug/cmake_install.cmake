@@ -1,4 +1,4 @@
-# Install script for directory: /goinfre/hyecheon/pushswap
+# Install script for directory: /goinfre/hyecheon/push_swap
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/goinfre/hyecheon/pushswap/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/goinfre/hyecheon/push_swap/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

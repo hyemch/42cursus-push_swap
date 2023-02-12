@@ -25,27 +25,8 @@ t_node	*new_node(int data)
 	return (node);
 }
 
-t_deque	*new_deque(void)
+int	add_front(t_deque *pdeque, t_node *new)
 {
-	t_deque	*deque;
-
-	deque = (t_deque *)malloc(sizeof(t_deque));
-	if (!deque)
-		return (0);
-	deque->elementcnt = 0;
-	deque->head = NULL;
-	deque->tail = NULL;
-	return (deque);
-}
-
-int	push_front(t_deque *pdeque, t_node data)
-{
-	t_node	*new;
-
-	new = (t_node *)malloc(sizeof(t_node));
-	if (new == NULL)
-		return (0);
-	*new = data;
 	if (pdeque->elementcnt == 0)
 	{
 		new->prev = NULL;
@@ -64,14 +45,8 @@ int	push_front(t_deque *pdeque, t_node data)
 	return (TRUE);
 }
 
-int	push_rear(t_deque *pdeque, t_node data)
+int	add_rear(t_deque *pdeque, t_node *new)
 {
-	t_node	*new;
-
-	new = (t_node *)malloc(sizeof(t_node));
-	if (new == NULL)
-		return (0);
-	*new = data;
 	if (pdeque->elementcnt == 0)
 	{
 		new->prev = NULL;
@@ -97,7 +72,7 @@ t_node	*peek_front(t_deque *pdeque)
 	return (pdeque->head);
 }
 
-t_node	*pop_front(t_deque *pdeque)
+t_node	*del_front(t_deque *pdeque)
 {
 	t_node	*ret;
 
@@ -119,18 +94,18 @@ t_node	*pop_front(t_deque *pdeque)
 	return (ret);
 }
 
-t_node	*peek_rear(t_deque *pdeque)
+t_node	*peek_tail(t_deque *pdeque)
 {
 	if (pdeque->elementcnt == 0)
 		return (NULL);
 	return (pdeque->tail);
 }
 
-t_node	*pop_rear(t_deque *pdeque)
+t_node	*del_tail(t_deque *pdeque)
 {
 	t_node	*ret;
 
-	ret = peek_rear(pdeque);
+	ret = peek_tail(pdeque);
 	if (ret == NULL)
 		return (NULL);
 	if (pdeque->elementcnt == 1)
@@ -148,22 +123,22 @@ t_node	*pop_rear(t_deque *pdeque)
 	return (ret);
 }
 
-static void	free_deque(t_deque *pdeque)
+void	free_deque(t_deque *pdeque)
 {
 	t_node	*curr;
-	t_node	*right;
+	t_node	*next;
 
 	curr = pdeque->head;
 	while (curr)
 	{
-		right = curr->next;
+		next = curr->next;
 		free(curr);
-		curr = right;
+		curr = next;
 	}
 	free(pdeque);
 }
 
-static void	display_deque(t_deque *pdeque)
+void	print_deque(t_deque *pdeque)
 {
 	t_node	*curr;
 
@@ -175,8 +150,29 @@ static void	display_deque(t_deque *pdeque)
 	}
 	while (curr->next)
 	{
-		printf("%d -> ", curr->data);
+		printf("%d->", curr->data);
 		curr = curr->next;
 	}
 	printf("%d\n", curr->data);
 }
+
+void	arr_to_deque(t_info info, t_deque *pdeque)
+{
+	int		i;
+	t_node	*new;
+
+	i = 0;
+	while (i < info.ret_cnt)
+	{
+		new = new_node(info.ret_arr[i]);
+		if (new == NULL)
+		{
+			free_deque(pdeque);
+			error_exit("node allocate error\n");
+		}
+		add_rear(pdeque, new);
+		i++;
+	}
+	print_deque(pdeque);
+}
+

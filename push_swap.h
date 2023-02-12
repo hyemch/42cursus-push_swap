@@ -52,13 +52,18 @@ typedef struct s_info
 	int		*ret_arr;
 }	t_info;
 
+void	error_exit(char *error_message);
+
 t_node	*new_node(int data);
 t_deque	*new_deque(void);
-int		push_front(t_deque *pdeque, t_node data);
-int		push_rear(t_deque *pdeque, t_node data);
+int		add_front(t_deque *pdeque, t_node *new);
+int		add_rear(t_deque *pdeque, t_node *new);
 t_node	*peek_front(t_deque *pdeque);
-t_node	*pop_frond(t_deque *pdeque);
-t_node	*peek_rear(t_deque *pdeque);
-t_node	*pop_rear(t_deque *pdeque);
+t_node	*del_front(t_deque *pdeque);
+t_node	*peek_tail(t_deque *pdeque);
+t_node	*del_tail(t_deque *pdeque);
+void	free_deque(t_deque *pdeque);
+void	print_deque(t_deque *pdeque);
+void	arr_to_deque(t_info info, t_deque *pdeque);
 
 #endif

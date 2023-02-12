@@ -26,7 +26,7 @@
  * 	atoi 해서 넣어주기
  */
 
-static void	error_exit(char *error_message)
+void	error_exit(char *error_message)
 {
 	write(2, "Error\n", 6);
 	write(2, error_message, ft_strlen(error_message));
@@ -80,7 +80,6 @@ static int	valid_arg(int argc, char **argv)
 	i = 1;
 	while (i < argc && argv[i] != NULL)
 	{
-		printf ("argv[%d] : %s\n", i, argv[i]);
 		if (check_arg(argv[i]) != ERROR && check_arg_num(argv[i]) != ERROR)
 			i++;
 		else
@@ -125,7 +124,6 @@ static void	split_arg(t_info *info)
 	while (arr[i])
 	{
 		info->ret_arr[i] = ft_atoi(arr[i]);
-		printf("ret_arr[%d]: %d\n", i, info->ret_arr[i]);
 		i++;
 	}
 	check_intarr(info);
@@ -162,9 +160,12 @@ static int	parsing_arg(t_info *info, int argc, char **argv)
 int	main(int argc, char **argv)
 {
 	t_info	info;
+	t_deque	deque;
 
 	if (argc < 2)
 		error_exit("argument count error\n");
 	ft_memset(&info, 0, sizeof(info));
+	ft_memset(&deque, 0, sizeof(deque));
 	parsing_arg(&info, argc, argv);
+	arr_to_deque(info, &deque);
 }

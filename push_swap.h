@@ -56,14 +56,14 @@ void	error_exit(char *error_message);
 
 t_node	*new_node(int data);
 t_deque	*new_deque(void);
-int		add_front(t_deque *pdeque, t_node *new);
-int		add_rear(t_deque *pdeque, t_node *new);
 t_node	*peek_front(t_deque *pdeque);
 t_node	*del_front(t_deque *pdeque);
 t_node	*peek_tail(t_deque *pdeque);
 t_node	*del_tail(t_deque *pdeque);
+int		add_front(t_deque *pdeque, t_node *new);
+int		add_rear(t_deque *pdeque, t_node *new);
 void	free_deque(t_deque *pdeque);
 void	print_deque(t_deque *pdeque);
-void	arr_to_deque(t_info info, t_deque *pdeque);
+void	arr_to_deque(t_info info, t_deque *deque_a);
 
 #endif

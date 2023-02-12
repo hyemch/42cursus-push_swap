@@ -156,7 +156,7 @@ void	print_deque(t_deque *pdeque)
 	printf("%d\n", curr->data);
 }
 
-void	arr_to_deque(t_info info, t_deque *pdeque)
+void	arr_to_deque(t_info info, t_deque *deque_a)
 {
 	int		i;
 	t_node	*new;
@@ -167,12 +167,12 @@ void	arr_to_deque(t_info info, t_deque *pdeque)
 		new = new_node(info.ret_arr[i]);
 		if (new == NULL)
 		{
-			free_deque(pdeque);
+			free_deque(deque_a);
 			error_exit("node allocate error\n");
 		}
-		add_rear(pdeque, new);
+		add_rear(deque_a, new);
 		i++;
 	}
-	print_deque(pdeque);
+	print_deque(deque_a);
 }
 

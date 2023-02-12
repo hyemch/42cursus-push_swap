@@ -160,12 +160,14 @@ static int	parsing_arg(t_info *info, int argc, char **argv)
 int	main(int argc, char **argv)
 {
 	t_info	info;
-	t_deque	deque;
+	t_deque	deque_a;
+	t_deque	deque_b;
 
 	if (argc < 2)
 		error_exit("argument count error\n");
 	ft_memset(&info, 0, sizeof(info));
-	ft_memset(&deque, 0, sizeof(deque));
+	ft_memset(&deque_a, 0, sizeof(deque_a));
+	ft_memset(&deque_b, 0, sizeof(deque_b));
 	parsing_arg(&info, argc, argv);
-	arr_to_deque(info, &deque);
+	arr_to_deque(info, &deque_a);
 }

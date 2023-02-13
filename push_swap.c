@@ -170,4 +170,11 @@ int	main(int argc, char **argv)
 	ft_memset(&deque_b, 0, sizeof(deque_b));
 	parsing_arg(&info, argc, argv);
 	arr_to_deque(info, &deque_a);
+	pb(&deque_a, &deque_b);
+	pb(&deque_a, &deque_b);
+	ss(&deque_a, &deque_b);
+	rr(&deque_a, &deque_b);
+	rrr(&deque_a, &deque_b);
+	print_deque(&deque_a);
+	print_deque(&deque_b);
 }

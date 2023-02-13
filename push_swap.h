@@ -36,15 +36,6 @@ typedef struct s_deque
 	t_node	*tail;
 }	t_deque;
 
-//typedef struct s_deque_node
-//{
-//	int		num;
-//	t_deque	*head_a;
-//	t_deque	*head_b;
-//	t_deque	*tail_a;
-//	t_deque	*tail_b;
-//}	t_deque_node;
-
 typedef struct s_info
 {
 	char	*ret;
@@ -55,15 +46,26 @@ typedef struct s_info
 void	error_exit(char *error_message);
 
 t_node	*new_node(int data);
-t_deque	*new_deque(void);
 t_node	*peek_front(t_deque *pdeque);
 t_node	*del_front(t_deque *pdeque);
-t_node	*peek_tail(t_deque *pdeque);
-t_node	*del_tail(t_deque *pdeque);
+t_node	*peek_rear(t_deque *pdeque);
+t_node	*del_rear(t_deque *pdeque);
 int		add_front(t_deque *pdeque, t_node *new);
 int		add_rear(t_deque *pdeque, t_node *new);
 void	free_deque(t_deque *pdeque);
 void	print_deque(t_deque *pdeque);
 void	arr_to_deque(t_info info, t_deque *deque_a);
+
+void	sa(t_deque *deque_a);
+void	sb(t_deque *deque_b);
+void	ss(t_deque *deque_a, t_deque *deque_b);
+void	pa(t_deque *deque_a, t_deque *deque_b);
+void	pb(t_deque *deque_a, t_deque *deque_b);
+void	ra(t_deque *deque_a);
+void	rb(t_deque *deque_b);
+void	rr(t_deque *deque_a, t_deque *deque_b);
+void	rra(t_deque *deque_a);
+void	rrb(t_deque *deque_b);
+void	rrr(t_deque *deque_a, t_deque *deque_b);
 
 #endif

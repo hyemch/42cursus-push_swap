@@ -94,18 +94,18 @@ t_node	*del_front(t_deque *pdeque)
 	return (ret);
 }
 
-t_node	*peek_tail(t_deque *pdeque)
+t_node	*peek_rear(t_deque *pdeque)
 {
 	if (pdeque->elementcnt == 0)
 		return (NULL);
 	return (pdeque->tail);
 }
 
-t_node	*del_tail(t_deque *pdeque)
+t_node	*del_rear(t_deque *pdeque)
 {
 	t_node	*ret;
 
-	ret = peek_tail(pdeque);
+	ret = peek_rear(pdeque);
 	if (ret == NULL)
 		return (NULL);
 	if (pdeque->elementcnt == 1)

@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/libft/ft_strlen.c.o.d"
   "CMakeFiles/push_swap.dir/push_swap.c.o"
   "CMakeFiles/push_swap.dir/push_swap.c.o.d"
+  "CMakeFiles/push_swap.dir/utils.c.o"
+  "CMakeFiles/push_swap.dir/utils.c.o.d"
   "push_swap"
   "push_swap.pdb"
 )

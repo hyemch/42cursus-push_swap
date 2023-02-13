@@ -12,31 +12,94 @@
 
 #include "push_swap.h"
 
-char	*ft_strsjoin(char *s1, char *s2)
+void	sa(t_deque *deque_a)
 {
-	char	*str;
-	int		i;
-	int		j;
+	int	tmp;
 
-	if (!s1 && !s2)
-		return (0);
-	else if (!s1)
-		return (ft_strdup(s2));
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!str)
-		return (0);
-	ft_memset(str, 0, ft_strlen(s1) + ft_strlen(s2) + 1);
-	i = -1;
-	j = 0;
-	while (s1[++i])
-		str[i] = s1[i];
-	while (s2[j])
-		str[i++] = s2[j++];
-	str[i] = '\0';
-	if (s1 != NULL)
-	{
-		free (s1);
-		s1 = NULL;
-	}
-	return (str);
+	if (deque_a->head == NULL)
+		return ;
+	tmp = deque_a->head->data;
+	deque_a->head->data = deque_a->head->next->data;
+	deque_a->head->next->data = tmp;
+}
+
+void	sb(t_deque *deque_b)
+{
+	int	tmp;
+
+	if (deque_b->head == NULL)
+		return ;
+	tmp = deque_b->head->data;
+	deque_b->head->data = deque_b->head->next->data;
+	deque_b->head->next->data = tmp;
+}
+
+void	ss(t_deque *deque_a, t_deque *deque_b)
+{
+	sa(deque_a);
+	sb(deque_b);
+}
+
+void	pa(t_deque *deque_a, t_deque *deque_b)
+{
+	t_node	*new;
+
+	if (deque_b->head == NULL)
+		return ;
+	new = del_front(deque_b);
+	add_front(deque_a, new);
+}
+
+void	pb(t_deque *deque_a, t_deque *deque_b)
+{
+	t_node	*new;
+
+	if (deque_a->head == NULL)
+		return ;
+	new = del_front(deque_a);
+	add_front(deque_b, new);
+}
+
+void	ra(t_deque *deque_a)
+{
+	t_node	*new;
+
+	new = del_front(deque_a);
+	add_rear(deque_a, new);
+}
+
+void	rb(t_deque *deque_b)
+{
+	t_node	*new;
+
+	new = del_front(deque_b);
+	add_rear(deque_b, new);
+}
+
+void	rr(t_deque *deque_a, t_deque *deque_b)
+{
+	ra(deque_a);
+	rb(deque_b);
+}
+
+void	rra(t_deque *deque_a)
+{
+	t_node	*new;
+
+	new = del_rear(deque_a);
+	add_front(deque_a, new);
+}
+
+void	rrb(t_deque *deque_b)
+{
+	t_node	*new;
+
+	new = del_rear(deque_b);
+	add_front(deque_b, new);
+}
+
+void	rrr(t_deque *deque_a, t_deque *deque_b)
+{
+	rra(deque_a);
+	rrb(deque_b);
 }

@@ -162,6 +162,7 @@ int	main(int argc, char **argv)
 	t_info	info;
 	t_deque	deque_a;
 	t_deque	deque_b;
+	int		i;
 
 	if (argc < 2)
 		error_exit("argument count error\n");
@@ -170,11 +171,13 @@ int	main(int argc, char **argv)
 	ft_memset(&deque_b, 0, sizeof(deque_b));
 	parsing_arg(&info, argc, argv);
 	arr_to_deque(info, &deque_a);
-	pb(&deque_a, &deque_b);
-	pb(&deque_a, &deque_b);
-	ss(&deque_a, &deque_b);
-	rr(&deque_a, &deque_b);
-	rrr(&deque_a, &deque_b);
-	print_deque(&deque_a);
-	print_deque(&deque_b);
+	sort_arr(info, 0, info.ret_cnt);
+	i = 0;
+	while (i < info.ret_cnt)
+	{
+		printf("sort_arr : %d\n", info.ret_arr[i]);
+		i++;
+	}
+//	print_deque(&deque_a);
+//	print_deque(&deque_b);
 }

@@ -11,6 +11,7 @@ add_executable(push_swap
         push_swap.h
         deque.c
         utils.c
+        sort.c
         ./libft/ft_calloc.c
         ./libft/ft_strjoin.c
         ./libft/ft_strlcpy.c

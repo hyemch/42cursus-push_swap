@@ -39,8 +39,13 @@ typedef struct s_deque
 typedef struct s_info
 {
 	char	*ret;
-	int		ret_cnt;
 	int		*ret_arr;
+	int		ret_cnt;
+	int		a;
+	int		b;
+	int		c;
+	int		pivot1;
+	int		pivot2;
 }	t_info;
 
 void	error_exit(char *error_message);
@@ -67,5 +72,11 @@ void	rr(t_deque *deque_a, t_deque *deque_b);
 void	rra(t_deque *deque_a);
 void	rrb(t_deque *deque_b);
 void	rrr(t_deque *deque_a, t_deque *deque_b);
+
+void	swap(int *arr, int a, int b);
+void	check_pivot(t_info info, int left, int right);
+void	sort_arr(t_info info, int left, int right);
+void	sort_partition(t_info *info);
+t_info	get_sort(t_info *info);
 
 #endif

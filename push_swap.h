@@ -74,7 +74,6 @@ void	rrb(t_deque *deque_b);
 void	rrr(t_deque *deque_a, t_deque *deque_b);
 
 void	swap(int *arr, int a, int b);
-void	check_pivot(t_info info, int left, int right);
 void	sort_arr(t_info info, int left, int right);
 void	sort_partition(t_info *info);
 t_info	get_sort(t_info *info);

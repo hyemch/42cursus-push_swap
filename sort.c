@@ -21,35 +21,16 @@ void	swap(int *arr, int a, int b)
 	arr[b] = tmp;
 }
 
-//void	check_pivot(t_info info, int left, int right)
-//{
-//	while (info.b <= info.c)
-//	{
-//		if (info.ret_arr[info.b] < info.pivot1)
-//		{
-//			swap (info.ret_arr, info.b, info.a);
-//			info.a++;
-//		}
-//		else
-//		{
-//			if (info.ret_arr[info.b] > info.pivot2)
-//			{
-//				while (info.ret_arr[info.c] > info.pivot2 && info.b < info.c)
-//					info.c--;
-//				swap(info.ret_arr, info.b, info.c);
-//				info.c--;
-//				if (info.ret_arr[info.b] < info.pivot1)
-//				{
-//					swap(info.ret_arr, info.b, info.a);
-//					info.a++;
-//				}
-//			}
-//		}
-//		info.b++;
-//	}
-//	info.a--;
-//	info.c++;
-//}
+//a = 1영역에 들어가는 "다음" 위치를 가리키는 변수 (left 보다 작은 값이 들어가는 자리)
+//b = 현재 인덱스
+//c = 3영역에 들어갈 "다음" 위치를 가리키는 변수 (right 보다 큰 값이 들어가는 자리)
+/*
+ * 1영역 = left ~ pivot1 -1
+ * pivot1
+ * 2영역 = pivot1 + 1 ~ pivot2 - 1
+ * pivot2
+ * 3영역 = pivot2 + 1 ~ right
+ * */
 
 void	sort_arr(t_info info, int left, int right)
 {

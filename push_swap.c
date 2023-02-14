@@ -171,7 +171,7 @@ int	main(int argc, char **argv)
 	ft_memset(&deque_b, 0, sizeof(deque_b));
 	parsing_arg(&info, argc, argv);
 	arr_to_deque(info, &deque_a);
-	sort_arr(info, 0, info.ret_cnt);
+	sort_arr(info, 0, info.ret_cnt - 1);
 	i = 0;
 	while (i < info.ret_cnt)
 	{

@@ -393,6 +393,30 @@ sort.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort.c.s
 .PHONY : sort.c.s
 
+spr.o: spr.c.o
+.PHONY : spr.o
+
+# target to build an object file
+spr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/spr.c.o
+.PHONY : spr.c.o
+
+spr.i: spr.c.i
+.PHONY : spr.i
+
+# target to preprocess a source file
+spr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/spr.c.i
+.PHONY : spr.c.i
+
+spr.s: spr.c.s
+.PHONY : spr.s
+
+# target to generate assembly for a file
+spr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/spr.c.s
+.PHONY : spr.c.s
+
 utils.o: utils.c.o
 .PHONY : utils.o
 
@@ -459,6 +483,9 @@ help:
 	@echo "... sort.o"
 	@echo "... sort.i"
 	@echo "... sort.s"
+	@echo "... spr.o"
+	@echo "... spr.i"
+	@echo "... spr.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

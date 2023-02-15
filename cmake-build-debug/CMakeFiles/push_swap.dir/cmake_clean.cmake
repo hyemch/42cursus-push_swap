@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/push_swap.c.o.d"
   "CMakeFiles/push_swap.dir/sort.c.o"
   "CMakeFiles/push_swap.dir/sort.c.o.d"
+  "CMakeFiles/push_swap.dir/spr.c.o"
+  "CMakeFiles/push_swap.dir/spr.c.o.d"
   "CMakeFiles/push_swap.dir/utils.c.o"
   "CMakeFiles/push_swap.dir/utils.c.o.d"
   "push_swap"

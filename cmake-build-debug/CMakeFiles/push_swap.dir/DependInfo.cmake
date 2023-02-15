@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/goinfre/hyecheon/pushswap/libft/ft_strlen.c" "CMakeFiles/push_swap.dir/libft/ft_strlen.c.o" "gcc" "CMakeFiles/push_swap.dir/libft/ft_strlen.c.o.d"
   "/goinfre/hyecheon/pushswap/push_swap.c" "CMakeFiles/push_swap.dir/push_swap.c.o" "gcc" "CMakeFiles/push_swap.dir/push_swap.c.o.d"
   "/goinfre/hyecheon/pushswap/sort.c" "CMakeFiles/push_swap.dir/sort.c.o" "gcc" "CMakeFiles/push_swap.dir/sort.c.o.d"
+  "/goinfre/hyecheon/pushswap/spr.c" "CMakeFiles/push_swap.dir/spr.c.o" "gcc" "CMakeFiles/push_swap.dir/spr.c.o.d"
   "/goinfre/hyecheon/pushswap/utils.c" "CMakeFiles/push_swap.dir/utils.c.o" "gcc" "CMakeFiles/push_swap.dir/utils.c.o.d"
   )
 

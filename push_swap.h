@@ -75,8 +75,9 @@ void	rrr(t_deque *deque_a, t_deque *deque_b);
 
 void	swap(int *arr, int a, int b);
 void	sort_arr(t_info info, int left, int right);
-t_info	sort_partition(t_info *info);
 void	partition_1(t_info *info);
 void	partition_2(t_info *info);
+t_info	sort_partition(t_info *info);
+
 
 #endif

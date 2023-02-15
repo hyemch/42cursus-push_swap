@@ -118,6 +118,9 @@
 		<Unit filename="/goinfre/hyecheon/pushswap/sort.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/goinfre/hyecheon/pushswap/spr.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/goinfre/hyecheon/pushswap/utils.c">
 			<Option target="push_swap"/>
 		</Unit>

@@ -178,6 +178,7 @@ int	main(int argc, char **argv)
 		printf("sort_arr : %d\n", info.ret_arr[i]);
 		i++;
 	}
+	sort_lst(info, &deque_a, &deque_b);
 //	print_deque(&deque_a);
 //	print_deque(&deque_b);
 }

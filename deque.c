@@ -143,6 +143,7 @@ void	print_deque(t_deque *pdeque)
 	t_node	*curr;
 
 	curr = pdeque->head;
+	printf("lst : ");
 	if (curr == NULL)
 	{
 		printf("empty deque\n");

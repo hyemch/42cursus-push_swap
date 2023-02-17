@@ -117,6 +117,7 @@ static void	split_arg(t_info *info)
 	while (arr[i])
 	{
 		info->ret_cnt++;
+		info->lst_cnt++;
 		i++;
 	}
 	i = 0;
@@ -178,7 +179,7 @@ int	main(int argc, char **argv)
 		printf("sort_arr : %d\n", info.ret_arr[i]);
 		i++;
 	}
-	sort_lst(info, &deque_a, &deque_b);
-//	print_deque(&deque_a);
-//	print_deque(&deque_b);
+	a_to_b(info, &deque_a, &deque_b);
+	print_deque(&deque_a);
+	print_deque(&deque_b);
 }

@@ -55,6 +55,13 @@ typedef struct s_info
 	int		lst_cnt;
 }	t_info;
 
+typedef struct s_pivot
+{
+	int	s;
+	int	m;
+	int	l;
+}	t_pivot;
+
 void	error_exit(char *error_message);
 
 t_node	*new_node(int data);
@@ -89,5 +96,8 @@ t_info	sort_partition(t_info *info);
 t_info	find_pivot(int cur, int cnt, t_info *info);
 void	sort_lst(t_info info, t_deque *deque_a, t_deque *deque_b, int lst_cnt);
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b);
+void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
+void	b_to_a(t_info info, t_deque *deque_a, t_deque *deque_b);
+void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
 
 #endif

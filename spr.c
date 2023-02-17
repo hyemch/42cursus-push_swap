@@ -66,14 +66,20 @@ t_info	find_pivot(int cur, int cnt, t_info *info)
 	int	*arr;
 
 	arr = info->ret_arr;
-	info->p1 = arr[cur +(cnt / 3)];
-	info->p2 = arr[cur +(cnt / 3) * 2];
+	if ((cur + cnt / 3) * 2 < info->ret_cnt)
+	{
+		info->p1 = arr[cur +(cnt / 3)];
+		info->p2 = arr[cur +(cnt / 3) * 2];
+	}
+	else
+		error_exit("pivot error\n");
 	return (*info);
 }
 
 
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 {
+	int		i;
 	t_pivot	a;
 
 	ft_memset(&a, 0, sizeof(a));
@@ -83,13 +89,16 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 	printf ("pivot1 : %d\n", info.p1);
 	printf ("pivot2 : %d\n", info.p2);
 	part_atob(&info, deque_a, deque_b, &a);
-	info.lst_cnt = a.s;
+	info.lst_cnt = a.l;
+	info.cur = a.s + a.m;
 	a_to_b(info, deque_a, deque_b);
 	info.lst_cnt = a.m;
 	info.cur = a.s;
 	b_to_a(info, deque_a, deque_b);
-	info.lst_cnt = a.l;
-	info.cur = a.s + a.m;
+	info.lst_cnt = a.s;
+	info.cur = 0;
+	while (i < a.s)
+		rrb(deque_b);
 	b_to_a(info, deque_a, deque_b);
 
 }

@@ -76,14 +76,13 @@ t_info	find_pivot(int cur, int cnt, t_info *info)
 	return (*info);
 }
 
-
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 {
 	int		i;
 	t_pivot	a;
 
 	ft_memset(&a, 0, sizeof(a));
-	if (info.lst_cnt < 3)
+	if (info.lst_cnt <= 5)
 		return ;
 	info = find_pivot(info.cur, info.lst_cnt, &info);
 	printf ("pivot1 : %d\n", info.p1);
@@ -100,7 +99,6 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 	while (i < a.s)
 		rrb(deque_b);
 	b_to_a(info, deque_a, deque_b);
-
 }
 
 void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a)
@@ -141,7 +139,7 @@ void	b_to_a(t_info info, t_deque *deque_a, t_deque *deque_b)
 
 	i = 0;
 	ft_memset(&b, 0, sizeof(b));
-	if (info.lst_cnt < 3)
+	if (info.lst_cnt <= 5)
 		return ;
 	info = find_pivot(info.cur, info.lst_cnt, &info);
 	part_btoa(&info, deque_a, deque_b, &b);
@@ -187,7 +185,14 @@ void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b)
 	}
 }
 
+void	lst_num_five(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
+{
+
+}
+
 //small_index			info.cur = 0;
 //middle_index			info.cur = info.s + info.m;
 //big_index				info.cur = info.s;
-
+//인자 3개 -> 명령어 3개 5개 -> 명령어 12개
+// 5개일때 a_to_b b_to_a 만들기
+// atob btoa rrr 명령어추가 .

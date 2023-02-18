@@ -1,7 +1,7 @@
 CMakeFiles/push_swap.dir/push_swap.c.o: \
-  /goinfre/hyecheon/push_swap/push_swap.c \
-  /goinfre/hyecheon/push_swap/./push_swap.h \
-  /goinfre/hyecheon/push_swap/././libft/libft.h \
+  /goinfre/hyecheon/pushswap/push_swap.c \
+  /goinfre/hyecheon/pushswap/./push_swap.h \
+  /goinfre/hyecheon/pushswap/././libft/libft.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityVersions.h \

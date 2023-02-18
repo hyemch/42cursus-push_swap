@@ -99,5 +99,6 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b);
 void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 void	b_to_a(t_info info, t_deque *deque_a, t_deque *deque_b);
 void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
+void	lst_num_five(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 
 #endif

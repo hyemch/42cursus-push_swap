@@ -430,8 +430,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/goinfre/hyecheon/push_swap/cmake-build-debug",
-		"source" : "/goinfre/hyecheon/push_swap"
+		"build" : "/goinfre/hyecheon/pushswap/cmake-build-debug",
+		"source" : "/goinfre/hyecheon/pushswap"
 	},
 	"version" : 
 	{

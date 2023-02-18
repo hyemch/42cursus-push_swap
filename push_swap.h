@@ -102,5 +102,7 @@ void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
 void	rrr_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
 void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
+void	lst_three_a(t_deque *deque_a, int cnt);
+void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
 
 #endif

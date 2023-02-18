@@ -45,7 +45,7 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 
 	ft_memset(&a, 0, sizeof(a));
 	if (info.lst_cnt <= 5)
-		return ;
+		lst_five_a(info, deque_a, deque_b, info.lst_cnt);
 	info = find_pivot(info.cur, info.lst_cnt, &info);
 	printf ("pivot1 : %d\n", info.p1);
 	printf ("pivot2 : %d\n", info.p2);
@@ -192,6 +192,8 @@ void	rrr_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b)
 
 void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 {
+	int	i;
+
 	if (cnt == 2)
 	{
 		if (deque_a->head->data > deque_a->head->next->data)
@@ -210,8 +212,6 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 				sa(deque_a);
 				write(1, "rra\nsa\n", 7);
 			}
-			else
-				return ;
 		}
 		else if (deque_a->head->data == info.ret_arr[1])
 		{
@@ -242,9 +242,93 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 		}
 	}
 	else if (cnt == 4)
-		lst_five_a(info, deque_a, deque_b, 4);
+	{
+		i = 0;
+		while (i < cnt)
+		{
+			if (deque_a->head->data != info.ret_arr[0] \
+			|| deque_a->head->data != info.ret_arr[1])
+			{
+				ra(deque_a);
+				write(1, "ra\n", 3);
+			}
+			else if (deque_a->head->data == info.ret_arr[0] \
+			|| deque_a->head->data == info.ret_arr[1])
+			{
+				pb(deque_a, deque_b);
+				write(1, "pb\n", 3);
+			}
+			i++;
+		}
+		if (deque_a->head->data > deque_a->head->next->data)
+		{
+			sa(deque_a);
+			write(1, "sa\n", 3);
+		}
+		if (deque_b->head->data < deque_b->head->next->data)
+		{
+			sb(deque_b);
+			pa(deque_a, deque_b);
+			pa(deque_a, deque_b);
+			write(1, "sb\npa\npa\n", 9);
+		}
+	}
 	else
-		lst_five_a(info, deque_a, deque_b, 5);
+	{
+		i = 0;
+		while (i < cnt)
+		{
+			if (deque_a->head->data != info.ret_arr[0] \
+			|| deque_a->head->data != info.ret_arr[1])
+			{
+				ra(deque_a);
+				write(1, "ra\n", 3);
+			}
+			else if (deque_a->head->data == info.ret_arr[0] \
+			|| deque_a->head->data == info.ret_arr[1])
+			{
+				pb(deque_a, deque_b);
+				write(1, "pb\n", 3);
+			}
+			i++;
+		}
+		if (deque_a->head->data == info.ret_arr[2])
+		{
+			if (deque_a->tail->data == info.ret_arr[4])
+			{
+				rra(deque_a);
+				sa(deque_a);
+				write(1, "rra\nsa\n", 7);
+			}
+		}
+		else if (deque_a->head->data == info.ret_arr[3])
+		{
+			if (deque_a->tail->data == info.ret_arr[4])
+			{
+				sa(deque_a);
+				write(1, "sa\n", 3);
+			}
+			else if (deque_a->tail->data == info.ret_arr[2])
+			{
+				rra(deque_a);
+				write(1, "rra\n", 4);
+			}
+		}
+		else if (deque_a->head->data == info.ret_arr[4])
+		{
+			if (deque_a->tail->data == info.ret_arr[3])
+			{
+				ra(deque_a);
+				write(1, "ra\n", 3);
+			}
+			else if (deque_a->tail->data == info.ret[2])
+			{
+				sa(deque_a);
+				rra(deque_a);
+				write(1, "sa\nrra\n", 7);
+			}
+		}
+	}
 }
 
 void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
@@ -259,7 +343,132 @@ void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 	}
 	else if (cnt == 3)
 	{
+		lst_three_a(deque_a, cnt);
 
+	}
+	else if (cnt >= 4)
+	{
+		lst_rest_a(&info, deque_a, deque_b, cnt);
+	}
+}
+
+void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt)
+{
+	t_node	*tmp;
+	int		i;
+	int		min;
+	int		min2;
+	int		data[5];
+
+	ft_memset(&data, 0, sizeof(data));
+	tmp = deque_a->head;
+	i = 0;
+	while (i < cnt)
+	{
+		data[i] = tmp->data;
+		tmp = tmp->next;
+		i++;
+	}
+	i = 2;
+	min = 0;
+	min2 = 1;
+	while (i < cnt)
+	{
+		if (data[min] > data[i] || data[min2] > data[i])
+		{
+			if (data[min] < data[min2])
+				min2 = i;
+			else
+				min = i;
+		}
+		i++;
+	}
+	i = 0;
+	while (i < cnt)
+	{
+		if (deque_a->head->data != data[min] \
+		|| deque_a->head->data != data[min2])
+		{
+			ra(deque_a);
+			write(1, "ra\n", 3);
+		}
+		else
+		{
+			pb(deque_a, deque_b);
+			write(1, "pb\n", 3);
+		}
+		i++;
+	}
+	i = 0;
+	while (i < cnt - 2)
+	{
+		rra(deque_a);
+		write(1, "rra\n", 4);
+		i++;
+	}
+	lst_five_a((*info), deque_a, deque_b, cnt - 2);
+}
+
+void	lst_three_a(t_deque *deque_a, int cnt)
+{
+	t_node	*tmp;
+	int		data[3];
+	int		i;
+
+	ft_memset(&data, 0, sizeof(data));
+	tmp = deque_a->head;
+	i = 0;
+	while (i < cnt)
+	{
+		data[i] = tmp->data;
+		tmp = tmp->next;
+		i++;
+	}
+	if (data[0] < data[1] && data[0] < data[2])
+	{
+		if (data[2] < data[1])
+		{
+			ra(deque_a);
+			sa(deque_a);
+			rra(deque_a);
+			write(1, "ra\nsa\nrra\n", 10);
+		}
+	}
+	else if (data[1] < data[0] && data[1] < data[2])
+	{
+		if (data[0] < data[2])
+		{
+			sa(deque_a);
+			write(1, "sa\n", 3);
+		}
+		else
+		{
+			sa(deque_a);
+			ra(deque_a);
+			sa(deque_a);
+			rra(deque_a);
+			write(1, "sa\nra\nsa\nrra\n", 13);
+		}
+	}
+	else if (data[2] < data[0] && data[2] < data[1])
+	{
+		if (data[0] < data[1])
+		{
+			ra(deque_a);
+			sa(deque_a);
+			rra(deque_a);
+			sa(deque_a);
+			write(1, "ra\nsa\nrra\nsa\n", 13);
+		}
+		else
+		{
+			sa(deque_a);
+			ra(deque_a);
+			sa(deque_a);
+			rra(deque_a);
+			sa(deque_a);
+			write(1, "sa\nra\nsa\nrra\nsa\n", 16);
+		}
 	}
 }
 

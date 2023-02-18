@@ -41,8 +41,8 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 	if (info.lst_cnt <= 5)
 		return (lst_five_a(info, deque_a, deque_b, info.lst_cnt));
 	info = find_pivot(info.cur, info.lst_cnt, &info);
-	printf ("pivot1 : %d\n", info.p1);
-	printf ("pivot2 : %d\n", info.p2);
+	//printf ("pivot1 : %d\n", info.p1);
+	//printf ("pivot2 : %d\n", info.p2);
 	part_atob(&info, deque_a, deque_b, &a);
 	rrr_atob (deque_a, deque_b, &a);
 	info.lst_cnt = a.l;
@@ -60,7 +60,7 @@ void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a)
 {
 	while (a->s + a->m + a->l < info->lst_cnt)
 	{
-		printf("head data a : %d\n", deque_a->head->data);
+		//printf("head data a : %d\n", deque_a->head->data);
 		if (deque_a->head->data < info->p1)
 		{
 			pb(deque_a, deque_b);
@@ -134,7 +134,7 @@ void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b)
 {
 	while (b->s + b->m + b->l < info->lst_cnt)
 	{
-		printf("head data b : %d\n", deque_b->head->data);
+		//printf("head data b : %d\n", deque_b->head->data);
 		if (deque_b->head->data < info->p1)
 		{
 			rb(deque_b);
@@ -199,7 +199,7 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 	{
 		if (deque_a->head->data == info.ret_arr[0])
 		{
-			if (deque_a->tail->data == info.ret_arr[2])
+			if (deque_a->tail->data == info.ret_arr[1])
 			{
 				rra(deque_a);
 				sa(deque_a);
@@ -213,7 +213,7 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 				sa(deque_a);
 				write(1, "sa\n", 3);
 			}
-			else if (deque_a->tail->data == info.ret_arr[0])
+			else
 			{
 				rra(deque_a);
 				write(1, "rra\n", 4);
@@ -226,7 +226,7 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 				ra(deque_a);
 				write(1, "ra\n", 3);
 			}
-			else if (deque_a->tail->data == info.ret[0])
+			else
 			{
 				sa(deque_a);
 				rra(deque_a);
@@ -255,7 +255,7 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 		}
 		rra(deque_a);
 		rra(deque_a);
-		write(1, "rra\nrra\n", 6);
+		write(1, "rra\nrra\n", 8);
 		if (deque_a->head->data > deque_a->head->next->data)
 		{
 			sa(deque_a);
@@ -289,17 +289,13 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 			}
 			i++;
 		}
-		rra(deque_a);
-		rra(deque_a);
-		rra(deque_a);
-		write(1, "rra\nrra\nrra\n", 9);
 		if (deque_a->head->data == info.ret_arr[2])
 		{
-			if (deque_a->tail->data == info.ret_arr[4])
+			if (deque_a->tail->data == info.ret_arr[3])
 			{
-				rra(deque_a);
 				sa(deque_a);
-				write(1, "rra\nsa\n", 7);
+				ra(deque_a);
+				write(1, "sa\nra\n", 6);
 			}
 		}
 		else if (deque_a->head->data == info.ret_arr[3])
@@ -322,7 +318,7 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 				ra(deque_a);
 				write(1, "ra\n", 3);
 			}
-			else if (deque_a->tail->data == info.ret[2])
+			else if (deque_a->tail->data == info.ret_arr[2])
 			{
 				sa(deque_a);
 				rra(deque_a);

@@ -172,12 +172,6 @@ int	main(int argc, char **argv)
 	parsing_arg(&info, argc, argv);
 	arr_to_deque(info, &deque_a);
 	sort_arr(info, 0, info.ret_cnt - 1);
-	int i = 0;
-	while (i < info.ret_cnt)
-	{
-		printf ("int_arr : %d", info.ret_arr[i]);
-		i++;
-	}
 	if (info.ret_cnt <= 5)
 		sort_lessfive(info, &deque_a, &deque_b, info.ret_cnt);
 	else

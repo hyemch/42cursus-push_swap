@@ -174,6 +174,6 @@ void	arr_to_deque(t_info info, t_deque *deque_a)
 		add_rear(deque_a, new);
 		i++;
 	}
-	print_deque(deque_a);
+//	print_deque(deque_a);
 }
 

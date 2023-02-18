@@ -179,7 +179,10 @@ int	main(int argc, char **argv)
 		printf("sort_arr : %d\n", info.ret_arr[i]);
 		i++;
 	}
-	a_to_b(info,&deque_a, &deque_b);
+	if (info.ret_cnt <= 5)
+		sort_lessfive(info, &deque_a, &deque_b, info.ret_cnt);
+	else
+		a_to_b(info, &deque_a, &deque_b);
 	print_deque(&deque_a);
 	print_deque(&deque_b);
 }

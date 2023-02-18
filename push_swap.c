@@ -163,7 +163,6 @@ int	main(int argc, char **argv)
 	t_info	info;
 	t_deque	deque_a;
 	t_deque	deque_b;
-	int		i;
 
 	if (argc < 2)
 		error_exit("argument count error\n");
@@ -173,10 +172,10 @@ int	main(int argc, char **argv)
 	parsing_arg(&info, argc, argv);
 	arr_to_deque(info, &deque_a);
 	sort_arr(info, 0, info.ret_cnt - 1);
-	i = 0;
+	int i = 0;
 	while (i < info.ret_cnt)
 	{
-		printf("sort_arr : %d\n", info.ret_arr[i]);
+		printf ("int_arr : %d", info.ret_arr[i]);
 		i++;
 	}
 	if (info.ret_cnt <= 5)

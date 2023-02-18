@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/goinfre/hyecheon/pushswap/cmake-build-debug"
+			"value" : "/goinfre/hyecheon/push_swap/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -495,7 +495,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/goinfre/hyecheon/pushswap"
+			"value" : "/goinfre/hyecheon/push_swap"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/goinfre/hyecheon/pushswap/cmake-build-debug"
+			"value" : "/goinfre/hyecheon/push_swap/cmake-build-debug"
 		},
 		{
 			"name" : "push_swap_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/goinfre/hyecheon/pushswap"
+			"value" : "/goinfre/hyecheon/push_swap"
 		}
 	],
 	"kind" : "cache",

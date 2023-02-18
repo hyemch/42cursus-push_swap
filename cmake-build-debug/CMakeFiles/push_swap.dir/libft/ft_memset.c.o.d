@@ -1,6 +1,6 @@
 CMakeFiles/push_swap.dir/libft/ft_memset.c.o: \
-  /goinfre/hyecheon/pushswap/libft/ft_memset.c \
-  /goinfre/hyecheon/pushswap/./libft/libft.h \
+  /goinfre/hyecheon/push_swap/libft/ft_memset.c \
+  /goinfre/hyecheon/push_swap/./libft/libft.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityVersions.h \

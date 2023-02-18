@@ -96,13 +96,16 @@ t_info	sort_partition(t_info *info);
 t_info	find_pivot(int cur, int cnt, t_info *info);
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b);
 void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
-void	rrr_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
+void	rrr_atob(t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 void	b_to_a(t_info info, t_deque *deque_a, t_deque *deque_b);
 void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
-void	rrr_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
+void	rrr_btoa(t_deque *deque_a, t_deque *deque_b, t_pivot *b);
 void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	lst_three_a(t_deque *deque_a, int cnt);
 void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
+void	lst_five_b(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
+void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt);
+void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
 
 #endif

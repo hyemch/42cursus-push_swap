@@ -49,11 +49,11 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/goinfre/hyecheon/pushswap/."
+					"path" : "/goinfre/hyecheon/push_swap/."
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/goinfre/hyecheon/pushswap/./libft"
+					"path" : "/goinfre/hyecheon/push_swap/./libft"
 				}
 			],
 			"language" : "C",

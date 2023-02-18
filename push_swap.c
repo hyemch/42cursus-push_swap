@@ -176,6 +176,6 @@ int	main(int argc, char **argv)
 		sort_lessfive(info, &deque_a, &deque_b, info.ret_cnt);
 	else
 		a_to_b(info, &deque_a, &deque_b);
-	print_deque(&deque_a);
-	print_deque(&deque_b);
+//	print_deque(&deque_a);
+//	print_deque(&deque_b);
 }

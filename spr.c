@@ -36,6 +36,7 @@ t_info	find_pivot(int cur, int cnt, t_info *info)
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 {
 	t_pivot	a;
+	int 	cur_temp;
 
 	ft_memset(&a, 0, sizeof(a));
 	if (info.lst_cnt <= 5)
@@ -43,16 +44,17 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 	info = find_pivot(info.cur, info.lst_cnt, &info);
 	//printf ("pivot1 : %d\n", info.p1);
 	//printf ("pivot2 : %d\n", info.p2);
+	cur_temp = info.cur;
 	part_atob(&info, deque_a, deque_b, &a);
 	rrr_atob (deque_a, deque_b, &a);
 	info.lst_cnt = a.l;
-	info.cur = a.s + a.m;
+	info.cur = cur_temp + a.s + a.m;
 	a_to_b(info, deque_a, deque_b);
 	info.lst_cnt = a.m;
-	info.cur = a.s;
+	info.cur = cur_temp + a.s;
 	b_to_a(info, deque_a, deque_b);
 	info.lst_cnt = a.s;
-	info.cur = 0;
+	info.cur = cur_temp + 0;
 	b_to_a(info, deque_a, deque_b);
 }
 
@@ -112,21 +114,23 @@ void	rrr_atob(t_deque *deque_a, t_deque *deque_b, t_pivot *a)
 void	b_to_a(t_info info, t_deque *deque_a, t_deque *deque_b)
 {
 	t_pivot	b;
+	int		cur_tmp;
 
 	ft_memset(&b, 0, sizeof(b));
 	if (info.lst_cnt <= 5)
 		return (lst_five_b(info, deque_a, deque_b, info.lst_cnt));
+	cur_tmp = info.cur;
 	info = find_pivot(info.cur, info.lst_cnt, &info);
 	part_btoa(&info, deque_a, deque_b, &b);
 	info.lst_cnt = b.l;
-	info.cur = b.s + b.m;
+	info.cur = cur_tmp + b.s + b.m;
 	a_to_b(info, deque_a, deque_b);
 	rrr_btoa(deque_a, deque_b, &b);
 	info.lst_cnt = b.m;
-	info.cur = b.s;
+	info.cur = cur_tmp + b.s;
 	a_to_b(info, deque_a, deque_b);
 	info.lst_cnt = b.s;
-	info.cur = 0;
+	info.cur = cur_tmp + 0;
 	b_to_a(info, deque_a, deque_b);
 }
 

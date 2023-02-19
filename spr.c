@@ -12,17 +12,6 @@
 
 #include "push_swap.h"
 
-/*
- * 1. 정렬된 int 배열 이용해서 pivot1, 2 찾아주기
- * 2. [num < pivot1] 일때 스택 b의 아래, [pivot1 < num < pivot2] 스택 b의 위로 넘겨주기
- * 3. stack a에 있는 [pivot2 < num] - pivot2개 찾고
- * 4. 1 - 5 개일경우 하드코딩
-
- * 1. pivot 찾기
- * 2. 5개 이하 일때 따로
- * 2. 값 비교 1 2 3 영역 정하기
- * */
-
 t_info	find_pivot(int cur, int cnt, t_info *info)
 {
 	int	*arr;
@@ -36,25 +25,23 @@ t_info	find_pivot(int cur, int cnt, t_info *info)
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 {
 	t_pivot	a;
-	int 	cur_temp;
+	int		cur_tmp;
 
 	ft_memset(&a, 0, sizeof(a));
 	if (info.lst_cnt <= 5)
 		return (lst_five_a(info, deque_a, deque_b, info.lst_cnt));
 	info = find_pivot(info.cur, info.lst_cnt, &info);
-	//printf ("pivot1 : %d\n", info.p1);
-	//printf ("pivot2 : %d\n", info.p2);
-	cur_temp = info.cur;
+	cur_tmp = info.cur;
 	part_atob(&info, deque_a, deque_b, &a);
 	rrr_atob (deque_a, deque_b, &a);
 	info.lst_cnt = a.l;
-	info.cur = cur_temp + a.s + a.m;
+	info.cur = cur_tmp + a.s + a.m;
 	a_to_b(info, deque_a, deque_b);
 	info.lst_cnt = a.m;
-	info.cur = cur_temp + a.s;
+	info.cur = cur_tmp + a.s;
 	b_to_a(info, deque_a, deque_b);
 	info.lst_cnt = a.s;
-	info.cur = cur_temp + 0;
+	info.cur = cur_tmp + 0;
 	b_to_a(info, deque_a, deque_b);
 }
 
@@ -62,7 +49,6 @@ void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a)
 {
 	while (a->s + a->m + a->l < info->lst_cnt)
 	{
-		//printf("head data a : %d\n", deque_a->head->data);
 		if (deque_a->head->data < info->p1)
 		{
 			pb(deque_a, deque_b);
@@ -138,7 +124,6 @@ void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b)
 {
 	while (b->s + b->m + b->l < info->lst_cnt)
 	{
-		//printf("head data b : %d\n", deque_b->head->data);
 		if (deque_b->head->data < info->p1)
 		{
 			rb(deque_b);
@@ -189,8 +174,6 @@ void	rrr_btoa(t_deque *deque_a, t_deque *deque_b, t_pivot *b)
 
 void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 {
-	int	i;
-
 	if (cnt == 2)
 	{
 		if (deque_a->head->data > deque_a->head->next->data)
@@ -201,142 +184,162 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 	}
 	else if (cnt == 3)
 	{
-		if (deque_a->head->data == info.ret_arr[0])
-		{
-			if (deque_a->tail->data == info.ret_arr[1])
-			{
-				rra(deque_a);
-				sa(deque_a);
-				write(1, "rra\nsa\n", 7);
-			}
-		}
-		else if (deque_a->head->data == info.ret_arr[1])
-		{
-			if (deque_a->tail->data == info.ret_arr[2])
-			{
-				sa(deque_a);
-				write(1, "sa\n", 3);
-			}
-			else
-			{
-				rra(deque_a);
-				write(1, "rra\n", 4);
-			}
-		}
-		else if (deque_a->head->data == info.ret_arr[2])
-		{
-			if (deque_a->tail->data == info.ret_arr[1])
-			{
-				ra(deque_a);
-				write(1, "ra\n", 3);
-			}
-			else
-			{
-				sa(deque_a);
-				rra(deque_a);
-				write(1, "sa\nrra\n", 7);
-			}
-		}
+		sort_onlythree(&info, deque_a);
 	}
 	else if (cnt == 4)
 	{
-		i = 0;
-		while (i < cnt)
+		sort_onlyfour(&info, deque_a, deque_b, cnt);
+	}
+	else if (cnt == 5)
+	{
+		sort_onlyfive(&info, deque_a, deque_b, cnt);
+
+	}
+}
+
+void	sort_onlyfive(t_info *info, t_deque *deque_a, t_deque *deque_b, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (deque_a->head->data != (*info).ret_arr[0] \
+		&& deque_a->head->data != (*info).ret_arr[1])
 		{
-			if (deque_a->head->data != info.ret_arr[0] \
-			&& deque_a->head->data != info.ret_arr[1])
-			{
-				ra(deque_a);
-				write(1, "ra\n", 3);
-			}
-			else if (deque_a->head->data == info.ret_arr[0] \
-			|| deque_a->head->data == info.ret_arr[1])
-			{
-				pb(deque_a, deque_b);
-				write(1, "pb\n", 3);
-			}
-			i++;
+			ra(deque_a);
+			write(1, "ra\n", 3);
 		}
-		rra(deque_a);
-		rra(deque_a);
-		write(1, "rra\nrra\n", 8);
-		if (deque_a->head->data > deque_a->head->next->data)
+		else if (deque_a->head->data == (*info).ret_arr[0] \
+		|| deque_a->head->data == (*info).ret_arr[1])
+		{
+			pb(deque_a, deque_b);
+			write(1, "pb\n", 3);
+		}
+		i++;
+	}
+	if (deque_a->head->data == (*info).ret_arr[2])
+	{
+		if (deque_a->tail->data == (*info).ret_arr[3])
+		{
+			sa(deque_a);
+			ra(deque_a);
+			write(1, "sa\nra\n", 6);
+		}
+	}
+	else if (deque_a->head->data == (*info).ret_arr[3])
+	{
+		if (deque_a->tail->data == (*info).ret_arr[4])
 		{
 			sa(deque_a);
 			write(1, "sa\n", 3);
 		}
-		if (deque_b->head->data < deque_b->head->next->data)
+		else if (deque_a->tail->data == (*info).ret_arr[2])
 		{
-			sb(deque_b);
-			write(1, "sb\n", 3);
+			rra(deque_a);
+			write(1, "rra\n", 4);
 		}
-		pa(deque_a, deque_b);
-		pa(deque_a, deque_b);
-		write(1, "pa\npa\n", 6);
 	}
-	else if (cnt == 5)
+	else if (deque_a->head->data == (*info).ret_arr[4])
 	{
-		i = 0;
-		while (i < cnt)
+		if (deque_a->tail->data == (*info).ret_arr[3])
 		{
-			if (deque_a->head->data != info.ret_arr[0] \
-			&& deque_a->head->data != info.ret_arr[1])
-			{
-				ra(deque_a);
-				write(1, "ra\n", 3);
-			}
-			else if (deque_a->head->data == info.ret_arr[0] \
-			|| deque_a->head->data == info.ret_arr[1])
-			{
-				pb(deque_a, deque_b);
-				write(1, "pb\n", 3);
-			}
-			i++;
+			ra(deque_a);
+			write(1, "ra\n", 3);
 		}
-		if (deque_a->head->data == info.ret_arr[2])
+		else if (deque_a->tail->data == (*info).ret_arr[2])
 		{
-			if (deque_a->tail->data == info.ret_arr[3])
-			{
-				sa(deque_a);
-				ra(deque_a);
-				write(1, "sa\nra\n", 6);
-			}
+			sa(deque_a);
+			rra(deque_a);
+			write(1, "sa\nrra\n", 7);
 		}
-		else if (deque_a->head->data == info.ret_arr[3])
+	}
+	if (deque_b->head->data < deque_b->head->next->data)
+	{
+		sb(deque_b);
+		write(1, "sb\n", 3);
+	}
+	pa(deque_a, deque_b);
+	pa(deque_a, deque_b);
+	write(1, "pa\npa\n", 6);
+}
+
+void	sort_onlyfour(t_info *info, t_deque *deque_a, t_deque *deque_b, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (deque_a->head->data != (*info).ret_arr[0] \
+		&& deque_a->head->data != (*info).ret_arr[1])
 		{
-			if (deque_a->tail->data == info.ret_arr[4])
-			{
-				sa(deque_a);
-				write(1, "sa\n", 3);
-			}
-			else if (deque_a->tail->data == info.ret_arr[2])
-			{
-				rra(deque_a);
-				write(1, "rra\n", 4);
-			}
+			ra(deque_a);
+			write(1, "ra\n", 3);
 		}
-		else if (deque_a->head->data == info.ret_arr[4])
+		else if (deque_a->head->data == (*info).ret_arr[0] \
+		|| deque_a->head->data == (*info).ret_arr[1])
 		{
-			if (deque_a->tail->data == info.ret_arr[3])
-			{
-				ra(deque_a);
-				write(1, "ra\n", 3);
-			}
-			else if (deque_a->tail->data == info.ret_arr[2])
-			{
-				sa(deque_a);
-				rra(deque_a);
-				write(1, "sa\nrra\n", 7);
-			}
+			pb(deque_a, deque_b);
+			write(1, "pb\n", 3);
 		}
-		if (deque_b->head->data < deque_b->head->next->data)
+		i++;
+	}
+	rra(deque_a);
+	rra(deque_a);
+	write(1, "rra\nrra\n", 8);
+	if (deque_a->head->data > deque_a->head->next->data)
+	{
+		sa(deque_a);
+		write(1, "sa\n", 3);
+	}
+	if (deque_b->head->data < deque_b->head->next->data)
+	{
+		sb(deque_b);
+		write(1, "sb\n", 3);
+	}
+	pa(deque_a, deque_b);
+	pa(deque_a, deque_b);
+	write(1, "pa\npa\n", 6);
+}
+
+void	sort_onlythree(t_info *info, t_deque *deque_a)
+{
+	if (deque_a->head->data == (*info).ret_arr[0])
+	{
+		if (deque_a->tail->data == (*info).ret_arr[1])
 		{
-			sb(deque_b);
-			write(1, "sb\n", 3);
+			rra(deque_a);
+			sa(deque_a);
+			write(1, "rra\nsa\n", 7);
 		}
-		pa(deque_a, deque_b);
-		pa(deque_a, deque_b);
-		write(1, "pa\npa\n", 6);
+	}
+	else if (deque_a->head->data == (*info).ret_arr[1])
+	{
+		if (deque_a->tail->data == (*info).ret_arr[2])
+		{
+			sa(deque_a);
+			write(1, "sa\n", 3);
+		}
+		else
+		{
+			rra(deque_a);
+			write(1, "rra\n", 4);
+		}
+	}
+	else if (deque_a->head->data == (*info).ret_arr[2])
+	{
+		if (deque_a->tail->data == (*info).ret_arr[1])
+		{
+			ra(deque_a);
+			write(1, "ra\n", 3);
+		}
+		else
+		{
+			sa(deque_a);
+			rra(deque_a);
+			write(1, "sa\nrra\n", 7);
+		}
 	}
 }
 
@@ -363,59 +366,86 @@ void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt)
 {
 	t_node	*tmp;
+	t_find	find;
 	int		i;
-	int		min;
-	int		min2;
-	int		data[5];
 
-	ft_memset(&data, 0, sizeof(data));
+	ft_memset(&find, 0, sizeof(find));
 	tmp = deque_a->head;
 	i = 0;
 	while (i < cnt)
 	{
-		data[i] = tmp->data;
+		find.min_data[i] = tmp->data;
 		tmp = tmp->next;
 		i++;
 	}
-	i = 2;
-	min = 0;
-	min2 = 1;
-	while (i < cnt)
-	{
-		if (data[min] > data[i] || data[min2] > data[i])
-		{
-			if (data[min] < data[min2])
-				min2 = i;
-			else
-				min = i;
-		}
-		i++;
-	}
+	find_mindata_a(cnt, &find);
+	min_sort_a(deque_a, deque_b, cnt, &find);
+	lst_five_a((*info), deque_a, deque_b, cnt - 2);
+	lst_five_b((*info), deque_a, deque_b, 2);
+}
+
+void	min_sort_a(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
+{
+	int	i;
+	int	pb_cnt;
+	int	ra_cnt;
+
 	i = 0;
-	while (i < cnt)
+	pb_cnt = 0;
+	ra_cnt = 0;
+	while (i < cnt && pb_cnt != 2)
 	{
-		if (deque_a->head->data != data[min] \
-		&& deque_a->head->data != data[min2])
+		if (deque_a->head->data != find->min_data[find->min] \
+		&& deque_a->head->data != find->min_data[find->min2])
 		{
 			ra(deque_a);
 			write(1, "ra\n", 3);
+			ra_cnt++;
 		}
 		else
 		{
 			pb(deque_a, deque_b);
 			write(1, "pb\n", 3);
+			pb_cnt++;
 		}
 		i++;
 	}
 	i = 0;
-	while (i < cnt - 2)
+	while (i < ra_cnt)
 	{
 		rra(deque_a);
 		write(1, "rra\n", 4);
 		i++;
 	}
-	lst_five_a((*info), deque_a, deque_b, cnt - 2);
-	lst_five_b((*info), deque_a, deque_b, 2);
+	if (ra_cnt == 2)
+	{
+		if (deque_a->head->data > deque_a->head->next->data)
+		{
+			sa(deque_a);
+			write(1, "sa\n", 3);
+		}
+	}
+}
+
+void	find_mindata_a(int cnt, t_find *find)
+{
+	int	i;
+
+	i = 2;
+	find->min = 0;
+	find->min2 = 1;
+	while (i < cnt)
+	{
+		if (find->min_data[find->min] > find->min_data[i] \
+		|| find->min_data[find->min2] > find->min_data[i])
+		{
+			if (find->min_data[find->min] < find->min_data[find->min2])
+				find->min2 = i;
+			else
+				find->min = i;
+		}
+		i++;
+	}
 }
 
 void	lst_three_a(t_deque *deque_a, int cnt)
@@ -512,42 +542,40 @@ void	lst_five_b(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt)
 {
 	t_node	*tmp;
+	t_find	find;
 	int		i;
-	int		min;
-	int		min2;
-	int		data[5];
 
-	ft_memset(&data, 0, sizeof(data));
+	ft_memset(&find, 0, sizeof(find));
 	tmp = deque_b->head;
 	i = 0;
 	while (i < cnt)
 	{
-		data[i] = tmp->data;
+		find.min_data[i] = tmp->data;
 		tmp = tmp->next;
 		i++;
 	}
-	i = 2;
-	min = 0;
-	min2 = 1;
-	while (i < cnt)
-	{
-		if (data[min] < data[i] || data[min2] < data[i])
-		{
-			if (data[min] > data[min2])
-				min2 = i;
-			else
-				min = i;
-		}
-		i++;
-	}
+	find_mindata_b(cnt, &find);
+	min_sort_b(deque_a, deque_b, cnt, &find);
+	lst_five_b((*info), deque_a, deque_b, cnt - 2);
+}
+
+void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
+{
+	int	i;
+	int	rb_cnt;
+	int	pa_cnt;
+
 	i = 0;
-	while (i < cnt)
+	rb_cnt = 0;
+	pa_cnt = 0;
+	while (i < cnt && pa_cnt != 2)
 	{
-		if (deque_b->head->data != data[min] \
-		&& deque_b->head->data != data[min2])
+		if (deque_b->head->data != find->min_data[find->min] \
+		&& deque_b->head->data != find->min_data[find->min2])
 		{
 			rb(deque_b);
 			write(1, "rb\n", 3);
+			rb_cnt++;
 		}
 		else
 		{
@@ -558,17 +586,38 @@ void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt)
 				sa(deque_a);
 				write(1, "sa\n", 3);
 			}
+			pa_cnt++;
 		}
 		i++;
 	}
 	i = 0;
-	while (i < cnt - 2)
+	while (i < rb_cnt)
 	{
 		rrb(deque_b);
 		write(1, "rrb\n", 4);
 		i++;
 	}
-	lst_five_b((*info), deque_a, deque_b, cnt - 2);
+}
+
+void	find_mindata_b(int cnt, t_find *find)
+{
+	int	i;
+
+	i = 2;
+	find->min = 0;
+	find->min2 = 1;
+	while (i < cnt)
+	{
+		if (find->min_data[find->min] < find->min_data[i] \
+		|| find->min_data[find->min2] < find->min_data[i])
+		{
+			if (find->min_data[find->min] > find->min_data[find->min2])
+				find->min2 = i;
+			else
+				find->min = i;
+		}
+		i++;
+	}
 }
 
 void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt)
@@ -638,9 +687,3 @@ void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt)
 		write(1, "pa\npa\npa\n", 9);
 	}
 }
-
-//small_index			info.cur = 0;
-//middle_index			info.cur = info.s + info.m;
-//big_index				info.cur = info.s;
-//인자 3개 -> 명령어 3개 5개 -> 명령어 12개
-// 5개일때 a_to_b b_to_a 만들기

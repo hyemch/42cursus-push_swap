@@ -13,11 +13,9 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "./libft/libft.h"
-# include <fcntl.h>
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 # define TRUE	1
 # define ERROR -1
@@ -92,7 +90,6 @@ t_node	*del_rear(t_deque *pdeque);
 int		add_front(t_deque *pdeque, t_node *new);
 int		add_rear(t_deque *pdeque, t_node *new);
 void	free_deque(t_deque *pdeque);
-void	print_deque(t_deque *pdeque);
 void	arr_to_deque(t_info info, t_deque *deque_a);
 
 /* operations_push.c*/

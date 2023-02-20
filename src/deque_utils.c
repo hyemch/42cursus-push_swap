@@ -66,25 +66,6 @@ void	free_deque(t_deque *pdeque)
 	}
 }
 
-void	print_deque(t_deque *pdeque)
-{
-	t_node	*curr;
-
-	curr = pdeque->head;
-	printf("lst : ");
-	if (curr == NULL)
-	{
-		printf("empty deque\n");
-		return ;
-	}
-	while (curr->next)
-	{
-		printf("%d->", curr->data);
-		curr = curr->next;
-	}
-	printf("%d\n", curr->data);
-}
-
 void	arr_to_deque(t_info info, t_deque *deque_a)
 {
 	int		i;

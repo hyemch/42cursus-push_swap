@@ -68,71 +68,97 @@ typedef struct s_pivot
 	int	l;
 }	t_pivot;
 
-void	error_exit(char *error_message);
+/*main.c*/
 
+/*parsing.c*/
+void	error_exit(char *error_message);
+void	split_arg(t_info *info);
+int		parsing_arg(t_info *info, int argc, char **argv);
+
+/*check_arg.c*/
+void	check_intarr(t_info *info);
+int		valid_arg(int argc, char **argv);
+int		check_arg(const char *str);
+int		check_arg_num(const char *str);
+
+/*deque.c*/
 t_node	*new_node(int data);
 t_node	*peek_front(t_deque *pdeque);
 t_node	*del_front(t_deque *pdeque);
 t_node	*peek_rear(t_deque *pdeque);
 t_node	*del_rear(t_deque *pdeque);
 
+/*deque_utils*/
 int		add_front(t_deque *pdeque, t_node *new);
 int		add_rear(t_deque *pdeque, t_node *new);
 void	free_deque(t_deque *pdeque);
 void	print_deque(t_deque *pdeque);
 void	arr_to_deque(t_info info, t_deque *deque_a);
 
+/* operations_push.c*/
+void	pa(t_deque *deque_a, t_deque *deque_b);
+void	pb(t_deque *deque_a, t_deque *deque_b);
+/* operations_swap.c*/
 void	sa(t_deque *deque_a);
 void	sb(t_deque *deque_b);
 void	ss(t_deque *deque_a, t_deque *deque_b);
-void	pa(t_deque *deque_a, t_deque *deque_b);
-void	pb(t_deque *deque_a, t_deque *deque_b);
+/* operations_rotate.c*/
 void	ra(t_deque *deque_a);
 void	rb(t_deque *deque_b);
 void	rr(t_deque *deque_a, t_deque *deque_b);
+/* operations_reverse.c*/
 void	rra(t_deque *deque_a);
 void	rrb(t_deque *deque_b);
 void	rrr(t_deque *deque_a, t_deque *deque_b);
 
+/* sort_intarr.c*/
 void	swap(int *arr, int a, int b);
 void	sort_arr(t_info info, int left, int right);
 void	partition_1(t_info *info);
 void	partition_2(t_info *info);
 t_info	sort_partition(t_info *info);
 
+/*sort_list.c*/
 t_info	find_pivot(int cur, int cnt, t_info *info);
+void	check_ab(t_deque *deque_a, t_deque *deque_b, t_info *info, t_pivot *a);
+void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
+
+/*a_to_b.c*/
 void	firstatob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b);
-void	check_ab(t_deque *deque_a, t_deque *deque_b, t_info *info, t_pivot *a);
 void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 void	rrr_atob(t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 
+/*b_to_a.c*/
 void	b_to_a(t_info info, t_deque *deque_a, t_deque *deque_b);
 void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
 void	rrr_btoa(t_deque *deque_a, t_deque *deque_b, t_pivot *b);
 
-void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
+/* sort_onlythree.c*/
 void	sort_onlythree(t_info *info, t_deque *deque_a);
+/* sort_onlyfour.c*/
 void	sort_onlyfour(t_info *info, t_deque *deque_a, t_deque *deque_b, int n);
+/* sort_onlyfive.c*/
 void	sort_onlyfive(t_info *info, t_deque *deque_a, t_deque *deque_b, int n);
 
+/*sort_five_a.c*/
 void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	lst_three_a(t_deque *deque_a, int cnt);
 void	lstthree_headsmall(t_deque *deque_a, const int *data);
 void	lstthree_headmedium(t_deque *deque_a, const int *data);
 void	lstthree_headlarge(t_deque *deque_a, const int *data);
-
+/*sort_five_a2.c*/
 void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	find_mindata_a(int cnt, t_find *find);
 void	min_sort_a(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
 void	min_sort_ra(t_deque *deque_a, int ra_cnt);
-
+/*sort_five_b*/
 void	lst_five_b(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt);
 void	bthree_headsmall(t_deque *deque_a, t_deque *deque_b, const int *data);
 void	bthree_headmedium(t_deque *deque_a, t_deque *deque_b, const int *data);
 void	bthree_headlarge(t_deque *deque_a, t_deque *deque_b, const int *data);
-
+/*sort_five_b2.c*/
 void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	find_mindata_b(int cnt, t_find *find);
 void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);

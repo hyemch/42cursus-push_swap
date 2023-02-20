@@ -82,7 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/goinfre/hyecheon/push_swap/a_to_b.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/b_to_a.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/check_arg.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/goinfre/hyecheon/push_swap/deque.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/deque_utils.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/goinfre/hyecheon/push_swap/libft/ft_atoi.c">
@@ -109,13 +121,43 @@
 		<Unit filename="/goinfre/hyecheon/push_swap/libft/ft_strlen.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/operations_push.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/operations_reverse.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/operations_rotate.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/operations_swap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/parsing.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/goinfre/hyecheon/push_swap/push_swap.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/goinfre/hyecheon/push_swap/push_swap.h">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/push_swap/sort.c">
+		<Unit filename="/goinfre/hyecheon/push_swap/sort_five_a.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/sort_five_a2.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/sort_five_b.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/sort_five_b2.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/sort_intarr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/goinfre/hyecheon/push_swap/sort_list.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/goinfre/hyecheon/push_swap/sort_onlyfive.c">
@@ -125,12 +167,6 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/goinfre/hyecheon/push_swap/sort_onlythree.c">
-			<Option target="push_swap"/>
-		</Unit>
-		<Unit filename="/goinfre/hyecheon/push_swap/spr.c">
-			<Option target="push_swap"/>
-		</Unit>
-		<Unit filename="/goinfre/hyecheon/push_swap/utils.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/goinfre/hyecheon/push_swap/CMakeLists.txt">

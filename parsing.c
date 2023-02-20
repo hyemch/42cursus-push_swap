@@ -42,6 +42,7 @@ void	split_arg(t_info *info)
 		free(arr[i]);
 		i++;
 	}
+	free(arr);
 	check_intarr(info);
 }
 

@@ -25,8 +25,8 @@ SRC		=	src/push_swap.c \
             src/operations_push.c \
             src/operations_swap.c \
             src/operations_rotate.c \
-           	src/operations_reverse.c \
-          	libft/ft_calloc.c \
+            src/operations_reverse.c \
+            libft/ft_calloc.c \
             libft/ft_strjoin.c \
             libft/ft_strlcpy.c \
             libft/ft_memset.c \
@@ -41,23 +41,17 @@ RM		=	rm -f
 
 all		:	$(NAME)
 
-bonus	:	$(NAME_B)
-
 %.o : %.c
 	$(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@
 
 $(NAME)	:	$(OBJ)
 	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
-
-$(NAME_B)	:	$(OBJ_B)
-	$(CC) $(CFLAGS) -o $@ $(OBJ_B)
-
 clean	:
-	$(RM) $(OBJ) $(OBJ_B)
+	$(RM) $(OBJ)
 
 fclean	: clean
-	$(RM) $(NAME) $(NAME_B)
+	$(RM) $(NAME)
 
 re : fclean all
 

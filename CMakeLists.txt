@@ -13,6 +13,9 @@ add_executable(push_swap
         utils.c
         sort.c
         spr.c
+        sort_onlyfive.c
+        sort_onlyfour.c
+        sort_onlythree.c
         ./libft/ft_calloc.c
         ./libft/ft_strjoin.c
         ./libft/ft_strlcpy.c

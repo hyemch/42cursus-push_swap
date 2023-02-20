@@ -42,21 +42,18 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk"
-				},
-				{
-					"fragment" : "-std=gnu11"
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/min/Desktop/c/42cursus/push_swap/."
+					"path" : "/goinfre/hyecheon/push_swap/."
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/min/Desktop/c/42cursus/push_swap/./libft"
+					"path" : "/goinfre/hyecheon/push_swap/./libft"
 				}
 			],
 			"language" : "C",
@@ -82,7 +79,10 @@
 				10,
 				11,
 				12,
-				13
+				13,
+				14,
+				15,
+				16
 			]
 		}
 	],
@@ -127,7 +127,10 @@
 				10,
 				11,
 				12,
-				13
+				13,
+				14,
+				15,
+				16
 			]
 		},
 		{
@@ -173,6 +176,24 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "spr.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sort_onlyfive.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sort_onlyfour.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sort_onlythree.c",
 			"sourceGroupIndex" : 0
 		},
 		{

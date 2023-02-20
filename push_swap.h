@@ -57,6 +57,8 @@ typedef struct s_find
 	int	min;
 	int	min2;
 	int	min_data[5];
+	int	rb_cnt;
+	int	pa_cnt;
 }	t_find;
 
 typedef struct s_pivot
@@ -73,6 +75,7 @@ t_node	*peek_front(t_deque *pdeque);
 t_node	*del_front(t_deque *pdeque);
 t_node	*peek_rear(t_deque *pdeque);
 t_node	*del_rear(t_deque *pdeque);
+
 int		add_front(t_deque *pdeque, t_node *new);
 int		add_rear(t_deque *pdeque, t_node *new);
 void	free_deque(t_deque *pdeque);
@@ -113,16 +116,24 @@ void	sort_onlyfive(t_info *info, t_deque *deque_a, t_deque *deque_b, int n);
 
 void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	lst_three_a(t_deque *deque_a, int cnt);
-void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
+void	lstthree_headsmall(t_deque *deque_a, const int *data);
+void	lstthree_headmedium(t_deque *deque_a, const int *data);
+void	lstthree_headlarge(t_deque *deque_a, const int *data);
 
+void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	find_mindata_a(int cnt, t_find *find);
 void	min_sort_a(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
+void	min_sort_ra(t_deque *deque_a, int ra_cnt);
 
 void	lst_five_b(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt);
-void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
+void	bthree_headsmall(t_deque *deque_a, t_deque *deque_b, const int *data);
+void	bthree_headmedium(t_deque *deque_a, t_deque *deque_b, const int *data);
+void	bthree_headlarge(t_deque *deque_a, t_deque *deque_b, const int *data);
 
+void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	find_mindata_b(int cnt, t_find *find);
 void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
+void	min_sort_ba(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
 
 #endif

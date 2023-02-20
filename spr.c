@@ -183,164 +183,11 @@ void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 		}
 	}
 	else if (cnt == 3)
-	{
 		sort_onlythree(&info, deque_a);
-	}
 	else if (cnt == 4)
-	{
 		sort_onlyfour(&info, deque_a, deque_b, cnt);
-	}
 	else if (cnt == 5)
-	{
 		sort_onlyfive(&info, deque_a, deque_b, cnt);
-
-	}
-}
-
-void	sort_onlyfive(t_info *info, t_deque *deque_a, t_deque *deque_b, int n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (deque_a->head->data != (*info).ret_arr[0] \
-		&& deque_a->head->data != (*info).ret_arr[1])
-		{
-			ra(deque_a);
-			write(1, "ra\n", 3);
-		}
-		else if (deque_a->head->data == (*info).ret_arr[0] \
-		|| deque_a->head->data == (*info).ret_arr[1])
-		{
-			pb(deque_a, deque_b);
-			write(1, "pb\n", 3);
-		}
-		i++;
-	}
-	if (deque_a->head->data == (*info).ret_arr[2])
-	{
-		if (deque_a->tail->data == (*info).ret_arr[3])
-		{
-			sa(deque_a);
-			ra(deque_a);
-			write(1, "sa\nra\n", 6);
-		}
-	}
-	else if (deque_a->head->data == (*info).ret_arr[3])
-	{
-		if (deque_a->tail->data == (*info).ret_arr[4])
-		{
-			sa(deque_a);
-			write(1, "sa\n", 3);
-		}
-		else if (deque_a->tail->data == (*info).ret_arr[2])
-		{
-			rra(deque_a);
-			write(1, "rra\n", 4);
-		}
-	}
-	else if (deque_a->head->data == (*info).ret_arr[4])
-	{
-		if (deque_a->tail->data == (*info).ret_arr[3])
-		{
-			ra(deque_a);
-			write(1, "ra\n", 3);
-		}
-		else if (deque_a->tail->data == (*info).ret_arr[2])
-		{
-			sa(deque_a);
-			rra(deque_a);
-			write(1, "sa\nrra\n", 7);
-		}
-	}
-	if (deque_b->head->data < deque_b->head->next->data)
-	{
-		sb(deque_b);
-		write(1, "sb\n", 3);
-	}
-	pa(deque_a, deque_b);
-	pa(deque_a, deque_b);
-	write(1, "pa\npa\n", 6);
-}
-
-void	sort_onlyfour(t_info *info, t_deque *deque_a, t_deque *deque_b, int n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (deque_a->head->data != (*info).ret_arr[0] \
-		&& deque_a->head->data != (*info).ret_arr[1])
-		{
-			ra(deque_a);
-			write(1, "ra\n", 3);
-		}
-		else if (deque_a->head->data == (*info).ret_arr[0] \
-		|| deque_a->head->data == (*info).ret_arr[1])
-		{
-			pb(deque_a, deque_b);
-			write(1, "pb\n", 3);
-		}
-		i++;
-	}
-	rra(deque_a);
-	rra(deque_a);
-	write(1, "rra\nrra\n", 8);
-	if (deque_a->head->data > deque_a->head->next->data)
-	{
-		sa(deque_a);
-		write(1, "sa\n", 3);
-	}
-	if (deque_b->head->data < deque_b->head->next->data)
-	{
-		sb(deque_b);
-		write(1, "sb\n", 3);
-	}
-	pa(deque_a, deque_b);
-	pa(deque_a, deque_b);
-	write(1, "pa\npa\n", 6);
-}
-
-void	sort_onlythree(t_info *info, t_deque *deque_a)
-{
-	if (deque_a->head->data == (*info).ret_arr[0])
-	{
-		if (deque_a->tail->data == (*info).ret_arr[1])
-		{
-			rra(deque_a);
-			sa(deque_a);
-			write(1, "rra\nsa\n", 7);
-		}
-	}
-	else if (deque_a->head->data == (*info).ret_arr[1])
-	{
-		if (deque_a->tail->data == (*info).ret_arr[2])
-		{
-			sa(deque_a);
-			write(1, "sa\n", 3);
-		}
-		else
-		{
-			rra(deque_a);
-			write(1, "rra\n", 4);
-		}
-	}
-	else if (deque_a->head->data == (*info).ret_arr[2])
-	{
-		if (deque_a->tail->data == (*info).ret_arr[1])
-		{
-			ra(deque_a);
-			write(1, "ra\n", 3);
-		}
-		else
-		{
-			sa(deque_a);
-			rra(deque_a);
-			write(1, "sa\nrra\n", 7);
-		}
-	}
 }
 
 void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
@@ -354,13 +201,9 @@ void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
 		}
 	}
 	else if (cnt == 3)
-	{
 		lst_three_a(deque_a, cnt);
-	}
 	else if (cnt >= 4)
-	{
 		lst_rest_a(&info, deque_a, deque_b, cnt);
-	}
 }
 
 void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt)
@@ -382,6 +225,27 @@ void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt)
 	min_sort_a(deque_a, deque_b, cnt, &find);
 	lst_five_a((*info), deque_a, deque_b, cnt - 2);
 	lst_five_b((*info), deque_a, deque_b, 2);
+}
+
+void	min_sort_ra(t_deque *deque_a, int ra_cnt)
+{
+	int	i;
+
+	i = 0;
+	while (i < ra_cnt)
+	{
+		rra(deque_a);
+		write(1, "rra\n", 4);
+		i++;
+	}
+	if (ra_cnt == 2)
+	{
+		if (deque_a->head->data > deque_a->head->next->data)
+		{
+			sa(deque_a);
+			write(1, "sa\n", 3);
+		}
+	}
 }
 
 void	min_sort_a(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
@@ -410,21 +274,7 @@ void	min_sort_a(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
 		}
 		i++;
 	}
-	i = 0;
-	while (i < ra_cnt)
-	{
-		rra(deque_a);
-		write(1, "rra\n", 4);
-		i++;
-	}
-	if (ra_cnt == 2)
-	{
-		if (deque_a->head->data > deque_a->head->next->data)
-		{
-			sa(deque_a);
-			write(1, "sa\n", 3);
-		}
-	}
+	min_sort_ra(deque_a, ra_cnt);
 }
 
 void	find_mindata_a(int cnt, t_find *find)
@@ -448,6 +298,55 @@ void	find_mindata_a(int cnt, t_find *find)
 	}
 }
 
+void	lstthree_headmedium(t_deque *deque_a, const int *data)
+{
+	if (data[0] < data[2])
+	{
+		sa(deque_a);
+		write(1, "sa\n", 3);
+	}
+	else
+	{
+		sa(deque_a);
+		ra(deque_a);
+		sa(deque_a);
+		rra(deque_a);
+		write(1, "sa\nra\nsa\nrra\n", 13);
+	}
+}
+
+void	lstthree_headlarge(t_deque *deque_a, const int *data)
+{
+	if (data[0] < data[1])
+	{
+		ra(deque_a);
+		sa(deque_a);
+		rra(deque_a);
+		sa(deque_a);
+		write(1, "ra\nsa\nrra\nsa\n", 13);
+	}
+	else
+	{
+		sa(deque_a);
+		ra(deque_a);
+		sa(deque_a);
+		rra(deque_a);
+		sa(deque_a);
+		write(1, "sa\nra\nsa\nrra\nsa\n", 16);
+	}
+}
+
+void	lstthree_headsmall(t_deque *deque_a, const int *data)
+{
+	if (data[2] < data[1])
+	{
+		ra(deque_a);
+		sa(deque_a);
+		rra(deque_a);
+		write(1, "ra\nsa\nrra\n", 10);
+	}
+}
+
 void	lst_three_a(t_deque *deque_a, int cnt)
 {
 	t_node	*tmp;
@@ -464,51 +363,11 @@ void	lst_three_a(t_deque *deque_a, int cnt)
 		i++;
 	}
 	if (data[0] < data[1] && data[0] < data[2])
-	{
-		if (data[2] < data[1])
-		{
-			ra(deque_a);
-			sa(deque_a);
-			rra(deque_a);
-			write(1, "ra\nsa\nrra\n", 10);
-		}
-	}
+		lstthree_headsmall(deque_a, data);
 	else if (data[1] < data[0] && data[1] < data[2])
-	{
-		if (data[0] < data[2])
-		{
-			sa(deque_a);
-			write(1, "sa\n", 3);
-		}
-		else
-		{
-			sa(deque_a);
-			ra(deque_a);
-			sa(deque_a);
-			rra(deque_a);
-			write(1, "sa\nra\nsa\nrra\n", 13);
-		}
-	}
+		lstthree_headmedium(deque_a, data);
 	else if (data[2] < data[0] && data[2] < data[1])
-	{
-		if (data[0] < data[1])
-		{
-			ra(deque_a);
-			sa(deque_a);
-			rra(deque_a);
-			sa(deque_a);
-			write(1, "ra\nsa\nrra\nsa\n", 13);
-		}
-		else
-		{
-			sa(deque_a);
-			ra(deque_a);
-			sa(deque_a);
-			rra(deque_a);
-			sa(deque_a);
-			write(1, "sa\nra\nsa\nrra\nsa\n", 16);
-		}
-	}
+		lstthree_headlarge(deque_a, data);
 }
 
 void	lst_five_b(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt)
@@ -559,23 +418,19 @@ void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt)
 	lst_five_b((*info), deque_a, deque_b, cnt - 2);
 }
 
-void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
+void	min_sort_ba(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
 {
 	int	i;
-	int	rb_cnt;
-	int	pa_cnt;
 
 	i = 0;
-	rb_cnt = 0;
-	pa_cnt = 0;
-	while (i < cnt && pa_cnt != 2)
+	while (i < cnt && find->pa_cnt != 2)
 	{
 		if (deque_b->head->data != find->min_data[find->min] \
 		&& deque_b->head->data != find->min_data[find->min2])
 		{
 			rb(deque_b);
 			write(1, "rb\n", 3);
-			rb_cnt++;
+			find->rb_cnt++;
 		}
 		else
 		{
@@ -586,12 +441,21 @@ void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
 				sa(deque_a);
 				write(1, "sa\n", 3);
 			}
-			pa_cnt++;
+			find->pa_cnt++;
 		}
 		i++;
 	}
+}
+
+void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find)
+{
+	int	i;
+
+	find->rb_cnt = 0;
+	find->pa_cnt = 0;
+	min_sort_ba(deque_a, deque_b, cnt, find);
 	i = 0;
-	while (i < rb_cnt)
+	while (i < find->rb_cnt)
 	{
 		rrb(deque_b);
 		write(1, "rrb\n", 4);
@@ -620,6 +484,60 @@ void	find_mindata_b(int cnt, t_find *find)
 	}
 }
 
+void	bthree_headsmall(t_deque *deque_a, t_deque *deque_b, const int *data)
+{
+	if (data[1] < data[2])
+	{
+		rb(deque_b);
+		sb(deque_b);
+		write(1, "rb\nsb\n", 6);
+	}
+	else
+	{
+		rb(deque_b);
+		write(1, "rb\n", 3);
+	}
+	pa(deque_a, deque_b);
+	pa(deque_a, deque_b);
+	rrb(deque_b);
+	pa(deque_a, deque_b);
+	write(1, "pa\npa\nrrb\npa\n", 13);
+}
+
+void	bthree_headmedium(t_deque *deque_a, t_deque *deque_b, const int *data)
+{
+	if (data[0] < data[2])
+	{
+		rb(deque_b);
+		sb(deque_b);
+		pa(deque_a, deque_b);
+		rrb(deque_b);
+		write(1, "rb\nsb\npa\nrrb\n", 13);
+	}
+	else
+	{
+		pa(deque_a, deque_b);
+		sb(deque_b);
+		write(1, "pa\nsb\n", 6);
+	}
+	pa(deque_a, deque_b);
+	pa(deque_a, deque_b);
+	write(1, "pa\npa\n", 6);
+}
+
+void	bthree_headlarge(t_deque *deque_a, t_deque *deque_b, const int *data)
+{
+	if (data[0] < data[1])
+	{
+		sb(deque_b);
+		write(1, "sb\n", 3);
+	}
+	pa(deque_a, deque_b);
+	pa(deque_a, deque_b);
+	pa(deque_a, deque_b);
+	write(1, "pa\npa\npa\n", 9);
+}
+
 void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt)
 {
 	t_node	*tmp;
@@ -636,54 +554,9 @@ void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt)
 		i++;
 	}
 	if (data[0] < data[1] && data[0] < data[2])
-	{
-		if (data[1] < data[2])
-		{
-			rb(deque_b);
-			sb(deque_b);
-			write(1, "rb\nsb\n", 6);
-		}
-		else
-		{
-			rb(deque_b);
-			write(1, "rb\n", 3);
-		}
-		pa(deque_a, deque_b);
-		pa(deque_a, deque_b);
-		rrb(deque_b);
-		pa(deque_a, deque_b);
-		write(1, "pa\npa\nrrb\npa\n", 13);
-	}
+		bthree_headsmall(deque_a, deque_b, data);
 	else if (data[1] < data[0] && data[1] < data[2])
-	{
-		if (data[0] < data[2])
-		{
-			rb(deque_b);
-			sb(deque_b);
-			pa(deque_a, deque_b);
-			rrb(deque_b);
-			write(1, "rb\nsb\npa\nrrb\n", 13);
-		}
-		else
-		{
-			pa(deque_a, deque_b);
-			sb(deque_b);
-			write(1, "pa\nsb\n", 6);
-		}
-		pa(deque_a, deque_b);
-		pa(deque_a, deque_b);
-		write(1, "pa\npa\n", 6);
-	}
+		bthree_headmedium(deque_a, deque_b, data);
 	else if (data[2] < data[0] && data[2] < data[1])
-	{
-		if (data[0] < data[1])
-		{
-			sb(deque_b);
-			write(1, "sb\n", 3);
-		}
-		pa(deque_a, deque_b);
-		pa(deque_a, deque_b);
-		pa(deque_a, deque_b);
-		write(1, "pa\npa\npa\n", 9);
-	}
+		bthree_headlarge(deque_a, deque_b, data);
 }

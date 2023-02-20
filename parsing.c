@@ -34,9 +34,12 @@ void	split_arg(t_info *info)
 	}
 	i = 0;
 	info->ret_arr = (int *)malloc(sizeof(int) * info->ret_cnt);
+	if (!info->ret_arr)
+		error_exit("malloc error\n");
 	while (arr[i])
 	{
 		info->ret_arr[i] = ft_atoi(arr[i]);
+		free(arr[i]);
 		i++;
 	}
 	check_intarr(info);

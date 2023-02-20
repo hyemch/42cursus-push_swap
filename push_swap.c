@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-//
-//void	leak(void)
-//{
-//	system("leaks push_swap");
-//}
+
+void	leak(void)
+{
+	system("leaks push_swap");
+}
 
 int	main(int argc, char **argv)
 {
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	t_deque	deque_a;
 	t_deque	deque_b;
 
-//	atexit(leak);
+	atexit(leak);
 	if (argc < 2)
 		error_exit("argument count error\n");
 	ft_memset(&info, 0, sizeof(info));

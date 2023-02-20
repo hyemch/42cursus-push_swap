@@ -22,6 +22,19 @@ t_info	find_pivot(int cur, int cnt, t_info *info)
 	return (*info);
 }
 
+void	check_ab(t_deque *deque_a, t_deque *deque_b, t_info *info, t_pivot *a)
+{
+	if (deque_b->head == NULL)
+	{
+		firstatob(info, deque_a, deque_b, a);
+	}
+	else if (deque_b->head != NULL)
+	{
+		part_atob(info, deque_a, deque_b, a);
+		rrr_atob (deque_a, deque_b, a);
+	}
+}
+
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 {
 	t_pivot	a;
@@ -32,8 +45,7 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 		return (lst_five_a(info, deque_a, deque_b, info.lst_cnt));
 	info = find_pivot(info.cur, info.lst_cnt, &info);
 	cur_tmp = info.cur;
-	part_atob(&info, deque_a, deque_b, &a);
-	rrr_atob (deque_a, deque_b, &a);
+	check_ab(deque_a, deque_b, &info, &a);
 	info.lst_cnt = a.l;
 	info.cur = cur_tmp + a.s + a.m;
 	a_to_b(info, deque_a, deque_b);
@@ -43,6 +55,32 @@ void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b)
 	info.lst_cnt = a.s;
 	info.cur = cur_tmp + 0;
 	b_to_a(info, deque_a, deque_b);
+}
+
+void	firstatob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a)
+{
+	while (a->s + a->m + a->l < info->lst_cnt)
+	{
+		if (deque_a->head->data < info->p1)
+		{
+			pb(deque_a, deque_b);
+			rb(deque_b);
+			write(1, "pb\nrb\n", 6);
+			a->m++;
+		}
+		else if (info->p2 <= deque_a->head->data)
+		{
+			ra(deque_a);
+			write(1, "ra\n", 3);
+			a->l++;
+		}
+		else
+		{
+			pb(deque_a, deque_b);
+			write(1, "pb\n", 3);
+			a->s++;
+		}
+	}
 }
 
 void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a)

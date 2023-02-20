@@ -101,7 +101,9 @@ void	partition_2(t_info *info);
 t_info	sort_partition(t_info *info);
 
 t_info	find_pivot(int cur, int cnt, t_info *info);
+void	firstatob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b);
+void	check_ab(t_deque *deque_a, t_deque *deque_b, t_info *info, t_pivot *a);
 void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 void	rrr_atob(t_deque *deque_a, t_deque *deque_b, t_pivot *a);
 

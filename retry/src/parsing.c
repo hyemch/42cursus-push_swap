@@ -31,7 +31,7 @@ long	ft_atol(const char *str)
 	{
 		result = result * 10 + (*str - '0');
 		if (result < 0)
-			return ((sign + 1) / -2);
+			return (INT_ERROR);
 		str++;
 	}
 	return (result * sign);

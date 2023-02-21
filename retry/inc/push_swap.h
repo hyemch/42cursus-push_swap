@@ -19,6 +19,7 @@
 
 # define TRUE	1
 # define ERROR -1
+# define INT_ERROR -9999999999;
 
 typedef struct s_node
 {

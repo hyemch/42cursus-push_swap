@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 	t_deque	deque_b;
 
 	if (argc < 2)
-		error_exit();
+		exit(1);
 	ft_memset(&info, 0, sizeof(info));
 	ft_memset(&deque_a, 0, sizeof(deque_a));
 	ft_memset(&deque_b, 0, sizeof(deque_b));

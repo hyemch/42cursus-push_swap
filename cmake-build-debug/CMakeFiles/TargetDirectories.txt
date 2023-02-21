@@ -1,3 +1,0 @@
-/goinfre/hyecheon/pushswapgit/cmake-build-debug/CMakeFiles/push_swap.dir
-/goinfre/hyecheon/pushswapgit/cmake-build-debug/CMakeFiles/edit_cache.dir
-/goinfre/hyecheon/pushswapgit/cmake-build-debug/CMakeFiles/rebuild_cache.dir

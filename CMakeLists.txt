@@ -7,27 +7,27 @@ include_directories(.
         ./libft)
 
 add_executable(push_swap
-        push_swap.h
-        push_swap.c
-        parsing.c
-        check_arg.c
-        deque.c
-        deque_utils.c
-        sort_intarr.c
-        sort_list.c
-        a_to_b.c
-        b_to_a.c
-        sort_five_a.c
-        sort_five_a2.c
-        sort_five_b.c
-        sort_five_b2.c
-        sort_onlyfive.c
-        sort_onlyfour.c
-        sort_onlythree.c
-        operations_push.c
-        operations_swap.c
-        operations_rotate.c
-        operations_reverse.c
+        ./inc/push_swap.h
+        ./src/push_swap.c
+        ./src/parsing.c
+        ./src/check_arg.c
+        ./src/deque.c
+        ./src/deque_utils.c
+        ./src/sort_intarr.c
+        ./src/sort_list.c
+        ./src/a_to_b.c
+        ./src/b_to_a.c
+        ./src/sort_five_a.c
+        ./src/sort_five_a2.c
+        ./src/sort_five_b.c
+        ./src/sort_five_b2.c
+        ./src/sort_onlyfive.c
+        ./src/sort_onlyfour.c
+        ./src/sort_onlythree.c
+        ./src/operations_push.c
+        ./src/operations_swap.c
+        ./src/operations_rotate.c
+        ./src/operations_reverse.c
         ./libft/ft_calloc.c
         ./libft/ft_strjoin.c
         ./libft/ft_strlcpy.c

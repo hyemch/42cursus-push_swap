@@ -12,6 +12,20 @@
 
 #include "push_swap.h"
 
+void	check_sort_arr(t_info info)
+{
+	int	i;
+
+	i = 0;
+	while (i + 1 < info.ret_cnt)
+	{
+		if (info.ret_arr[i] > info.ret_arr[i + 1])
+			return ;
+		i++;
+	}
+	exit(0);
+}
+
 t_info	find_pivot(int cur, int cnt, t_info *info)
 {
 	int	*arr;

@@ -32,7 +32,6 @@ SRC		=	src/push_swap.c \
             libft/ft_memset.c \
             libft/ft_strlcat.c \
             libft/ft_strlen.c \
-            libft/ft_atoi.c \
             libft/ft_split.c
 
 OBJ		=	$(SRC:%.c=%.o)

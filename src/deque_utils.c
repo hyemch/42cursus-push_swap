@@ -78,7 +78,8 @@ void	arr_to_deque(t_info info, t_deque *deque_a)
 		if (new == NULL)
 		{
 			free_deque(deque_a);
-			error_exit("node allocate error\n");
+			write(2, "ERROR\nnode allocate error\n", 26);
+			error_exit();
 		}
 		add_rear(deque_a, new);
 		i++;

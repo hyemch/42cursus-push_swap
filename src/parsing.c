@@ -12,11 +12,47 @@
 
 #include "push_swap.h"
 
-void	error_exit(char *error_message)
+long	ft_atol(const char *str)
 {
-	write(2, "Error\n", 6);
-	write(2, error_message, ft_strlen(error_message));
-	exit(1);
+	int		sign;
+	long	result;
+
+	sign = 1;
+	result = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign *= -1;
+		str++;
+	}
+	while (*str && *str >= '0' && *str <= '9')
+	{
+		result = result * 10 + (*str - '0');
+		if (result < 0)
+			return ((sign + 1) / -2);
+		str++;
+	}
+	return (result * sign);
+}
+
+void	atol_intarr(t_info *info, char **arr)
+{
+	int		i;
+	long	check_num;
+
+	i = 0;
+	while (arr[i])
+	{
+		check_num = ft_atol(arr[i]);
+		if (check_num < -2147483648 || 2147483647 < check_num)
+			error_exit();
+		info->ret_arr[i] = (int)check_num;
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }
 
 void	split_arg(t_info *info)
@@ -32,21 +68,14 @@ void	split_arg(t_info *info)
 		info->lst_cnt++;
 		i++;
 	}
-	i = 0;
 	info->ret_arr = (int *)malloc(sizeof(int) * info->ret_cnt);
 	if (!info->ret_arr)
-		error_exit("malloc error\n");
-	while (arr[i])
-	{
-		info->ret_arr[i] = ft_atoi(arr[i]);
-		free(arr[i]);
-		i++;
-	}
-	free(arr);
+		error_exit();
+	atol_intarr(info, arr);
 	check_intarr(info);
 }
 
-static void	arg_join(t_info *info, int argc, char **argv, char *ret)
+void	arg_join(t_info *info, int argc, char **argv, char *ret)
 {
 	int		i;
 	char	*tmp;
@@ -57,12 +86,12 @@ static void	arg_join(t_info *info, int argc, char **argv, char *ret)
 		tmp = ret;
 		ret = ft_strjoin(ret, argv[i]);
 		if (!ret)
-			error_exit("parsing error\n");
+			error_exit();
 		free (tmp);
 		tmp = ret;
 		ret = ft_strjoin(ret, " ");
 		if (!ret)
-			error_exit("parsing error\n");
+			error_exit();
 		free (tmp);
 		i++;
 	}
@@ -75,11 +104,11 @@ int	parsing_arg(t_info *info, int argc, char **argv)
 
 	ret = ft_calloc(1, sizeof(char));
 	if (!ret)
-		error_exit("parsing error\n");
+		error_exit();
 	if (valid_arg(argc, argv) != ERROR)
 		arg_join(info, argc, argv, ret);
 	else
-		error_exit("argument error!\n");
+		error_exit();
 	split_arg(info);
 	return (0);
 }

@@ -73,13 +73,13 @@ void	check_intarr(t_info *info)
 	int	j;
 
 	i = 0;
-	while (i < info->ret_cnt && info->ret_arr[i])
+	while (i < info->ret_cnt)
 	{
 		j = i + 1;
 		while (j < info->ret_cnt)
 		{
 			if (info->ret_arr[i] == info->ret_arr[j])
-				error_exit("Overlap argument!\n");
+				error_exit();
 			j++;
 		}
 		i++;

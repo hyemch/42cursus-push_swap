@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/min/Desktop/c/42cursus/push_swap
+CMAKE_SOURCE_DIR = /goinfre/hyecheon/pushswapgit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/min/Desktop/c/42cursus/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /goinfre/hyecheon/pushswapgit/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/min/Desktop/c/42cursus/push_swap/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/min/Desktop/c/42cursus/push_swap/cmake-build-debug/CMakeFiles /Users/min/Desktop/c/42cursus/push_swap/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /goinfre/hyecheon/pushswapgit/cmake-build-debug/CMakeFiles /goinfre/hyecheon/pushswapgit/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/min/Desktop/c/42cursus/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /goinfre/hyecheon/pushswapgit/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,126 +128,6 @@ push_swap: cmake_check_build_system
 push_swap/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
 .PHONY : push_swap/fast
-
-a_to_b.o: a_to_b.c.o
-.PHONY : a_to_b.o
-
-# target to build an object file
-a_to_b.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/a_to_b.c.o
-.PHONY : a_to_b.c.o
-
-a_to_b.i: a_to_b.c.i
-.PHONY : a_to_b.i
-
-# target to preprocess a source file
-a_to_b.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/a_to_b.c.i
-.PHONY : a_to_b.c.i
-
-a_to_b.s: a_to_b.c.s
-.PHONY : a_to_b.s
-
-# target to generate assembly for a file
-a_to_b.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/a_to_b.c.s
-.PHONY : a_to_b.c.s
-
-b_to_a.o: b_to_a.c.o
-.PHONY : b_to_a.o
-
-# target to build an object file
-b_to_a.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/b_to_a.c.o
-.PHONY : b_to_a.c.o
-
-b_to_a.i: b_to_a.c.i
-.PHONY : b_to_a.i
-
-# target to preprocess a source file
-b_to_a.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/b_to_a.c.i
-.PHONY : b_to_a.c.i
-
-b_to_a.s: b_to_a.c.s
-.PHONY : b_to_a.s
-
-# target to generate assembly for a file
-b_to_a.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/b_to_a.c.s
-.PHONY : b_to_a.c.s
-
-check_arg.o: check_arg.c.o
-.PHONY : check_arg.o
-
-# target to build an object file
-check_arg.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/check_arg.c.o
-.PHONY : check_arg.c.o
-
-check_arg.i: check_arg.c.i
-.PHONY : check_arg.i
-
-# target to preprocess a source file
-check_arg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/check_arg.c.i
-.PHONY : check_arg.c.i
-
-check_arg.s: check_arg.c.s
-.PHONY : check_arg.s
-
-# target to generate assembly for a file
-check_arg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/check_arg.c.s
-.PHONY : check_arg.c.s
-
-deque.o: deque.c.o
-.PHONY : deque.o
-
-# target to build an object file
-deque.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque.c.o
-.PHONY : deque.c.o
-
-deque.i: deque.c.i
-.PHONY : deque.i
-
-# target to preprocess a source file
-deque.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque.c.i
-.PHONY : deque.c.i
-
-deque.s: deque.c.s
-.PHONY : deque.s
-
-# target to generate assembly for a file
-deque.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque.c.s
-.PHONY : deque.c.s
-
-deque_utils.o: deque_utils.c.o
-.PHONY : deque_utils.o
-
-# target to build an object file
-deque_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque_utils.c.o
-.PHONY : deque_utils.c.o
-
-deque_utils.i: deque_utils.c.i
-.PHONY : deque_utils.i
-
-# target to preprocess a source file
-deque_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque_utils.c.i
-.PHONY : deque_utils.c.i
-
-deque_utils.s: deque_utils.c.s
-.PHONY : deque_utils.s
-
-# target to generate assembly for a file
-deque_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/deque_utils.c.s
-.PHONY : deque_utils.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 .PHONY : libft/ft_atoi.o
@@ -441,365 +321,485 @@ libft/ft_strlen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_strlen.c.s
 .PHONY : libft/ft_strlen.c.s
 
-operations_push.o: operations_push.c.o
-.PHONY : operations_push.o
+src/a_to_b.o: src/a_to_b.c.o
+.PHONY : src/a_to_b.o
 
 # target to build an object file
-operations_push.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_push.c.o
-.PHONY : operations_push.c.o
+src/a_to_b.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_to_b.c.o
+.PHONY : src/a_to_b.c.o
 
-operations_push.i: operations_push.c.i
-.PHONY : operations_push.i
+src/a_to_b.i: src/a_to_b.c.i
+.PHONY : src/a_to_b.i
 
 # target to preprocess a source file
-operations_push.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_push.c.i
-.PHONY : operations_push.c.i
+src/a_to_b.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_to_b.c.i
+.PHONY : src/a_to_b.c.i
 
-operations_push.s: operations_push.c.s
-.PHONY : operations_push.s
+src/a_to_b.s: src/a_to_b.c.s
+.PHONY : src/a_to_b.s
 
 # target to generate assembly for a file
-operations_push.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_push.c.s
-.PHONY : operations_push.c.s
+src/a_to_b.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_to_b.c.s
+.PHONY : src/a_to_b.c.s
 
-operations_reverse.o: operations_reverse.c.o
-.PHONY : operations_reverse.o
+src/b_to_a.o: src/b_to_a.c.o
+.PHONY : src/b_to_a.o
 
 # target to build an object file
-operations_reverse.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_reverse.c.o
-.PHONY : operations_reverse.c.o
+src/b_to_a.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_to_a.c.o
+.PHONY : src/b_to_a.c.o
 
-operations_reverse.i: operations_reverse.c.i
-.PHONY : operations_reverse.i
+src/b_to_a.i: src/b_to_a.c.i
+.PHONY : src/b_to_a.i
 
 # target to preprocess a source file
-operations_reverse.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_reverse.c.i
-.PHONY : operations_reverse.c.i
+src/b_to_a.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_to_a.c.i
+.PHONY : src/b_to_a.c.i
 
-operations_reverse.s: operations_reverse.c.s
-.PHONY : operations_reverse.s
+src/b_to_a.s: src/b_to_a.c.s
+.PHONY : src/b_to_a.s
 
 # target to generate assembly for a file
-operations_reverse.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_reverse.c.s
-.PHONY : operations_reverse.c.s
+src/b_to_a.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_to_a.c.s
+.PHONY : src/b_to_a.c.s
 
-operations_rotate.o: operations_rotate.c.o
-.PHONY : operations_rotate.o
+src/check_arg.o: src/check_arg.c.o
+.PHONY : src/check_arg.o
 
 # target to build an object file
-operations_rotate.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_rotate.c.o
-.PHONY : operations_rotate.c.o
+src/check_arg.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_arg.c.o
+.PHONY : src/check_arg.c.o
 
-operations_rotate.i: operations_rotate.c.i
-.PHONY : operations_rotate.i
+src/check_arg.i: src/check_arg.c.i
+.PHONY : src/check_arg.i
 
 # target to preprocess a source file
-operations_rotate.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_rotate.c.i
-.PHONY : operations_rotate.c.i
+src/check_arg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_arg.c.i
+.PHONY : src/check_arg.c.i
 
-operations_rotate.s: operations_rotate.c.s
-.PHONY : operations_rotate.s
+src/check_arg.s: src/check_arg.c.s
+.PHONY : src/check_arg.s
 
 # target to generate assembly for a file
-operations_rotate.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_rotate.c.s
-.PHONY : operations_rotate.c.s
+src/check_arg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_arg.c.s
+.PHONY : src/check_arg.c.s
 
-operations_swap.o: operations_swap.c.o
-.PHONY : operations_swap.o
+src/deque.o: src/deque.c.o
+.PHONY : src/deque.o
 
 # target to build an object file
-operations_swap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_swap.c.o
-.PHONY : operations_swap.c.o
+src/deque.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/deque.c.o
+.PHONY : src/deque.c.o
 
-operations_swap.i: operations_swap.c.i
-.PHONY : operations_swap.i
+src/deque.i: src/deque.c.i
+.PHONY : src/deque.i
 
 # target to preprocess a source file
-operations_swap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_swap.c.i
-.PHONY : operations_swap.c.i
+src/deque.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/deque.c.i
+.PHONY : src/deque.c.i
 
-operations_swap.s: operations_swap.c.s
-.PHONY : operations_swap.s
+src/deque.s: src/deque.c.s
+.PHONY : src/deque.s
 
 # target to generate assembly for a file
-operations_swap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations_swap.c.s
-.PHONY : operations_swap.c.s
+src/deque.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/deque.c.s
+.PHONY : src/deque.c.s
 
-parsing.o: parsing.c.o
-.PHONY : parsing.o
+src/deque_utils.o: src/deque_utils.c.o
+.PHONY : src/deque_utils.o
 
 # target to build an object file
-parsing.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/parsing.c.o
-.PHONY : parsing.c.o
+src/deque_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/deque_utils.c.o
+.PHONY : src/deque_utils.c.o
 
-parsing.i: parsing.c.i
-.PHONY : parsing.i
+src/deque_utils.i: src/deque_utils.c.i
+.PHONY : src/deque_utils.i
 
 # target to preprocess a source file
-parsing.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/parsing.c.i
-.PHONY : parsing.c.i
+src/deque_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/deque_utils.c.i
+.PHONY : src/deque_utils.c.i
 
-parsing.s: parsing.c.s
-.PHONY : parsing.s
+src/deque_utils.s: src/deque_utils.c.s
+.PHONY : src/deque_utils.s
 
 # target to generate assembly for a file
-parsing.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/parsing.c.s
-.PHONY : parsing.c.s
+src/deque_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/deque_utils.c.s
+.PHONY : src/deque_utils.c.s
 
-push_swap.o: push_swap.c.o
-.PHONY : push_swap.o
+src/operations_push.o: src/operations_push.c.o
+.PHONY : src/operations_push.o
 
 # target to build an object file
-push_swap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.o
-.PHONY : push_swap.c.o
+src/operations_push.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_push.c.o
+.PHONY : src/operations_push.c.o
 
-push_swap.i: push_swap.c.i
-.PHONY : push_swap.i
+src/operations_push.i: src/operations_push.c.i
+.PHONY : src/operations_push.i
 
 # target to preprocess a source file
-push_swap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.i
-.PHONY : push_swap.c.i
+src/operations_push.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_push.c.i
+.PHONY : src/operations_push.c.i
 
-push_swap.s: push_swap.c.s
-.PHONY : push_swap.s
+src/operations_push.s: src/operations_push.c.s
+.PHONY : src/operations_push.s
 
 # target to generate assembly for a file
-push_swap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.s
-.PHONY : push_swap.c.s
+src/operations_push.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_push.c.s
+.PHONY : src/operations_push.c.s
 
-sort_five_a.o: sort_five_a.c.o
-.PHONY : sort_five_a.o
+src/operations_reverse.o: src/operations_reverse.c.o
+.PHONY : src/operations_reverse.o
 
 # target to build an object file
-sort_five_a.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_a.c.o
-.PHONY : sort_five_a.c.o
+src/operations_reverse.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_reverse.c.o
+.PHONY : src/operations_reverse.c.o
 
-sort_five_a.i: sort_five_a.c.i
-.PHONY : sort_five_a.i
+src/operations_reverse.i: src/operations_reverse.c.i
+.PHONY : src/operations_reverse.i
 
 # target to preprocess a source file
-sort_five_a.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_a.c.i
-.PHONY : sort_five_a.c.i
+src/operations_reverse.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_reverse.c.i
+.PHONY : src/operations_reverse.c.i
 
-sort_five_a.s: sort_five_a.c.s
-.PHONY : sort_five_a.s
+src/operations_reverse.s: src/operations_reverse.c.s
+.PHONY : src/operations_reverse.s
 
 # target to generate assembly for a file
-sort_five_a.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_a.c.s
-.PHONY : sort_five_a.c.s
+src/operations_reverse.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_reverse.c.s
+.PHONY : src/operations_reverse.c.s
 
-sort_five_a2.o: sort_five_a2.c.o
-.PHONY : sort_five_a2.o
+src/operations_rotate.o: src/operations_rotate.c.o
+.PHONY : src/operations_rotate.o
 
 # target to build an object file
-sort_five_a2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_a2.c.o
-.PHONY : sort_five_a2.c.o
+src/operations_rotate.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_rotate.c.o
+.PHONY : src/operations_rotate.c.o
 
-sort_five_a2.i: sort_five_a2.c.i
-.PHONY : sort_five_a2.i
+src/operations_rotate.i: src/operations_rotate.c.i
+.PHONY : src/operations_rotate.i
 
 # target to preprocess a source file
-sort_five_a2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_a2.c.i
-.PHONY : sort_five_a2.c.i
+src/operations_rotate.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_rotate.c.i
+.PHONY : src/operations_rotate.c.i
 
-sort_five_a2.s: sort_five_a2.c.s
-.PHONY : sort_five_a2.s
+src/operations_rotate.s: src/operations_rotate.c.s
+.PHONY : src/operations_rotate.s
 
 # target to generate assembly for a file
-sort_five_a2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_a2.c.s
-.PHONY : sort_five_a2.c.s
+src/operations_rotate.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_rotate.c.s
+.PHONY : src/operations_rotate.c.s
 
-sort_five_b.o: sort_five_b.c.o
-.PHONY : sort_five_b.o
+src/operations_swap.o: src/operations_swap.c.o
+.PHONY : src/operations_swap.o
 
 # target to build an object file
-sort_five_b.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_b.c.o
-.PHONY : sort_five_b.c.o
+src/operations_swap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_swap.c.o
+.PHONY : src/operations_swap.c.o
 
-sort_five_b.i: sort_five_b.c.i
-.PHONY : sort_five_b.i
+src/operations_swap.i: src/operations_swap.c.i
+.PHONY : src/operations_swap.i
 
 # target to preprocess a source file
-sort_five_b.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_b.c.i
-.PHONY : sort_five_b.c.i
+src/operations_swap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_swap.c.i
+.PHONY : src/operations_swap.c.i
 
-sort_five_b.s: sort_five_b.c.s
-.PHONY : sort_five_b.s
+src/operations_swap.s: src/operations_swap.c.s
+.PHONY : src/operations_swap.s
 
 # target to generate assembly for a file
-sort_five_b.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_b.c.s
-.PHONY : sort_five_b.c.s
+src/operations_swap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/operations_swap.c.s
+.PHONY : src/operations_swap.c.s
 
-sort_five_b2.o: sort_five_b2.c.o
-.PHONY : sort_five_b2.o
+src/parsing.o: src/parsing.c.o
+.PHONY : src/parsing.o
 
 # target to build an object file
-sort_five_b2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_b2.c.o
-.PHONY : sort_five_b2.c.o
+src/parsing.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/parsing.c.o
+.PHONY : src/parsing.c.o
 
-sort_five_b2.i: sort_five_b2.c.i
-.PHONY : sort_five_b2.i
+src/parsing.i: src/parsing.c.i
+.PHONY : src/parsing.i
 
 # target to preprocess a source file
-sort_five_b2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_b2.c.i
-.PHONY : sort_five_b2.c.i
+src/parsing.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/parsing.c.i
+.PHONY : src/parsing.c.i
 
-sort_five_b2.s: sort_five_b2.c.s
-.PHONY : sort_five_b2.s
+src/parsing.s: src/parsing.c.s
+.PHONY : src/parsing.s
 
 # target to generate assembly for a file
-sort_five_b2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_five_b2.c.s
-.PHONY : sort_five_b2.c.s
+src/parsing.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/parsing.c.s
+.PHONY : src/parsing.c.s
 
-sort_intarr.o: sort_intarr.c.o
-.PHONY : sort_intarr.o
+src/push_swap.o: src/push_swap.c.o
+.PHONY : src/push_swap.o
 
 # target to build an object file
-sort_intarr.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_intarr.c.o
-.PHONY : sort_intarr.c.o
+src/push_swap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.o
+.PHONY : src/push_swap.c.o
 
-sort_intarr.i: sort_intarr.c.i
-.PHONY : sort_intarr.i
+src/push_swap.i: src/push_swap.c.i
+.PHONY : src/push_swap.i
 
 # target to preprocess a source file
-sort_intarr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_intarr.c.i
-.PHONY : sort_intarr.c.i
+src/push_swap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.i
+.PHONY : src/push_swap.c.i
 
-sort_intarr.s: sort_intarr.c.s
-.PHONY : sort_intarr.s
+src/push_swap.s: src/push_swap.c.s
+.PHONY : src/push_swap.s
 
 # target to generate assembly for a file
-sort_intarr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_intarr.c.s
-.PHONY : sort_intarr.c.s
+src/push_swap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.s
+.PHONY : src/push_swap.c.s
 
-sort_list.o: sort_list.c.o
-.PHONY : sort_list.o
+src/sort_five_a.o: src/sort_five_a.c.o
+.PHONY : src/sort_five_a.o
 
 # target to build an object file
-sort_list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_list.c.o
-.PHONY : sort_list.c.o
+src/sort_five_a.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_a.c.o
+.PHONY : src/sort_five_a.c.o
 
-sort_list.i: sort_list.c.i
-.PHONY : sort_list.i
+src/sort_five_a.i: src/sort_five_a.c.i
+.PHONY : src/sort_five_a.i
 
 # target to preprocess a source file
-sort_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_list.c.i
-.PHONY : sort_list.c.i
+src/sort_five_a.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_a.c.i
+.PHONY : src/sort_five_a.c.i
 
-sort_list.s: sort_list.c.s
-.PHONY : sort_list.s
+src/sort_five_a.s: src/sort_five_a.c.s
+.PHONY : src/sort_five_a.s
 
 # target to generate assembly for a file
-sort_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_list.c.s
-.PHONY : sort_list.c.s
+src/sort_five_a.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_a.c.s
+.PHONY : src/sort_five_a.c.s
 
-sort_onlyfive.o: sort_onlyfive.c.o
-.PHONY : sort_onlyfive.o
+src/sort_five_a2.o: src/sort_five_a2.c.o
+.PHONY : src/sort_five_a2.o
 
 # target to build an object file
-sort_onlyfive.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlyfive.c.o
-.PHONY : sort_onlyfive.c.o
+src/sort_five_a2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_a2.c.o
+.PHONY : src/sort_five_a2.c.o
 
-sort_onlyfive.i: sort_onlyfive.c.i
-.PHONY : sort_onlyfive.i
+src/sort_five_a2.i: src/sort_five_a2.c.i
+.PHONY : src/sort_five_a2.i
 
 # target to preprocess a source file
-sort_onlyfive.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlyfive.c.i
-.PHONY : sort_onlyfive.c.i
+src/sort_five_a2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_a2.c.i
+.PHONY : src/sort_five_a2.c.i
 
-sort_onlyfive.s: sort_onlyfive.c.s
-.PHONY : sort_onlyfive.s
+src/sort_five_a2.s: src/sort_five_a2.c.s
+.PHONY : src/sort_five_a2.s
 
 # target to generate assembly for a file
-sort_onlyfive.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlyfive.c.s
-.PHONY : sort_onlyfive.c.s
+src/sort_five_a2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_a2.c.s
+.PHONY : src/sort_five_a2.c.s
 
-sort_onlyfour.o: sort_onlyfour.c.o
-.PHONY : sort_onlyfour.o
+src/sort_five_b.o: src/sort_five_b.c.o
+.PHONY : src/sort_five_b.o
 
 # target to build an object file
-sort_onlyfour.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlyfour.c.o
-.PHONY : sort_onlyfour.c.o
+src/sort_five_b.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_b.c.o
+.PHONY : src/sort_five_b.c.o
 
-sort_onlyfour.i: sort_onlyfour.c.i
-.PHONY : sort_onlyfour.i
+src/sort_five_b.i: src/sort_five_b.c.i
+.PHONY : src/sort_five_b.i
 
 # target to preprocess a source file
-sort_onlyfour.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlyfour.c.i
-.PHONY : sort_onlyfour.c.i
+src/sort_five_b.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_b.c.i
+.PHONY : src/sort_five_b.c.i
 
-sort_onlyfour.s: sort_onlyfour.c.s
-.PHONY : sort_onlyfour.s
+src/sort_five_b.s: src/sort_five_b.c.s
+.PHONY : src/sort_five_b.s
 
 # target to generate assembly for a file
-sort_onlyfour.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlyfour.c.s
-.PHONY : sort_onlyfour.c.s
+src/sort_five_b.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_b.c.s
+.PHONY : src/sort_five_b.c.s
 
-sort_onlythree.o: sort_onlythree.c.o
-.PHONY : sort_onlythree.o
+src/sort_five_b2.o: src/sort_five_b2.c.o
+.PHONY : src/sort_five_b2.o
 
 # target to build an object file
-sort_onlythree.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlythree.c.o
-.PHONY : sort_onlythree.c.o
+src/sort_five_b2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_b2.c.o
+.PHONY : src/sort_five_b2.c.o
 
-sort_onlythree.i: sort_onlythree.c.i
-.PHONY : sort_onlythree.i
+src/sort_five_b2.i: src/sort_five_b2.c.i
+.PHONY : src/sort_five_b2.i
 
 # target to preprocess a source file
-sort_onlythree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlythree.c.i
-.PHONY : sort_onlythree.c.i
+src/sort_five_b2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_b2.c.i
+.PHONY : src/sort_five_b2.c.i
 
-sort_onlythree.s: sort_onlythree.c.s
-.PHONY : sort_onlythree.s
+src/sort_five_b2.s: src/sort_five_b2.c.s
+.PHONY : src/sort_five_b2.s
 
 # target to generate assembly for a file
-sort_onlythree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/sort_onlythree.c.s
-.PHONY : sort_onlythree.c.s
+src/sort_five_b2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_five_b2.c.s
+.PHONY : src/sort_five_b2.c.s
+
+src/sort_intarr.o: src/sort_intarr.c.o
+.PHONY : src/sort_intarr.o
+
+# target to build an object file
+src/sort_intarr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_intarr.c.o
+.PHONY : src/sort_intarr.c.o
+
+src/sort_intarr.i: src/sort_intarr.c.i
+.PHONY : src/sort_intarr.i
+
+# target to preprocess a source file
+src/sort_intarr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_intarr.c.i
+.PHONY : src/sort_intarr.c.i
+
+src/sort_intarr.s: src/sort_intarr.c.s
+.PHONY : src/sort_intarr.s
+
+# target to generate assembly for a file
+src/sort_intarr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_intarr.c.s
+.PHONY : src/sort_intarr.c.s
+
+src/sort_list.o: src/sort_list.c.o
+.PHONY : src/sort_list.o
+
+# target to build an object file
+src/sort_list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_list.c.o
+.PHONY : src/sort_list.c.o
+
+src/sort_list.i: src/sort_list.c.i
+.PHONY : src/sort_list.i
+
+# target to preprocess a source file
+src/sort_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_list.c.i
+.PHONY : src/sort_list.c.i
+
+src/sort_list.s: src/sort_list.c.s
+.PHONY : src/sort_list.s
+
+# target to generate assembly for a file
+src/sort_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_list.c.s
+.PHONY : src/sort_list.c.s
+
+src/sort_onlyfive.o: src/sort_onlyfive.c.o
+.PHONY : src/sort_onlyfive.o
+
+# target to build an object file
+src/sort_onlyfive.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlyfive.c.o
+.PHONY : src/sort_onlyfive.c.o
+
+src/sort_onlyfive.i: src/sort_onlyfive.c.i
+.PHONY : src/sort_onlyfive.i
+
+# target to preprocess a source file
+src/sort_onlyfive.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlyfive.c.i
+.PHONY : src/sort_onlyfive.c.i
+
+src/sort_onlyfive.s: src/sort_onlyfive.c.s
+.PHONY : src/sort_onlyfive.s
+
+# target to generate assembly for a file
+src/sort_onlyfive.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlyfive.c.s
+.PHONY : src/sort_onlyfive.c.s
+
+src/sort_onlyfour.o: src/sort_onlyfour.c.o
+.PHONY : src/sort_onlyfour.o
+
+# target to build an object file
+src/sort_onlyfour.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlyfour.c.o
+.PHONY : src/sort_onlyfour.c.o
+
+src/sort_onlyfour.i: src/sort_onlyfour.c.i
+.PHONY : src/sort_onlyfour.i
+
+# target to preprocess a source file
+src/sort_onlyfour.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlyfour.c.i
+.PHONY : src/sort_onlyfour.c.i
+
+src/sort_onlyfour.s: src/sort_onlyfour.c.s
+.PHONY : src/sort_onlyfour.s
+
+# target to generate assembly for a file
+src/sort_onlyfour.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlyfour.c.s
+.PHONY : src/sort_onlyfour.c.s
+
+src/sort_onlythree.o: src/sort_onlythree.c.o
+.PHONY : src/sort_onlythree.o
+
+# target to build an object file
+src/sort_onlythree.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlythree.c.o
+.PHONY : src/sort_onlythree.c.o
+
+src/sort_onlythree.i: src/sort_onlythree.c.i
+.PHONY : src/sort_onlythree.i
+
+# target to preprocess a source file
+src/sort_onlythree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlythree.c.i
+.PHONY : src/sort_onlythree.c.i
+
+src/sort_onlythree.s: src/sort_onlythree.c.s
+.PHONY : src/sort_onlythree.s
+
+# target to generate assembly for a file
+src/sort_onlythree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort_onlythree.c.s
+.PHONY : src/sort_onlythree.c.s
 
 # Help Target
 help:
@@ -810,21 +810,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... push_swap"
-	@echo "... a_to_b.o"
-	@echo "... a_to_b.i"
-	@echo "... a_to_b.s"
-	@echo "... b_to_a.o"
-	@echo "... b_to_a.i"
-	@echo "... b_to_a.s"
-	@echo "... check_arg.o"
-	@echo "... check_arg.i"
-	@echo "... check_arg.s"
-	@echo "... deque.o"
-	@echo "... deque.i"
-	@echo "... deque.s"
-	@echo "... deque_utils.o"
-	@echo "... deque_utils.i"
-	@echo "... deque_utils.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -849,51 +834,66 @@ help:
 	@echo "... libft/ft_strlen.o"
 	@echo "... libft/ft_strlen.i"
 	@echo "... libft/ft_strlen.s"
-	@echo "... operations_push.o"
-	@echo "... operations_push.i"
-	@echo "... operations_push.s"
-	@echo "... operations_reverse.o"
-	@echo "... operations_reverse.i"
-	@echo "... operations_reverse.s"
-	@echo "... operations_rotate.o"
-	@echo "... operations_rotate.i"
-	@echo "... operations_rotate.s"
-	@echo "... operations_swap.o"
-	@echo "... operations_swap.i"
-	@echo "... operations_swap.s"
-	@echo "... parsing.o"
-	@echo "... parsing.i"
-	@echo "... parsing.s"
-	@echo "... push_swap.o"
-	@echo "... push_swap.i"
-	@echo "... push_swap.s"
-	@echo "... sort_five_a.o"
-	@echo "... sort_five_a.i"
-	@echo "... sort_five_a.s"
-	@echo "... sort_five_a2.o"
-	@echo "... sort_five_a2.i"
-	@echo "... sort_five_a2.s"
-	@echo "... sort_five_b.o"
-	@echo "... sort_five_b.i"
-	@echo "... sort_five_b.s"
-	@echo "... sort_five_b2.o"
-	@echo "... sort_five_b2.i"
-	@echo "... sort_five_b2.s"
-	@echo "... sort_intarr.o"
-	@echo "... sort_intarr.i"
-	@echo "... sort_intarr.s"
-	@echo "... sort_list.o"
-	@echo "... sort_list.i"
-	@echo "... sort_list.s"
-	@echo "... sort_onlyfive.o"
-	@echo "... sort_onlyfive.i"
-	@echo "... sort_onlyfive.s"
-	@echo "... sort_onlyfour.o"
-	@echo "... sort_onlyfour.i"
-	@echo "... sort_onlyfour.s"
-	@echo "... sort_onlythree.o"
-	@echo "... sort_onlythree.i"
-	@echo "... sort_onlythree.s"
+	@echo "... src/a_to_b.o"
+	@echo "... src/a_to_b.i"
+	@echo "... src/a_to_b.s"
+	@echo "... src/b_to_a.o"
+	@echo "... src/b_to_a.i"
+	@echo "... src/b_to_a.s"
+	@echo "... src/check_arg.o"
+	@echo "... src/check_arg.i"
+	@echo "... src/check_arg.s"
+	@echo "... src/deque.o"
+	@echo "... src/deque.i"
+	@echo "... src/deque.s"
+	@echo "... src/deque_utils.o"
+	@echo "... src/deque_utils.i"
+	@echo "... src/deque_utils.s"
+	@echo "... src/operations_push.o"
+	@echo "... src/operations_push.i"
+	@echo "... src/operations_push.s"
+	@echo "... src/operations_reverse.o"
+	@echo "... src/operations_reverse.i"
+	@echo "... src/operations_reverse.s"
+	@echo "... src/operations_rotate.o"
+	@echo "... src/operations_rotate.i"
+	@echo "... src/operations_rotate.s"
+	@echo "... src/operations_swap.o"
+	@echo "... src/operations_swap.i"
+	@echo "... src/operations_swap.s"
+	@echo "... src/parsing.o"
+	@echo "... src/parsing.i"
+	@echo "... src/parsing.s"
+	@echo "... src/push_swap.o"
+	@echo "... src/push_swap.i"
+	@echo "... src/push_swap.s"
+	@echo "... src/sort_five_a.o"
+	@echo "... src/sort_five_a.i"
+	@echo "... src/sort_five_a.s"
+	@echo "... src/sort_five_a2.o"
+	@echo "... src/sort_five_a2.i"
+	@echo "... src/sort_five_a2.s"
+	@echo "... src/sort_five_b.o"
+	@echo "... src/sort_five_b.i"
+	@echo "... src/sort_five_b.s"
+	@echo "... src/sort_five_b2.o"
+	@echo "... src/sort_five_b2.i"
+	@echo "... src/sort_five_b2.s"
+	@echo "... src/sort_intarr.o"
+	@echo "... src/sort_intarr.i"
+	@echo "... src/sort_intarr.s"
+	@echo "... src/sort_list.o"
+	@echo "... src/sort_list.i"
+	@echo "... src/sort_list.s"
+	@echo "... src/sort_onlyfive.o"
+	@echo "... src/sort_onlyfive.i"
+	@echo "... src/sort_onlyfive.s"
+	@echo "... src/sort_onlyfour.o"
+	@echo "... src/sort_onlyfour.i"
+	@echo "... src/sort_onlyfour.s"
+	@echo "... src/sort_onlythree.o"
+	@echo "... src/sort_onlythree.i"
+	@echo "... src/sort_onlythree.s"
 .PHONY : help
 
 

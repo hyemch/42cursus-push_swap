@@ -12,6 +12,12 @@
 
 #include "push_swap.h"
 
+void	error_exit(void)
+{
+	write(2, "Error\n", 6);
+	exit(1);
+}
+
 int	main(int argc, char **argv)
 {
 	t_info	info;
@@ -19,11 +25,12 @@ int	main(int argc, char **argv)
 	t_deque	deque_b;
 
 	if (argc < 2)
-		error_exit("argument count error\n");
+		error_exit();
 	ft_memset(&info, 0, sizeof(info));
 	ft_memset(&deque_a, 0, sizeof(deque_a));
 	ft_memset(&deque_b, 0, sizeof(deque_b));
 	parsing_arg(&info, argc, argv);
+	check_sort_arr(info);
 	arr_to_deque(info, &deque_a);
 	sort_arr(info, 0, info.ret_cnt - 1);
 	if (info.ret_cnt <= 5)

@@ -67,9 +67,12 @@ typedef struct s_pivot
 }	t_pivot;
 
 /*main.c*/
+void	error_exit(void);
 
 /*parsing.c*/
-void	error_exit(char *error_message);
+long	ft_atol(const char *str);
+void	atol_intarr(t_info *info, char **arr);
+void	arg_join(t_info *info, int argc, char **argv, char *ret);
 void	split_arg(t_info *info);
 int		parsing_arg(t_info *info, int argc, char **argv);
 
@@ -116,6 +119,7 @@ void	partition_2(t_info *info);
 t_info	sort_partition(t_info *info);
 
 /*sort_list.c*/
+void	check_sort_arr(t_info info);
 t_info	find_pivot(int cur, int cnt, t_info *info);
 void	check_ab(t_deque *deque_a, t_deque *deque_b, t_info *info, t_pivot *a);
 void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);

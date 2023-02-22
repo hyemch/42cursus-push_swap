@@ -30,13 +30,10 @@ int	main(int argc, char **argv)
 	ft_memset(&deque_a, 0, sizeof(deque_a));
 	ft_memset(&deque_b, 0, sizeof(deque_b));
 	parsing_arg(&info, argc, argv);
-	check_sort_arr(info);
 	arr_to_deque(info, &deque_a);
-	sort_arr(info, 0, info.ret_cnt - 1);
-	if (info.ret_cnt <= 5)
-		sort_lessfive(info, &deque_a, &deque_b, info.ret_cnt);
-	else
-		a_to_b(info, &deque_a, &deque_b);
+
+
+
 	free(info.ret);
 	free(info.ret_arr);
 	free_deque(&deque_a);

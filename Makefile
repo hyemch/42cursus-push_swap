@@ -1,11 +1,36 @@
 CC 		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 
+ifdef BONUS
+NAME	=	checker
+else
 NAME	= 	push_swap
+endif
+
+NAME_BONUS	= checker
+
 INC_DIR	=	-I./inc
 
 INC		=	$(INC_DIR)/push_swap.h
 
+ifdef BONUS
+SRC		=	bonus/main_bonus.c \
+			bonus/parsing.c \
+			bonus/check_arg.c \
+			bonus/deque.c \
+			bonus/deque_utils.c \
+			bonus/operations_push.c \
+			bonus/operations_swap.c \
+			bonus/operations_rotate.c \
+			bonus/operations_reverse.c \
+			libft/ft_calloc.c \
+			libft/ft_strjoin.c \
+			libft/ft_strlcpy.c \
+			libft/ft_memset.c \
+			libft/ft_strlcat.c \
+			libft/ft_strlen.c \
+			libft/ft_split.c
+else
 SRC		=	src/push_swap.c \
 			src/parsing.c \
             src/check_arg.c \
@@ -33,8 +58,12 @@ SRC		=	src/push_swap.c \
             libft/ft_strlcat.c \
             libft/ft_strlen.c \
             libft/ft_split.c
+endif
+
 
 OBJ		=	$(SRC:%.c=%.o)
+
+OBJ_BONUS	=	$(addprefix bonus/, $(OBJ))
 
 RM		=	rm -f
 
@@ -47,11 +76,14 @@ $(NAME)	:	$(OBJ)
 	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
 clean	:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(OBJ_BONUS)
 
 fclean	: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(NAME_BONUS)
 
 re : fclean all
 
-.PHONY : all clean fclean re
+bonus:
+	make BONUS=1
+
+.PHONY : all clean fclean re bonus

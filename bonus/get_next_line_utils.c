@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-size_t	ft_strlen(const char *s)
+size_t	gnl_strlen(const char *s)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*gnl_memset(void *b, int c, size_t len)
 {
 	unsigned char	*ptr;
 	unsigned char	value;
@@ -37,7 +37,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*gnl_strchr(const char *s, int c)
 {
 	while (*s)
 	{
@@ -55,16 +55,16 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-char	*ft_strdup(char *s1)
+char	*gnl_strdup(char *s1)
 {
 	size_t	i;
 	char	*dst;
 
 	i = 0;
-	dst = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	dst = (char *)malloc(sizeof(char) * (gnl_strlen(s1) + 1));
 	if (dst == 0)
 		return (0);
-	ft_memset(dst, 0, ft_strlen(s1) + 1);
+	gnl_memset(dst, 0, gnl_strlen(s1) + 1);
 	while (s1[i])
 	{
 		dst[i] = s1[i];
@@ -74,7 +74,7 @@ char	*ft_strdup(char *s1)
 	return (dst);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*gnl_strjoin(char *s1, char *s2)
 {
 	char	*str;
 	int		i;
@@ -83,13 +83,13 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s1 && !s2)
 		return (0);
 	else if (!s1)
-		return (ft_strdup(s2));
+		return (gnl_strdup(s2));
 	else if (!s2)
-		return (ft_strdup(s1));
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+		return (gnl_strdup(s1));
+	str = (char *)malloc(sizeof(char) * (gnl_strlen(s1) + gnl_strlen(s2) + 1));
 	if (!str)
 		return (0);
-	ft_memset(str, 0, ft_strlen(s1) + ft_strlen(s2) + 1);
+	gnl_memset(str, 0, gnl_strlen(s1) + gnl_strlen(s2) + 1);
 	i = -1;
 	j = 0;
 	while (s1[++i])

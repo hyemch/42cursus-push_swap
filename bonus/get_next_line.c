@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*next_line(char *keep)
 {
@@ -28,14 +28,14 @@ static char	*next_line(char *keep)
 		keep = NULL;
 		return (0);
 	}
-	temp = (char *)malloc(sizeof(char) * (ft_strlen(keep) - i));
+	temp = (char *)malloc(sizeof(char) * (gnl_strlen(keep) - i));
 	if (!temp)
 		return (0);
 	i++;
 	while (keep[i] != '\0')
 		temp[j++] = keep[i++];
 	temp[j] = '\0';
-	ft_memset(keep, 0, ft_strlen(keep));
+	gnl_memset(keep, 0, gnl_strlen(keep));
 	free(keep);
 	keep = NULL;
 	return (temp);
@@ -77,7 +77,7 @@ static char	*read_line(int fd, char *keep)
 	buff = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buff)
 		return (0);
-	ft_memset(buff, 0, BUFFER_SIZE + 1);
+	gnl_memset(buff, 0, BUFFER_SIZE + 1);
 	ret = read(fd, buff, BUFFER_SIZE);
 	if (ret < 0)
 	{
@@ -87,10 +87,10 @@ static char	*read_line(int fd, char *keep)
 	}
 	while (ret > 0)
 	{
-		keep = ft_strjoin(keep, buff);
-		if (ft_strchr(keep, '\n'))
+		keep = gnl_strjoin(keep, buff);
+		if (gnl_strchr(keep, '\n'))
 			break ;
-		ft_memset(buff, 0, BUFFER_SIZE + 1);
+		gnl_memset(buff, 0, BUFFER_SIZE + 1);
 		ret = read(fd, buff, BUFFER_SIZE);
 	}
 	free(buff);

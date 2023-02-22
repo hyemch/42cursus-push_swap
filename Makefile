@@ -1,36 +1,13 @@
 CC 		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 
-ifdef BONUS
-NAME	=	checker
-else
 NAME	= 	push_swap
-endif
-
-NAME_BONUS	= checker
+NAME_B	=	checker
 
 INC_DIR	=	-I./inc
 
 INC		=	$(INC_DIR)/push_swap.h
 
-ifdef BONUS
-SRC		=	bonus/main_bonus.c \
-			bonus/parsing.c \
-			bonus/check_arg.c \
-			bonus/deque.c \
-			bonus/deque_utils.c \
-			bonus/operations_push.c \
-			bonus/operations_swap.c \
-			bonus/operations_rotate.c \
-			bonus/operations_reverse.c \
-			libft/ft_calloc.c \
-			libft/ft_strjoin.c \
-			libft/ft_strlcpy.c \
-			libft/ft_memset.c \
-			libft/ft_strlcat.c \
-			libft/ft_strlen.c \
-			libft/ft_split.c
-else
 SRC		=	src/push_swap.c \
 			src/parsing.c \
             src/check_arg.c \
@@ -58,16 +35,37 @@ SRC		=	src/push_swap.c \
             libft/ft_strlcat.c \
             libft/ft_strlen.c \
             libft/ft_split.c
-endif
 
+INC_B	=	$(addprefix $(INC_DIR),	push_swap_bonus.h \
+									get_next_line_bonus.h)
+
+
+SRC_B	=	bonus/main_bonus.c \
+			bonus/parsing.c \
+			bonus/check_arg.c \
+			bonus/deque.c \
+			bonus/deque_utils.c \
+			bonus/operations_push.c \
+			bonus/operations_swap.c \
+			bonus/operations_rotate.c \
+			bonus/operations_reverse.c \
+			bonus/get_next_line.c \
+			bonus/get_next_line_utils.c \
+			libft/ft_calloc.c \
+			libft/ft_strjoin.c \
+			libft/ft_strlcpy.c \
+			libft/ft_memset.c \
+			libft/ft_strlcat.c \
+			libft/ft_strlen.c \
+			libft/ft_split.c
 
 OBJ		=	$(SRC:%.c=%.o)
-
-OBJ_BONUS	=	$(addprefix bonus/, $(OBJ))
-
+OBJ_B	=	$(SRC_B:%.c=%.o)
 RM		=	rm -f
 
 all		:	$(NAME)
+
+bonus	:	$(NAME_B)
 
 %.o : %.c
 	$(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@
@@ -75,15 +73,16 @@ all		:	$(NAME)
 $(NAME)	:	$(OBJ)
 	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
+
+$(NAME_B)	:	$(OBJ_B)
+	$(CC) $(CFLAGS) -o $@ $(OBJ_B)
+
 clean	:
-	$(RM) $(OBJ) $(OBJ_BONUS)
+	$(RM) $(OBJ) $(OBJ_B)
 
 fclean	: clean
-	$(RM) $(NAME) $(NAME_BONUS)
+	$(RM) $(NAME) $(NAME_B)
 
 re : fclean all
 
-bonus:
-	make BONUS=1
-
-.PHONY : all clean fclean re bonus
+.PHONY : all clean fclean re

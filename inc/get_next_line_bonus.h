@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyecheon <hyecheon@student.42seoul.kr      +#+  +:+       +#+        */
+/*   By: hyecheon <hyecheon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 14:56:50 by hyecheon          #+#    #+#             */
-/*   Updated: 2022/11/04 21:29:54 by hyecheon         ###   ########.fr       */
+/*   Created: 2023/02/22 16:41:05 by hyecheon          #+#    #+#             */
+/*   Updated: 2023/02/22 16:41:09 by hyecheon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,13 @@
 # include <stdlib.h>
 # include <limits.h>
 
-/*typedef struct s_fd_list
-{
-	int					fd;
-	char				*str;
-	struct s_fd_list	*next;
-}	t_fd_list;
- */
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *b, int c, size_t len);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(char *s1);
-char	*ft_strjoin(char*s1, char *s2);
+#define BUFFER_SIZE 42
+
+size_t	gnl_strlen(const char *s);
+void	*gnl_memset(void *b, int c, size_t len);
+char	*gnl_strchr(const char *s, int c);
+char	*gnl_strdup(char *s1);
+char	*gnl_strjoin(char*s1, char *s2);
 char	*get_next_line(int fd);
 
 #endif

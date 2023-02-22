@@ -49,11 +49,11 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/goinfre/hyecheon/retry/."
+					"path" : "/goinfre/hyecheon/retry_push_swap/prev_push_swap/."
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/goinfre/hyecheon/retry/./libft"
+					"path" : "/goinfre/hyecheon/retry_push_swap/prev_push_swap/./libft"
 				}
 			],
 			"language" : "C",

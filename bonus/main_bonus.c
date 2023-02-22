@@ -19,6 +19,25 @@ void	error_exit(void)
 	exit(1);
 }
 
+void	print_deque(t_deque *pdeque)
+{
+	t_node	*curr;
+
+	curr = pdeque->head;
+	printf("lst : ");
+	if (curr == NULL)
+	{
+		printf("empty deque\n");
+		return ;
+	}
+	while (curr->next)
+	{
+		printf("%d->", curr->data);
+		curr = curr->next;
+	}
+	printf("%d\n", curr->data);
+}
+
 static int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t				i;
@@ -54,6 +73,7 @@ static void	init_cmd_info(t_cmd_info *cmd_info)
 
 static void	execute_cmd(int i, const char **cmd, t_deque *a, t_deque *b)
 {
+	(void)cmd;
 	t_cmd_info	cmd_info;
 
 	init_cmd_info(&cmd_info);
@@ -67,9 +87,17 @@ static void	execute_cmd(int i, const char **cmd, t_deque *a, t_deque *b)
 	}
 	else
 	{
-		cmd_info.func_b(i - 8)(b);
+		cmd_info.func_b[i - 8](b);
 	}
 }
+
+//static  void	check_lst(t_deque *deque_a, t_deque *deque_b)
+//{
+//	int *tmp;
+//
+//	tmp = deque_a->head;
+//
+//}
 
 static void	get_cmd(t_deque *deque_a, t_deque *deque_b)
 {
@@ -99,7 +127,10 @@ static void	get_cmd(t_deque *deque_a, t_deque *deque_b)
 			exit(255);
 		}
 	}
+//	check_lst(deque_a, deque_b);
 	write(1, "OK\n", 3);
+	print_deque(deque_a);
+	print_deque(deque_b);
 	exit(0);
 }
 
@@ -117,8 +148,6 @@ int	main(int argc, char **argv)
 	parsing_arg(&info, argc, argv);
 	arr_to_deque(info, &deque_a);
 	get_cmd(&deque_a, &deque_b);
-
-
 	free(info.ret);
 	free(info.ret_arr);
 	free_deque(&deque_a);

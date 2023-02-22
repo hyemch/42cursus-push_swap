@@ -8,24 +8,24 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/goinfre/hyecheon/retry/cmake-build-debug"/>
+				<Option working_dir="/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="push_swap">
-				<Option output="/goinfre/hyecheon/retry/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/goinfre/hyecheon/retry/cmake-build-debug"/>
+				<Option output="/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/goinfre/hyecheon/retry/."/>
-					<Add directory="/goinfre/hyecheon/retry/./libft"/>
+					<Add directory="/goinfre/hyecheon/retry_push_swap/prev_push_swap/."/>
+					<Add directory="/goinfre/hyecheon/retry_push_swap/prev_push_swap/./libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -33,21 +33,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="push_swap/fast">
-				<Option output="/goinfre/hyecheon/retry/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/goinfre/hyecheon/retry/cmake-build-debug"/>
+				<Option output="/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/goinfre/hyecheon/retry/."/>
-					<Add directory="/goinfre/hyecheon/retry/./libft"/>
+					<Add directory="/goinfre/hyecheon/retry_push_swap/prev_push_swap/."/>
+					<Add directory="/goinfre/hyecheon/retry_push_swap/prev_push_swap/./libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -55,121 +55,121 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/goinfre/hyecheon/retry/cmake-build-debug"/>
+				<Option working_dir="/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/goinfre/hyecheon/retry/cmake-build-debug"/>
+				<Option working_dir="/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/goinfre/hyecheon/retry/inc/push_swap.h">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/inc/push_swap.h">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_atoi.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_atoi.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_calloc.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_calloc.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_memset.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_memset.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_split.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_split.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_strjoin.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_strjoin.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_strlcat.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_strlcat.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_strlcpy.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_strlcpy.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/libft/ft_strlen.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/libft/ft_strlen.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/a_to_b.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/a_to_b.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/b_to_a.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/b_to_a.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/check_arg.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/check_arg.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/deque.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/deque.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/deque_utils.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/deque_utils.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/operations_push.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/operations_push.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/operations_reverse.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/operations_reverse.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/operations_rotate.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/operations_rotate.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/operations_swap.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/operations_swap.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/parsing.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/parsing.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/push_swap.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/push_swap.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_five_a.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_five_a.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_five_a2.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_five_a2.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_five_b.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_five_b.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_five_b2.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_five_b2.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_intarr.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_intarr.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_list.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_list.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_onlyfive.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_onlyfive.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_onlyfour.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_onlyfour.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/src/sort_onlythree.c">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/src/sort_onlythree.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/goinfre/hyecheon/retry/CMakeLists.txt">
+		<Unit filename="/goinfre/hyecheon/retry_push_swap/prev_push_swap/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

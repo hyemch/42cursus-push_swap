@@ -430,8 +430,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/goinfre/hyecheon/retry/cmake-build-debug",
-		"source" : "/goinfre/hyecheon/retry"
+		"build" : "/goinfre/hyecheon/retry_push_swap/prev_push_swap/cmake-build-debug",
+		"source" : "/goinfre/hyecheon/retry_push_swap/prev_push_swap"
 	},
 	"version" : 
 	{

@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyecheon <hyecheon@student.42seoul.kr      +#+  +:+       +#+        */
+/*   By: hyecheon <hyecheon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:28:58 by hyecheon          #+#    #+#             */
-/*   Updated: 2023/01/29 17:30:11 by hyecheon         ###   ########.fr       */
+/*   Created: 2023/02/22 20:00:25 by hyecheon          #+#    #+#             */
+/*   Updated: 2023/02/22 20:00:27 by hyecheon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include "../libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <stdio.h>
 
 # define TRUE	1
 # define ERROR -1
@@ -173,5 +174,7 @@ void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
 void	find_mindata_b(int cnt, t_find *find);
 void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
 void	min_sort_ba(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
+
+void	print_deque(t_deque *pdeque);
 
 #endif

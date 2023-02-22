@@ -10,14 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
+
+# define BUFFER_SIZE 42
 
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
 
-#define BUFFER_SIZE 42
 
 size_t	gnl_strlen(const char *s);
 void	*gnl_memset(void *b, int c, size_t len);

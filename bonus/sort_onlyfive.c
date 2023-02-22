@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 static void	find_min(t_info *info, t_deque *deque_a, t_deque *deque_b, int n)
 {

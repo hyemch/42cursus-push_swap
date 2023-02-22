@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	sa(t_deque *deque_a)
 {
 	int	tmp;
 
-	if (deque_a->head == NULL)
+	if (deque_a->head == NULL || deque_a->head->next == NULL)
 		return ;
 	tmp = deque_a->head->data;
 	deque_a->head->data = deque_a->head->next->data;
@@ -27,7 +27,7 @@ void	sb(t_deque *deque_b)
 {
 	int	tmp;
 
-	if (deque_b->head == NULL)
+	if (deque_b->head == NULL || deque_b->head->next == NULL)
 		return ;
 	tmp = deque_b->head->data;
 	deque_b->head->data = deque_b->head->next->data;

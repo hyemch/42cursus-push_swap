@@ -1,1 +1,4 @@
-/goinfre/hyecheon/retry_push_swap에서 CMakeLists.txt을(를) 찾을 수 없습니다 CMakeLists.txt 선택
+/Users/hyecheon/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/hyecheon/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /goinfre/hyecheon/retry_push_swap -B /goinfre/hyecheon/retry_push_swap/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /goinfre/hyecheon/retry_push_swap/cmake-build-debug

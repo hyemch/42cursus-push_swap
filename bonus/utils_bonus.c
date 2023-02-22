@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations_push.c                                  :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyecheon <hyecheon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 19:25:41 by hyecheon          #+#    #+#             */
-/*   Updated: 2023/02/20 19:25:43 by hyecheon         ###   ########.fr       */
+/*   Created: 2023/02/22 21:57:42 by hyecheon          #+#    #+#             */
+/*   Updated: 2023/02/22 21:57:45 by hyecheon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-void	pa(t_deque *deque_a, t_deque *deque_b)
+void	error_exit(void)
 {
-	t_node	*new;
-
-	if (deque_b->head == NULL)
-		return ;
-	new = del_front(deque_b);
-	add_front(deque_a, new);
+	write(2, "Error\n", 6);
+	exit(1);
 }
 
-void	pb(t_deque *deque_a, t_deque *deque_b)
+void	print_error(void)
 {
-	t_node	*new;
+	write(2, "KO\n", 3);
+	exit(255);
+}
 
-	if (deque_a->head == NULL)
-		return ;
-	new = del_front(deque_a);
-	add_front(deque_b, new);
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	size_t				i;
+	unsigned char		*sptr1;
+	unsigned char		*sptr2;
+
+	sptr1 = (unsigned char *)s1;
+	sptr2 = (unsigned char *)s2;
+	i = 0;
+	while (sptr1[i] != '\0' || sptr2[i] != '\0')
+	{
+		if (sptr1[i] != sptr2[i])
+			return (sptr1[i] - sptr2[i]);
+		i++;
+	}
+	return (0);
 }

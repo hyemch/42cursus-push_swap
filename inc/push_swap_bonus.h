@@ -14,6 +14,7 @@
 # define PUSH_SWAP_BONUS_H
 
 # include "../libft/libft.h"
+# include "get_next_line_bonus.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
@@ -76,8 +77,10 @@ typedef struct s_cmd_info
 	void	(*func_b[3])(t_deque *b);
 }	t_cmd_info;
 
-/*main.c*/
+/*utils_bonus.c*/
+int		ft_strcmp(const char *s1, const char *s2);
 void	error_exit(void);
+void	print_error(void);
 
 /*parsing.c*/
 long	ft_atol(const char *str);
@@ -120,61 +123,5 @@ void	rr(t_deque *deque_a, t_deque *deque_b);
 void	rra(t_deque *deque_a);
 void	rrb(t_deque *deque_b);
 void	rrr(t_deque *deque_a, t_deque *deque_b);
-
-/* sort_intarr.c*/
-void	swap(int *arr, int a, int b);
-void	sort_arr(t_info info, int left, int right);
-void	partition_1(t_info *info);
-void	partition_2(t_info *info);
-t_info	sort_partition(t_info *info);
-
-/*sort_list.c*/
-void	check_sort_arr(t_info info);
-t_info	find_pivot(int cur, int cnt, t_info *info);
-void	check_ab(t_deque *deque_a, t_deque *deque_b, t_info *info, t_pivot *a);
-void	sort_lessfive(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
-
-/*a_to_b.c*/
-void	firstatob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
-void	a_to_b(t_info info, t_deque *deque_a, t_deque *deque_b);
-void	part_atob(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *a);
-void	rrr_atob(t_deque *deque_a, t_deque *deque_b, t_pivot *a);
-
-/*b_to_a.c*/
-void	b_to_a(t_info info, t_deque *deque_a, t_deque *deque_b);
-void	part_btoa(t_info *info, t_deque *deque_a, t_deque *deque_b, t_pivot *b);
-void	rrr_btoa(t_deque *deque_a, t_deque *deque_b, t_pivot *b);
-
-/* sort_onlythree.c*/
-void	sort_onlythree(t_info *info, t_deque *deque_a);
-/* sort_onlyfour.c*/
-void	sort_onlyfour(t_info *info, t_deque *deque_a, t_deque *deque_b, int n);
-/* sort_onlyfive.c*/
-void	sort_onlyfive(t_info *info, t_deque *deque_a, t_deque *deque_b, int n);
-
-/*sort_five_a.c*/
-void	lst_five_a(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
-void	lst_three_a(t_deque *deque_a, int cnt);
-void	lstthree_headsmall(t_deque *deque_a, const int *data);
-void	lstthree_headmedium(t_deque *deque_a, const int *data);
-void	lstthree_headlarge(t_deque *deque_a, const int *data);
-/*sort_five_a2.c*/
-void	lst_rest_a(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
-void	find_mindata_a(int cnt, t_find *find);
-void	min_sort_a(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
-void	min_sort_ra(t_deque *deque_a, int ra_cnt);
-/*sort_five_b*/
-void	lst_five_b(t_info info, t_deque *deque_a, t_deque *deque_b, int cnt);
-void	lst_three_b(t_deque *deque_a, t_deque *deque_b, int cnt);
-void	bthree_headsmall(t_deque *deque_a, t_deque *deque_b, const int *data);
-void	bthree_headmedium(t_deque *deque_a, t_deque *deque_b, const int *data);
-void	bthree_headlarge(t_deque *deque_a, t_deque *deque_b, const int *data);
-/*sort_five_b2.c*/
-void	lst_rest_b(t_info *info, t_deque *deque_a, t_deque *deque_b, int cnt);
-void	find_mindata_b(int cnt, t_find *find);
-void	min_sort_b(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
-void	min_sort_ba(t_deque *deque_a, t_deque *deque_b, int cnt, t_find *find);
-
-void	print_deque(t_deque *pdeque);
 
 #endif

@@ -30,3 +30,8 @@
 87	135	1677064318049133756	CMakeFiles/push_swap_bonus.dir/bonus/deque_utils.c.o	c6aaeaf431ee4a2b
 87	139	1677064318052533368	CMakeFiles/push_swap_bonus.dir/bonus/main_bonus.c.o	e52eb89189c3b589
 139	182	1677064318094560740	push_swap_bonus	d659c95e690259d2
+1	42	1677068255709025023	CMakeFiles/push_swap_bonus.dir/bonus/operations_reverse.c.o	9606b53a2522881b
+1	42	1677068255708871396	CMakeFiles/push_swap_bonus.dir/bonus/operations_swap.c.o	9fc9a6d07d5d7977
+1	42	1677068255708870682	CMakeFiles/push_swap_bonus.dir/bonus/operations_rotate.c.o	a87f35c0cbd0596e
+1	48	1677068255715967695	CMakeFiles/push_swap_bonus.dir/bonus/main_bonus.c.o	e52eb89189c3b589
+48	102	1677068255769376557	push_swap_bonus	d659c95e690259d2

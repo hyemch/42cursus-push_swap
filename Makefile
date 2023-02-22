@@ -1,5 +1,5 @@
 CC 		=	cc
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -g
 
 NAME	= 	push_swap
 NAME_B	=	checker
@@ -8,7 +8,7 @@ INC_DIR	=	-I./inc
 
 INC		=	$(INC_DIR)/push_swap.h
 
-SRC		=	src/push_swap.c \
+SRC		=	src/main.c \
 			src/parsing.c \
             src/check_arg.c \
             src/deque.c \
@@ -41,16 +41,17 @@ INC_B	=	$(addprefix $(INC_DIR),	push_swap_bonus.h \
 
 
 SRC_B	=	bonus/main_bonus.c \
-			bonus/parsing.c \
-			bonus/check_arg.c \
-			bonus/deque.c \
-			bonus/deque_utils.c \
-			bonus/operations_push.c \
-			bonus/operations_swap.c \
-			bonus/operations_rotate.c \
-			bonus/operations_reverse.c \
-			bonus/get_next_line.c \
-			bonus/get_next_line_utils.c \
+			bonus/utils_bonus.c \
+			bonus/parsing_bonus.c \
+			bonus/check_arg_bonus.c \
+			bonus/deque_bonus.c \
+			bonus/deque_utils_bonus.c \
+			bonus/operations_push_bonus.c \
+			bonus/operations_swap_bonus.c \
+			bonus/operations_rotate_bonus.c \
+			bonus/operations_reverse_bonus.c \
+			bonus/get_next_line_bonus.c \
+			bonus/get_next_line_utils_bonus.c \
 			libft/ft_calloc.c \
 			libft/ft_strjoin.c \
 			libft/ft_strlcpy.c \

@@ -30,27 +30,92 @@ int	check_arg_num(const char *str)
 	return (0);
 }
 
+int	ft_isdigit(int c)
+{
+	if ('0' <= c && c <= '9')
+		return (0);
+	else
+		return (1);
+}
+
+int	ft_isspace(int c)
+{
+	if ((9 <= c && c <= 13) || c == ' ')
+		return (0);
+	else
+		return (1);
+}
+
+int	check_arg_valid(const char *str, int i)
+{
+	return (!(ft_isdigit(str[i + 1] == 0) || ft_isspace(str[i + 1]) == 0 \
+	|| str[i + 1] == '-' || str[i + 1] == '+'));
+}
+
 int	check_arg(const char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i + 1] != '\0')
 	{
-		if (('0' <= str[i] && str[i] <= '9') \
-		|| (9 <= str[i] && str[i] <= 13) || 32 == str[i])
-			i++;
+		if ('0' <= str[i] && str[i] <= '9')
+		{
+			if (!(ft_isdigit(str[i + 1] == 0) || ft_isspace(str[i + 1]) == 0))
+				return (ERROR);
+		}
+		else if ((9 <= str[i] && str[i] <= 13) || 32 == str[i])
+		{
+			if (check_arg_valid(str, i))
+				return (ERROR);
+		}
 		else if (str[i] == '-' || str[i] == '+')
 		{
 			if ('0' > str[i + 1] || str[i + 1] > '9')
 				return (ERROR);
-			i++;
 		}
 		else
 			return (ERROR);
+		i++;
 	}
 	return (0);
 }
+
+//int	check_arg(const char *str)
+//{
+//	int	i;
+//
+//	i = 0;
+//	while (str[i + 1] != '\0')
+//	{
+//		if ('0' <= str[i] && str[i] <= '9')
+//		{
+//			if (('0' <= str[i + 1] && str[i + 1] <= '9') \
+//		|| (9 <= str[i + 1] && str[i + 1] <= 13) || 32 == str[i + 1])
+//				i++;
+//			else
+//				return (ERROR);
+//		}
+//		else if ((9 <= str[i] && str[i] <= 13) || 32 == str[i])
+//		{
+//			if (('0' <= str[i + 1] && str[i + 1] <= '9') || \
+//			(9 <= str[i + 1] && str[i + 1] <= 13) || 32 == str[i + 1] || \
+//			str[i + 1] == '-' || str[i + 1] == '+')
+//				i++;
+//			else
+//				return (ERROR);
+//		}
+//		else if (str[i] == '-' || str[i] == '+')
+//		{
+//			if ('0' > str[i + 1] || str[i + 1] > '9')
+//				return (ERROR);
+//			i++;
+//		}
+//		else
+//			return (ERROR);
+//	}
+//	return (0);
+//}
 
 int	valid_arg(int argc, char **argv)
 {
